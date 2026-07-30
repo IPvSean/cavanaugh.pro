@@ -1,3 +1,19 @@
+- title: "Red Hat Summit 2026 — Product Spotlight"
+  description: "Trusted execution for AI-driven IT ops — opening the session and closing with a live demo of the new Automation Orchestrator alongside Roger and Dafne."
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "Red Hat Summit"
+  year: 2026
+  url: "https://tv.redhat.com/detail/6396287207112/product-spotlight-red-hat-ansible-automation-platform-trusted-execution-for-ai-driven-it-ops"
+  featured: true
+  video_platform: "redhat-tv"
+  segments:
+    - title: "Cold Open — How We Got Here"
+      description: "Opening the Product Spotlight with Roger and Dafne"
+      start: "1:00"
+    - title: "Automation Orchestrator Demo"
+      description: "Live demo of the new Automation Orchestrator with Roger and Dafne"
+      start: "1:50:00"
+
 - title: "AnsibleFest 2025 Keynote"
   description: "Two live demos on the AnsibleFest main stage — the Ansible Automation Dashboard and Ansible Lightspeed Assistant + AIOps with Dafne Mendoza."
   image: "/assets/images/placeholder-talk.svg"
@@ -5,6 +21,8 @@
   year: 2025
   url: "https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=2418"
   featured: true
+  video_platform: "youtube"
+  youtube_id: "OiQDFjmWGUc"
   segments:
     - title: "Ansible Automation Dashboard"
       start: "40:18"
@@ -15,13 +33,6 @@
       start_seconds: 3835
       end: "1:10:09"
       co_presenter: "Dafne Mendoza"
-
-- title: "Red Hat Summit"
-  description: "Product Spotlight — Enterprise AI and Automation"
-  image: "/assets/images/placeholder-talk.svg"
-  audience: "2,000+ attendees"
-  year: 2024
-  url: "#"
 
 - title: "Cisco Live"
   description: "Hands-on Network Automation with Ansible"

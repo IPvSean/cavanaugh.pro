@@ -12,36 +12,49 @@ permalink: /talks/
       <p>Keynotes, breakout sessions, and workshops at the world's largest infrastructure and automation conferences.</p>
     </div>
 
-    <!-- Featured Keynote -->
-    {% assign featured_talk = site.data.talks | where: "featured", true | first %}
-    {% if featured_talk %}
+    <!-- Featured Talks -->
+    {% assign featured_talks = site.data.talks | where: "featured", true %}
+    {% for talk in featured_talks %}
     <div class="keynote-highlight" style="margin-bottom: var(--space-4xl);">
       <div class="keynote-video">
+        {% if talk.video_platform == "youtube" %}
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/OiQDFjmWGUc?start=2418" title="{{ featured_talk.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/{{ talk.youtube_id }}?start={{ talk.segments[0].start_seconds }}" title="{{ talk.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
+        {% else %}
+        <a href="{{ talk.url }}" target="_blank" rel="noopener" class="rhtv-preview">
+          <div class="rhtv-preview-inner">
+            <svg class="rhtv-play" viewBox="0 0 24 24" width="56" height="56"><circle cx="12" cy="12" r="12" fill="rgba(230,57,70,0.9)"/><polygon points="9.5,7 9.5,17 17.5,12" fill="white"/></svg>
+            <span class="rhtv-badge">Red Hat TV</span>
+          </div>
+        </a>
+        {% endif %}
       </div>
       <div class="keynote-info">
-        <span class="section-label">Featured Keynote</span>
-        <h2>{{ featured_talk.title }}</h2>
-        <p>{{ featured_talk.description }}</p>
+        <span class="section-label">{{ talk.audience }} &bull; {{ talk.year }}</span>
+        <h2>{{ talk.title }}</h2>
+        <p>{{ talk.description }}</p>
         <div class="keynote-segments">
-          {% for seg in featured_talk.segments %}
-          <a href="https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t={{ seg.start_seconds }}" target="_blank" rel="noopener" class="keynote-segment">
+          {% for seg in talk.segments %}
+          <a href="{{ talk.url }}" target="_blank" rel="noopener" class="keynote-segment">
             <span class="segment-time">{{ seg.start }}</span>
             <div>
               <strong>{{ seg.title }}</strong>
-              {% if seg.co_presenter %}
+              {% if seg.description %}
+              <span class="segment-desc">{{ seg.description }}</span>
+              {% elsif seg.co_presenter %}
               <span class="segment-desc">With {{ seg.co_presenter }}</span>
               {% endif %}
             </div>
           </a>
           {% endfor %}
         </div>
-        <a href="{{ featured_talk.url }}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: var(--space-lg);">Watch Full Keynote</a>
+        <a href="{{ talk.url }}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: var(--space-lg);">
+          {% if talk.video_platform == "youtube" %}Watch Full Keynote{% else %}Watch on Red Hat TV{% endif %}
+        </a>
       </div>
     </div>
-    {% endif %}
+    {% endfor %}
 
     <!-- All Talks -->
     <div class="section-header">
