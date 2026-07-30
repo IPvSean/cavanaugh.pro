@@ -56,6 +56,29 @@ permalink: /talks/
     </div>
     {% endfor %}
 
+    <!-- Speaking Track Record -->
+    <div class="track-record fade-in">
+      <div class="track-record-stat">
+        <span class="track-record-number">10+</span>
+        <span class="track-record-label">Years Speaking</span>
+      </div>
+      <div class="track-record-divider"></div>
+      <div class="track-record-stat">
+        <span class="track-record-number">2016</span>
+        <span class="track-record-label">First Talk</span>
+      </div>
+      <div class="track-record-divider"></div>
+      <div class="track-record-stat">
+        <span class="track-record-number">2026</span>
+        <span class="track-record-label">Latest</span>
+      </div>
+      <div class="track-record-divider"></div>
+      <div class="track-record-stat">
+        <span class="track-record-number">50+</span>
+        <span class="track-record-label">Total Talks</span>
+      </div>
+    </div>
+
     <!-- All Talks -->
     <div class="section-header">
       <span class="section-label">All Talks</span>
@@ -64,7 +87,7 @@ permalink: /talks/
     <div class="talks-grid">
       {% for talk in site.data.talks %}
       {% unless talk.featured %}
-      <a href="{{ talk.url }}" class="talk-card">
+      <a href="{{ talk.url }}" class="talk-card" {% if talk.url contains "http" %}target="_blank" rel="noopener"{% endif %}>
         <div class="talk-card-image">
           <div class="placeholder-visual">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -75,10 +98,21 @@ permalink: /talks/
         <div class="talk-card-body">
           <h3>{{ talk.title }}</h3>
           <p>{{ talk.description }}</p>
+          {% if talk.role_at_time %}
+          <div class="talk-role">While at {{ talk.role_at_time }}</div>
+          {% endif %}
           <div class="talk-meta">
             <span>{{ talk.audience }}</span>
-            <span>{{ talk.year }}</span>
+            <span>{% if talk.date %}{{ talk.date }}{% else %}{{ talk.year }}{% endif %}</span>
           </div>
+          {% if talk.slides %}
+          <div class="talk-resources">
+            <span class="talk-resource-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg>
+              Slides
+            </span>
+          </div>
+          {% endif %}
         </div>
       </a>
       {% endunless %}

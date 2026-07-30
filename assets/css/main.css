@@ -726,6 +726,84 @@ p {
   gap: var(--space-xs);
 }
 
+/* ---- Speaking Track Record ---- */
+
+.track-record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+  padding: var(--space-2xl) var(--space-xl);
+  margin-bottom: var(--space-4xl);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.track-record-stat {
+  text-align: center;
+}
+
+.track-record-number {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.track-record-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.track-record-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border-light);
+}
+
+.talk-role {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.talk-resources {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.talk-resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .track-record {
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+  }
+
+  .track-record-divider {
+    display: none;
+  }
+
+  .track-record-stat {
+    flex: 1;
+    min-width: 80px;
+  }
+}
+
 /* ---- Timeline ---- */
 
 .timeline {

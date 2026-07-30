@@ -54,3 +54,13 @@
   audience: "200+ attendees"
   year: 2024
   url: "#"
+
+- title: "Routing on the Host with Docker and Ansible"
+  description: "Community meetup talk on using Ansible to manage routable Docker containers — presented at the Ansible RDU meetup while at Cumulus Networks."
+  audience: "Ansible RDU Meetup"
+  year: 2016
+  date: "March 29, 2016"
+  url: "https://www.meetup.com/ansible-durham/events/229409542/"
+  slides: "https://docs.google.com/presentation/d/1cbUP1XLanxM0AuF2SC7Ve4beFEGqbq8x-1JoUrK_Cp0/edit?usp=sharing"
+  venue_url: "https://www.meetup.com/ansible-durham/"
+  role_at_time: "Cumulus Networks"
