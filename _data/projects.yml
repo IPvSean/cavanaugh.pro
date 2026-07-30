@@ -19,6 +19,17 @@
     stars: "1,862"
     forks: "1,100+"
 
+- title: "Network Automation Toolkit"
+  description: "An Ansible Content Collection for common network automation functions — backup, restore, facts, reporting, and more. Used alongside the Ansible Network Automation Workshop to help engineers quickly adopt network automation use cases. 130 stars, 157 forks, and 653 commits of battle-tested network roles and playbooks."
+  tags: ["Ansible", "Networking", "Collection", "Open Source"]
+  github: "https://github.com/network-automation/toolkit"
+  url: "https://github.com/network-automation/toolkit"
+  featured: true
+  stats:
+    stars: "130"
+    forks: "157"
+    commits: "653"
+
 - title: "Enterprise AI Operations"
   description: "End-to-end AI-powered operations demos showcasing how large language models integrate with enterprise automation platforms."
   tags: ["AI", "LLM", "Enterprise"]
