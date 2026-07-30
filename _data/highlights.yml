@@ -1,23 +1,45 @@
-- number: "16,400+"
-  label: "YouTube Subscribers"
-  icon: "youtube"
-
 - number: "25,000+"
+  raw: 25000
   label: "LinkedIn Followers"
   icon: "linkedin"
+  url: "https://www.linkedin.com/in/ipvsean"
+  color: "#0a66c2"
+
+- number: "16,400+"
+  raw: 16400
+  label: "YouTube Subscribers"
+  icon: "youtube"
+  url: "https://www.youtube.com/@IPvSean"
+  color: "#ff0000"
 
 - number: "9,000+"
+  raw: 9000
   label: "TikTok Followers"
   icon: "tiktok"
+  url: "https://www.tiktok.com/@ipvsean"
+  color: "#69c9d0"
+
+- number: "2,300+"
+  raw: 2300
+  label: "GitHub Stars"
+  icon: "github"
+  url: "https://github.com/IPvSean"
+  color: "#8b949e"
 
 - number: "50+"
+  raw: 50
   label: "Conference Talks"
   icon: "mic"
+  color: "#e63946"
 
 - number: "2,000+"
+  raw: 2000
   label: "Largest Live Audience"
   icon: "users"
+  color: "#8b5cf6"
 
 - number: "300+"
+  raw: 300
   label: "Students Trained"
   icon: "graduation"
+  color: "#10b981"

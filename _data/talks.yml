@@ -1,6 +1,7 @@
 - title: "Red Hat Summit 2026 — Product Spotlight"
-  description: "Trusted execution for AI-driven IT ops — opening the session and closing with a live demo of the new Automation Orchestrator alongside Roger and Dafne."
-  image: "/assets/images/placeholder-talk.svg"
+  description: "Opening and closing the Ansible Product Spotlight at Red Hat Summit — featuring customer stories from TD Bank and Marriott, an AIOps partner panel with ServiceNow, Splunk, and IBM Instana, and a live demo of the new Automation Orchestrator."
+  image: "/assets/images/summit-2026-stage.png"
+  stage_photo: "/assets/images/summit-2026-stage.png"
   audience: "Red Hat Summit"
   year: 2026
   url: "https://tv.redhat.com/detail/6396287207112/product-spotlight-red-hat-ansible-automation-platform-trusted-execution-for-ai-driven-it-ops"
@@ -8,15 +9,16 @@
   video_platform: "redhat-tv"
   segments:
     - title: "Cold Open — How We Got Here"
-      description: "Opening the Product Spotlight with Roger and Dafne"
-      start: "1:00"
+      description: "With Roger Lopez and Dafne Mendoza"
+      start: "Intro"
     - title: "Automation Orchestrator Demo"
       description: "Live demo of the new Automation Orchestrator with Roger and Dafne"
-      start: "1:50:00"
+      start: "Closing"
 
 - title: "AnsibleFest 2025 Keynote"
   description: "Two live demos on the AnsibleFest main stage — the Ansible Automation Dashboard and Ansible Lightspeed Assistant + AIOps with Dafne Mendoza."
-  image: "/assets/images/placeholder-talk.svg"
+  image: "/assets/images/ansiblefest-2025-stage.png"
+  stage_photo: "/assets/images/ansiblefest-2025-stage.png"
   audience: "Keynote"
   year: 2025
   url: "https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=2418"
@@ -34,12 +36,55 @@
       end: "1:10:09"
       co_presenter: "Dafne Mendoza"
 
-- title: "Cisco Live"
-  description: "Hands-on Network Automation with Ansible"
-  image: "/assets/images/placeholder-talk.svg"
-  audience: "500+ attendees"
+- title: "Ansible Network Automation, GitOps for NetOps"
+  session_id: "BRKATO-2106"
+  description: "A new paradigm shift has created a more opinionated and simpler model: GitOps. This talk covers a simple network as code approach where your Source of Truth is simply a Git Repository and every pull request starts your automation workflow. Co-presented with Adrian Iliesiu (Cisco Distinguished Speaker)."
+  image: "/assets/images/cisco-live-2023-speakers.png"
+  audience: "Cisco Live Las Vegas"
   year: 2023
-  url: "#"
+  date: "June 2023"
+  url: "https://www.ciscolive.com/on-demand/on-demand-library.html?search=cavanaugh#/session/1686177737934001Vsxq"
+  slides: "/assets/slides/BRKATO-2106.pdf"
+  photos: "https://photos.app.goo.gl/oKnaPREH9SCRRwfn6"
+  gallery:
+    - src: "/assets/images/cisco-live-2023-speakers.png"
+      alt: "Sean Cavanaugh and Adrian Iliesiu before their Cisco Live 2023 talk"
+    - src: "/assets/images/cisco-live-2023-audience.png"
+      alt: "View from the podium — 343 attendees at BRKATO-2106"
+    - src: "/assets/images/cisco-live-2023-booth.png"
+      alt: "Packed Red Hat booth at Cisco Live 2023"
+  co_presenter: "Adrian Iliesiu, Principal Engineer, Cisco"
+  stats:
+    registered: 423
+    attended: 343
+  role_at_time: "Red Hat"
+  tags:
+    - "Breakout Session"
+    - "Intermediate"
+    - "Automation & Orchestration"
+
+- title: "Ansible Automates Tokyo — Keynote"
+  description: "Keynote presentation at Ansible Automates Tokyo — speaking to a packed audience on the state of Ansible network automation and the global Ansible community."
+  image: "/assets/images/ansible-automates-tokyo-2018.png"
+  audience: "Ansible Automates Tokyo"
+  year: 2018
+  date: "April 2018"
+  role_at_time: "Red Hat"
+
+- title: "Ansible Network Automation"
+  description: "Presenting on the four types of Ansible network modules — command, config, facts, and resource — at Red Hat Tech Exchange in Seoul, South Korea."
+  image: "/assets/images/tech-exchange-seoul.png"
+  audience: "Red Hat Tech Exchange Seoul"
+  year: 2019
+  role_at_time: "Red Hat"
+
+- title: "Demo Jam: Ansible Arcade"
+  description: "Live demo of Ansible Arcade on the Demo Jam stage — showing how gamification can teach automation concepts in an engaging way."
+  image: "/assets/images/demo-jam-2019.png"
+  audience: "AnsibleFest"
+  year: 2019
+  date: "October 2019"
+  role_at_time: "Red Hat"
 
 - title: "All Things Open"
   description: "Open Source Automation at Scale"
