@@ -1,0 +1,22 @@
+- title: "Built to Automate"
+  repo: "ansible-f1"
+  description: "A retro-arcade racing game built with Three.js, themed around Ansible and IT automation. Dodge outages, collect playbooks and collections, answer Ansible skill-check quizzes, and race your way up the leaderboard. Features 12 playable drivers, secret unlockable vehicles (hippo, T-Rex, fighter jet, DeLorean, and more), a hidden Death Star Trench level, and a global leaderboard."
+  tags: ["Three.js", "Ansible", "Arcade", "Education"]
+  github: "https://github.com/ansible-tmm/ansible-f1"
+  play: "https://ansible-tmm.github.io/ansible-f1/"
+  emoji: "🏎️"
+  stats:
+    commits: "331"
+    drivers: "12"
+    secret_modes: "10"
+
+- title: "Ansible Quest"
+  repo: "ansible-quest"
+  description: "A medieval-themed 3D interactive learning game for Ansible Development Tools. Explore a kingdom divided into three districts — Village (Create), Township (Test), and Fortress (Deploy) — take quizzes on 9 tools, fight ogres, chop trees, and master the full Ansible dev workflow from creation to deployment."
+  tags: ["Three.js", "Ansible", "RPG", "Education"]
+  github: "https://github.com/ansible-tmm/ansible-quest"
+  play: "https://ansible-tmm.github.io/ansible-quest/"
+  emoji: "⚔️"
+  stats:
+    tools_covered: "9"
+    districts: "3"
