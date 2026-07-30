@@ -696,7 +696,9 @@ p {
 .talk-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: var(--space-xl);
+  background: var(--color-surface);
 }
 
 .talk-card-body {

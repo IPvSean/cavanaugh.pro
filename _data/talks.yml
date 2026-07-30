@@ -57,6 +57,7 @@
 
 - title: "Routing on the Host with Docker and Ansible"
   description: "Community meetup talk on using Ansible to manage routable Docker containers — presented at the Ansible RDU meetup while at Cumulus Networks."
+  image: "/assets/images/docker-ansible-meetup.png"
   audience: "Ansible RDU Meetup"
   year: 2016
   date: "March 29, 2016"
