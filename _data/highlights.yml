@@ -1,0 +1,23 @@
+- number: "16,400+"
+  label: "YouTube Subscribers"
+  icon: "youtube"
+
+- number: "25,000+"
+  label: "LinkedIn Followers"
+  icon: "linkedin"
+
+- number: "9,000+"
+  label: "TikTok Followers"
+  icon: "tiktok"
+
+- number: "50+"
+  label: "Conference Talks"
+  icon: "mic"
+
+- number: "2,000+"
+  label: "Largest Live Audience"
+  icon: "users"
+
+- number: "300+"
+  label: "Students Trained"
+  icon: "graduation"

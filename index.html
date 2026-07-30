@@ -1,0 +1,236 @@
+---
+layout: default
+title: Home
+---
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <span class="hero-label">AI &bull; Automation &bull; Cloud</span>
+    <h1>Sean Cavanaugh</h1>
+    <p class="hero-subtitle">Building enterprise AI demos that developers actually use.</p>
+    <div class="hero-cta">
+      <a href="/talks/" class="btn btn-primary">Watch Talks</a>
+      <a href="/projects/" class="btn btn-outline">Explore Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED WORK ===== -->
+<section class="section" id="featured">
+  <div class="section-inner fade-in">
+    <div class="section-header">
+      <span class="section-label">Featured</span>
+      <h2>What I Build</h2>
+      <p>Enterprise automation, AI integrations, and developer education — from conference stages to open source.</p>
+    </div>
+    <div class="featured-grid">
+      <a href="/projects/#enterprise-ai" class="featured-card">
+        <div class="featured-card-bg">
+          <span class="featured-card-icon">&#x1F916;</span>
+        </div>
+        <div class="featured-card-content">
+          <span class="featured-card-label">AI</span>
+          <h3>Enterprise AI Operations</h3>
+        </div>
+      </a>
+      <a href="/projects/#automation" class="featured-card">
+        <div class="featured-card-bg">
+          <span class="featured-card-icon">&#x2699;&#xFE0F;</span>
+        </div>
+        <div class="featured-card-content">
+          <span class="featured-card-label">Automation</span>
+          <h3>Automation Orchestrator</h3>
+        </div>
+      </a>
+      <a href="/projects/#ansible" class="featured-card">
+        <div class="featured-card-bg">
+          <span class="featured-card-icon">&#x1F4E1;</span>
+        </div>
+        <div class="featured-card-content">
+          <span class="featured-card-label">Ansible</span>
+          <h3>Infrastructure Automation</h3>
+        </div>
+      </a>
+      <a href="/projects/#networking" class="featured-card">
+        <div class="featured-card-bg">
+          <span class="featured-card-icon">&#x1F310;</span>
+        </div>
+        <div class="featured-card-content">
+          <span class="featured-card-label">Networking</span>
+          <h3>Network Automation</h3>
+        </div>
+      </a>
+      <a href="/talks/" class="featured-card">
+        <div class="featured-card-bg">
+          <span class="featured-card-icon">&#x1F3A4;</span>
+        </div>
+        <div class="featured-card-content">
+          <span class="featured-card-label">Speaking</span>
+          <h3>Conference Talks</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HIGHLIGHTS ===== -->
+<section class="section section-alt">
+  <div class="section-inner fade-in">
+    <div class="highlights-grid">
+      {% for item in site.data.highlights %}
+      <div class="highlight-item">
+        <div class="highlight-number">{{ item.number }}</div>
+        <div class="highlight-label">{{ item.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== TALKS ===== -->
+<section class="section">
+  <div class="section-inner fade-in">
+    <div class="section-header">
+      <span class="section-label">Talks</span>
+      <h2>On Stage</h2>
+      <p>Keynotes, breakout sessions, and workshops at the world's largest infrastructure conferences.</p>
+    </div>
+    <div class="talks-grid">
+      {% for talk in site.data.talks limit:3 %}
+      <a href="{{ talk.url }}" class="talk-card">
+        <div class="talk-card-image">
+          <div class="placeholder-visual">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="talk-card-body">
+          <h3>{{ talk.title }}</h3>
+          <p>{{ talk.description }}</p>
+          <div class="talk-meta">
+            <span>{{ talk.audience }}</span>
+            <span>{{ talk.year }}</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <a href="/talks/" class="view-all">
+      View all talks
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===== INTERACTIVE DEMOS ===== -->
+<section class="section section-alt">
+  <div class="section-inner fade-in">
+    <div class="section-header">
+      <span class="section-label">Interactive</span>
+      <h2>Demo Gallery</h2>
+      <p>Explore live demonstrations of enterprise automation and AI concepts.</p>
+    </div>
+    <div class="demos-grid">
+      <div class="demo-card">
+        <div class="demo-card-icon">&#x1F916;</div>
+        <h3>AI Agents</h3>
+        <p class="demo-card-desc" style="font-size: 0.85rem; color: var(--color-text-muted);">See how LLMs orchestrate enterprise tasks</p>
+        <span class="btn btn-outline">Coming Soon</span>
+      </div>
+      <div class="demo-card">
+        <div class="demo-card-icon">&#x2699;&#xFE0F;</div>
+        <h3>Enterprise Patching</h3>
+        <p class="demo-card-desc" style="font-size: 0.85rem; color: var(--color-text-muted);">Automated OS patching at scale</p>
+        <span class="btn btn-outline">Coming Soon</span>
+      </div>
+      <div class="demo-card">
+        <div class="demo-card-icon">&#x1F310;</div>
+        <h3>Event-Driven Ansible</h3>
+        <p class="demo-card-desc" style="font-size: 0.85rem; color: var(--color-text-muted);">React to infrastructure events in real time</p>
+        <span class="btn btn-outline">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="section">
+  <div class="section-inner fade-in">
+    <div class="section-header">
+      <span class="section-label">Journey</span>
+      <h2>The Path</h2>
+    </div>
+    <div class="timeline">
+      {% for item in site.data.timeline %}
+      <div class="timeline-item">
+        <span class="timeline-era">{{ item.era }}</span>
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">{{ item.title }}</div>
+        <div class="timeline-desc">{{ item.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPEAKING AT ===== -->
+<section class="section section-alt">
+  <div class="section-inner fade-in">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-label">Speaking At</span>
+      <h2>Trusted By</h2>
+    </div>
+    <div class="speaking-logos">
+      {% for venue in site.data.speaking %}
+      <span class="speaking-logo">{{ venue.name }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== LATEST BLOG ===== -->
+<section class="section">
+  <div class="section-inner fade-in">
+    <div class="section-header">
+      <span class="section-label">Blog</span>
+      <h2>Latest Writing</h2>
+      <p>Demos, tutorials, and thoughts on enterprise automation and AI.</p>
+    </div>
+    <div class="blog-grid">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url }}" class="blog-card">
+        <div class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <span class="read-more">Read more &rarr;</span>
+      </a>
+      {% endfor %}
+
+      {% if site.posts.size == 0 %}
+      <div class="blog-card">
+        <div class="blog-card-date">Coming soon</div>
+        <h3>First post on the way</h3>
+        <p>Blog posts will appear here. Stay tuned.</p>
+      </div>
+      {% endif %}
+    </div>
+    <a href="/blog/" class="view-all">
+      View all posts
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section section-alt">
+  <div class="section-inner fade-in" style="text-align: center; max-width: 600px;">
+    <h2>Let's Work Together</h2>
+    <p style="margin: var(--space-lg) 0 var(--space-2xl);">Speaking engagements, consulting, podcast appearances, or just want to connect.</p>
+    <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+  </div>
+</section>

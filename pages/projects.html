@@ -1,0 +1,37 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<section class="page-content">
+  <div class="section-inner">
+    <div class="section-header" style="padding-top: calc(var(--space-5xl) + 40px);">
+      <span class="section-label">Projects</span>
+      <h1>What I've Built</h1>
+      <p>Enterprise automation demos, open source tools, and educational content. Each project has a story, architecture, and working code.</p>
+    </div>
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <div class="project-card" id="{{ project.title | slugify }}">
+        <div class="project-card-image">
+          <div class="placeholder-visual">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="project-tags">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

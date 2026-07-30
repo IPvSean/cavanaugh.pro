@@ -1,0 +1,49 @@
+---
+layout: default
+title: Talks
+permalink: /talks/
+---
+
+<section class="page-content">
+  <div class="section-inner">
+    <div class="section-header" style="padding-top: calc(var(--space-5xl) + 40px);">
+      <span class="section-label">Speaking</span>
+      <h1>Conference Talks</h1>
+      <p>Keynotes, breakout sessions, and workshops at the world's largest infrastructure and automation conferences.</p>
+    </div>
+
+    <div class="talks-grid">
+      {% for talk in site.data.talks %}
+      <a href="{{ talk.url }}" class="talk-card">
+        <div class="talk-card-image">
+          <div class="placeholder-visual">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="talk-card-body">
+          <h3>{{ talk.title }}</h3>
+          <p>{{ talk.description }}</p>
+          <div class="talk-meta">
+            <span>{{ talk.audience }}</span>
+            <span>{{ talk.year }}</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div style="margin-top: var(--space-4xl);">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-label">Venues</span>
+        <h2>Where I've Spoken</h2>
+      </div>
+      <div class="speaking-logos">
+        {% for venue in site.data.speaking %}
+        <span class="speaking-logo">{{ venue.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+- title: "Enterprise AI Operations"
+  description: "End-to-end AI-powered operations demos showcasing how large language models integrate with enterprise automation platforms."
+  image: "/assets/images/placeholder-project.svg"
+  tags: ["AI", "LLM", "Enterprise"]
+  github: "#"
+  youtube: "#"
+  url: "#"
+
+- title: "Automation Orchestrator Demo"
+  description: "A comprehensive orchestration platform demo bringing together Ansible, Event-Driven Ansible, and cloud-native tooling."
+  image: "/assets/images/placeholder-project.svg"
+  tags: ["Ansible", "Orchestration", "Demo"]
+  github: "#"
+  youtube: "#"
+  url: "#"
+
+- title: "Windows Enterprise Patching"
+  description: "Automated patching workflows for Windows environments at scale, with compliance reporting and rollback capabilities."
+  image: "/assets/images/placeholder-project.svg"
+  tags: ["Windows", "Patching", "Enterprise"]
+  github: "#"
+  youtube: "#"
+  url: "#"
+
+- title: "Ansible Tips Series"
+  description: "A growing collection of practical Ansible tips, tricks, and best practices for real-world automation."
+  image: "/assets/images/placeholder-project.svg"
+  tags: ["Ansible", "Education", "Tips"]
+  github: "#"
+  youtube: "#"
+  url: "#"
+
+- title: "Cisco Live Labs"
+  description: "Hands-on lab environments built for Cisco Live conferences, teaching network automation with Ansible."
+  image: "/assets/images/placeholder-project.svg"
+  tags: ["Cisco", "Networking", "Labs"]
+  github: "#"
+  youtube: "#"
+  url: "#"
+
+- title: "MCP Demonstrations"
+  description: "Model Context Protocol demos showing how AI agents interact with enterprise tools and infrastructure."
+  image: "/assets/images/placeholder-project.svg"
+  tags: ["MCP", "AI", "Agents"]
+  github: "#"
+  youtube: "#"
+  url: "#"

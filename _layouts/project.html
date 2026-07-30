@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="project-single">
+  <div class="project-hero">
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="project-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.tags.size > 0 %}
+    <div class="project-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="project-content">
+    {{ content }}
+  </div>
+  <div class="project-footer">
+    {% if page.github %}
+    <a href="{{ page.github }}" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+    {% endif %}
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="btn btn-outline" target="_blank" rel="noopener">YouTube</a>
+    {% endif %}
+    <a href="/projects/" class="back-link">&larr; Back to Projects</a>
+  </div>
+</article>

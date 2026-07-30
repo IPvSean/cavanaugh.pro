@@ -1,0 +1,34 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<section class="page-content">
+  <div class="section-inner">
+    <div class="section-header" style="padding-top: calc(var(--space-5xl) + 40px);">
+      <span class="section-label">Blog</span>
+      <h1>Writing</h1>
+      <p>Demos, tutorials, architecture deep-dives, and thoughts on enterprise automation and AI.</p>
+    </div>
+
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      <a href="{{ post.url }}" class="blog-card">
+        <div class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <span class="read-more">Read more &rarr;</span>
+      </a>
+      {% endfor %}
+
+      {% if site.posts.size == 0 %}
+      <div class="blog-card">
+        <div class="blog-card-date">Coming soon</div>
+        <h3>Blog posts on the way</h3>
+        <p>I'm migrating from WordPress to this new site. New posts are coming soon — covering AI, automation, demos, and more.</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

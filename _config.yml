@@ -1,0 +1,51 @@
+title: Sean Cavanaugh
+description: "AI • Automation • Cloud — Building enterprise AI demos that developers actually use."
+url: "https://cavanaugh.pro"
+baseurl: ""
+
+permalink: /blog/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "page"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+social:
+  youtube: "https://www.youtube.com/@yourchannelhere"
+  linkedin: "https://www.linkedin.com/in/yourprofile"
+  github: "https://github.com/IPvSean"
+  tiktok: "https://www.tiktok.com/@yourprofile"

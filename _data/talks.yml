@@ -1,0 +1,34 @@
+- title: "Red Hat Summit"
+  description: "Product Spotlight — Enterprise AI and Automation"
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "2,000+ attendees"
+  year: 2024
+  url: "#"
+
+- title: "AnsibleFest Keynote"
+  description: "The Future of Network Automation"
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "1,500+ attendees"
+  year: 2023
+  url: "#"
+
+- title: "Cisco Live"
+  description: "Hands-on Network Automation with Ansible"
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "500+ attendees"
+  year: 2023
+  url: "#"
+
+- title: "All Things Open"
+  description: "Open Source Automation at Scale"
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "300+ attendees"
+  year: 2023
+  url: "#"
+
+- title: "AutoCon"
+  description: "Event-Driven Automation for Network Engineers"
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "200+ attendees"
+  year: 2024
+  url: "#"

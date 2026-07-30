@@ -1,0 +1,24 @@
+- era: "Cisco"
+  title: "Network Engineering"
+  description: "Started in networking, building and managing enterprise infrastructure."
+  period: "Early Career"
+
+- era: "Cumulus"
+  title: "Open Networking"
+  description: "Moved into open networking and Linux-based network operating systems."
+  period: "Growth"
+
+- era: "Red Hat"
+  title: "Automation & Ansible"
+  description: "Joined Red Hat to focus on automation, becoming a principal architect for Ansible."
+  period: "Expertise"
+
+- era: "AI"
+  title: "Enterprise AI"
+  description: "Pioneering the intersection of AI, automation, and enterprise infrastructure."
+  period: "Innovation"
+
+- era: "Today"
+  title: "Building the Future"
+  description: "Creating demos, content, and tools that help developers adopt AI-powered automation."
+  period: "Now"
