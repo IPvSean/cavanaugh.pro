@@ -55,6 +55,23 @@
   year: 2024
   url: "#"
 
+- title: "Routing on the Host"
+  description: "Talk on host-based routing and network automation at All Things Open 2016 — one of the largest open source conferences in the US — while working at Cumulus Networks."
+  audience: "All Things Open"
+  year: 2016
+  date: "October 26, 2016"
+  url: "https://allthingsopen.org/"
+  slides: "https://docs.google.com/presentation/d/1NKQQ2sTODTFDfTXqjfgjPQ2BIUBPF6BXlupLNeHh3pc/edit?usp=sharing"
+  role_at_time: "Cumulus Networks"
+
+- title: "Network Automation with Ansible"
+  description: "Ansible Automates Atlanta — covering automation for network infrastructure, from configuration management to compliance and operational workflows."
+  audience: "Ansible Automates Atlanta"
+  year: 2017
+  date: "November 1, 2017"
+  url: "https://www.ansible.com/videos-ansible-automates-network-automation-with-ansible"
+  role_at_time: "Red Hat"
+
 - title: "Routing on the Host with Docker and Ansible"
   description: "Community meetup talk on using Ansible to manage routable Docker containers — presented at the Ansible RDU meetup while at Cumulus Networks."
   image: "/assets/images/docker-ansible-meetup.png"
