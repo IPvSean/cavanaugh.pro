@@ -45,7 +45,11 @@ exclude:
   - README.md
 
 social:
-  youtube: "https://www.youtube.com/@yourchannelhere"
-  linkedin: "https://www.linkedin.com/in/yourprofile"
+  youtube: "https://www.youtube.com/@IPvSean"
+  linkedin: "https://www.linkedin.com/in/ipvsean"
   github: "https://github.com/IPvSean"
-  tiktok: "https://www.tiktok.com/@yourprofile"
+  tiktok: "https://www.tiktok.com/@ipvsean"
+  instagram: "https://www.instagram.com/ipvsean"
+  x: "https://x.com/ipvsean"
+  bluesky: "https://bsky.app/profile/ipvsean.bsky.social"
+  linktree: "https://linktr.ee/ipvsean"
