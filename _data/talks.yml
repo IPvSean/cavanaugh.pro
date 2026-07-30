@@ -1,15 +1,26 @@
+- title: "AnsibleFest 2025 Keynote"
+  description: "Two live demos on the AnsibleFest main stage — the Ansible Automation Dashboard and Ansible Lightspeed Assistant + AIOps with Dafne Mendoza."
+  image: "/assets/images/placeholder-talk.svg"
+  audience: "Keynote"
+  year: 2025
+  url: "https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=2418"
+  featured: true
+  segments:
+    - title: "Ansible Automation Dashboard"
+      start: "40:18"
+      start_seconds: 2418
+      end: "44:15"
+    - title: "Ansible Lightspeed Assistant + AIOps"
+      start: "1:03:55"
+      start_seconds: 3835
+      end: "1:10:09"
+      co_presenter: "Dafne Mendoza"
+
 - title: "Red Hat Summit"
   description: "Product Spotlight — Enterprise AI and Automation"
   image: "/assets/images/placeholder-talk.svg"
   audience: "2,000+ attendees"
   year: 2024
-  url: "#"
-
-- title: "AnsibleFest Keynote"
-  description: "The Future of Network Automation"
-  image: "/assets/images/placeholder-talk.svg"
-  audience: "1,500+ attendees"
-  year: 2023
   url: "#"
 
 - title: "Cisco Live"

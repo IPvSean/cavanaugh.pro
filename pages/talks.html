@@ -12,8 +12,45 @@ permalink: /talks/
       <p>Keynotes, breakout sessions, and workshops at the world's largest infrastructure and automation conferences.</p>
     </div>
 
+    <!-- Featured Keynote -->
+    {% assign featured_talk = site.data.talks | where: "featured", true | first %}
+    {% if featured_talk %}
+    <div class="keynote-highlight" style="margin-bottom: var(--space-4xl);">
+      <div class="keynote-video">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/OiQDFjmWGUc?start=2418" title="{{ featured_talk.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="keynote-info">
+        <span class="section-label">Featured Keynote</span>
+        <h2>{{ featured_talk.title }}</h2>
+        <p>{{ featured_talk.description }}</p>
+        <div class="keynote-segments">
+          {% for seg in featured_talk.segments %}
+          <a href="https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t={{ seg.start_seconds }}" target="_blank" rel="noopener" class="keynote-segment">
+            <span class="segment-time">{{ seg.start }}</span>
+            <div>
+              <strong>{{ seg.title }}</strong>
+              {% if seg.co_presenter %}
+              <span class="segment-desc">With {{ seg.co_presenter }}</span>
+              {% endif %}
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        <a href="{{ featured_talk.url }}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: var(--space-lg);">Watch Full Keynote</a>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- All Talks -->
+    <div class="section-header">
+      <span class="section-label">All Talks</span>
+      <h2>More Appearances</h2>
+    </div>
     <div class="talks-grid">
       {% for talk in site.data.talks %}
+      {% unless talk.featured %}
       <a href="{{ talk.url }}" class="talk-card">
         <div class="talk-card-image">
           <div class="placeholder-visual">
@@ -31,6 +68,7 @@ permalink: /talks/
           </div>
         </div>
       </a>
+      {% endunless %}
       {% endfor %}
     </div>
 
