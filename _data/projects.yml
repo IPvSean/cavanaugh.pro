@@ -9,6 +9,16 @@
     forks: "256"
     commits: "570+"
 
+- title: "Ansible Workshops"
+  description: "The official training course for Ansible Automation Platform — hands-on workshop content used to train thousands of engineers worldwide at conferences, customer engagements, and instructor-led sessions. 1,862 stars and the backbone of Ansible's global enablement program."
+  tags: ["Ansible", "Training", "Workshops", "Open Source"]
+  github: "https://github.com/ansible/workshops"
+  url: "https://github.com/ansible/workshops"
+  featured: true
+  stats:
+    stars: "1,862"
+    forks: "1,100+"
+
 - title: "Enterprise AI Operations"
   description: "End-to-end AI-powered operations demos showcasing how large language models integrate with enterprise automation platforms."
   tags: ["AI", "LLM", "Enterprise"]
