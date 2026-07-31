@@ -660,14 +660,14 @@ p {
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--space-lg);
   position: relative;
 }
 
 .highlight-item {
   text-align: center;
-  padding: var(--space-2xl) var(--space-md);
+  padding: var(--space-2xl) var(--space-lg);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   background: var(--color-bg-card);
@@ -717,7 +717,7 @@ a.highlight-item {
 }
 
 .highlight-number {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   font-weight: 800;
   background: linear-gradient(135deg, var(--color-white) 30%, var(--highlight-color, var(--color-accent)));
   -webkit-background-clip: text;
@@ -1859,6 +1859,10 @@ a.highlight-item {
 
   .featured-card:nth-child(1) {
     grid-column: span 2;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .demos-grid {
