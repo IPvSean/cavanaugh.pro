@@ -128,6 +128,11 @@
   category: "booth"
   year: 2019
 
+- src: "/assets/images/ansiblefest-2025-armon-dadgar.png"
+  alt: "With HashiCorp co-founder Armon Dadgar — AnsibleFest 2025"
+  category: "people"
+  year: 2025
+
 - src: "/assets/images/ansiblefest-2025-backstage.png"
   alt: "Backstage at AnsibleFest 2025 with Craig Brandt and Emily Bock"
   category: "behind-the-scenes"
