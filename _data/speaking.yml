@@ -8,6 +8,8 @@
   logo: "allthingsopen"
 - name: "Ansible Automates"
   logo: "ansible"
+- name: "AWS re:Invent"
+  logo: "aws"
 - name: "Red Hat One"
   logo: "redhat"
 - name: "Red Hat Tech Exchange"
