@@ -87,12 +87,19 @@
   role_at_time: "Red Hat"
 
 - title: "Demo Jam: Ansible Arcade"
-  description: "Live demo of Ansible Arcade on the Demo Jam stage — showing how gamification can teach automation concepts in an engaging way."
+  description: "Live demo of Ansible Arcade on the Demo Jam stage and manning the Ansible Automation Platform booth at AnsibleFest 2019 in Atlanta."
   image: "/assets/images/demo-jam-2019.png"
-  audience: "AnsibleFest"
+  audience: "AnsibleFest Atlanta"
   year: 2019
-  date: "October 2019"
+  date: "September 24–25, 2019"
   role_at_time: "Red Hat"
+  gallery:
+    - src: "/assets/images/demo-jam-2019.png"
+      alt: "Sean Cavanaugh presenting Ansible Arcade at Demo Jam"
+    - src: "/assets/images/ansiblefest-2019-booth-1.png"
+      alt: "Demoing at the Ansible Automation Platform booth — AnsibleFest 2019"
+    - src: "/assets/images/ansiblefest-2019-booth-2.png"
+      alt: "Crowd gathering at the Ansible booth — AnsibleFest 2019 Atlanta"
 
 - title: "All Things Open"
   description: "Open Source Automation at Scale"
