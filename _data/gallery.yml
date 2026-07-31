@@ -178,6 +178,11 @@
   category: "people"
   year: 2026
 
+- src: "/assets/images/nara-japan-deer.png"
+  alt: "Nara deer park, Japan"
+  category: "people"
+  year: 2026
+
 - src: "/assets/images/four-on-the-4th-ivan.png"
   alt: "Four on the 4th with my son Ivan — Carrboro, NC"
   category: "people"
