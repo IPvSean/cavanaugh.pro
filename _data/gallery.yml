@@ -178,6 +178,11 @@
   category: "people"
   year: 2026
 
+- src: "/assets/images/camp-cheerio-family.png"
+  alt: "Family sunset at Camp Cheerio, NC mountains"
+  category: "people"
+  year: 2025
+
 - src: "/assets/images/london-etx.png"
   alt: "London — teaching AIOps at Emerging Tech Experience (ETX)"
   category: "people"
