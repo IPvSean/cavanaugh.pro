@@ -114,6 +114,9 @@ p {
   right: 0;
   z-index: 1000;
   padding: var(--space-lg) var(--space-xl);
+  background-color: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: background-color var(--transition-base), backdrop-filter var(--transition-base);
 }
 
