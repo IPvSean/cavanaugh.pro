@@ -173,6 +173,11 @@
   category: "people"
   year: 2026
 
+- src: "/assets/images/iceland-gljufrabui-family.png"
+  alt: "Family at Gljúfrabúi waterfall, Iceland"
+  category: "people"
+  year: 2026
+
 - src: "/assets/images/sean-kid.png"
   alt: "Future keynote speaker"
   category: "behind-the-scenes"
