@@ -1,220 +1,219 @@
 - src: "/assets/images/redhat-one-keynote-demo.png"
-  alt: "Live demo on stage — Red Hat One, Indonesia 2024"
+  alt: "Live demo on stage — Red Hat One, Indonesia, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/ansiblefest-2025-closeup-screen.png"
-  alt: "On the big screen — AnsibleFest 2025 keynote"
+  alt: "On the big screen during keynote — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/cisco-live-rh-booth-networking.png"
-  alt: "Why Ansible Became Popular in Networking — AnsibleFest 2025"
+  alt: "Presenting Why Ansible Became Popular in Networking — AnsibleFest, Atlanta, 2025"
   category: "booth"
   year: 2025
 
 - src: "/assets/images/redhat-one-speaker-badge.png"
-  alt: "Speaker badge — Red Hat One, Indonesia 2024"
+  alt: "Speaker badge — Red Hat One, Indonesia, 2024"
   category: "people"
   year: 2024
 
 - src: "/assets/images/ansiblefest-2025-stage.png"
-  alt: "AnsibleFest 2025 keynote — on the big screens"
+  alt: "Keynote on the big screens — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/cisco-live-badge-ribbons.png"
-  alt: "CCIE Ten Years, Speaker, Presenter, DevNet — Cisco Live 2024, Las Vegas"
+  alt: "CCIE Ten Years, Speaker, Presenter, DevNet badges — Cisco Live, Las Vegas, 2024"
   category: "people"
   year: 2024
 
 - src: "/assets/images/summit-2026-stage.png"
-  alt: "Red Hat Summit 2026 — demoing the Automation Orchestrator"
+  alt: "Demoing the Automation Orchestrator — Red Hat Summit, Las Vegas, 2026"
   category: "stage"
   year: 2026
 
 - src: "/assets/images/rh-booth-silent-disco.png"
-  alt: "Presenting at the Red Hat booth — VMware Explore 2024 Las Vegas"
+  alt: "Silent disco demo at the Red Hat booth — VMware Explore, Las Vegas, 2024"
   category: "booth"
   year: 2024
 
 - src: "/assets/images/cisco-live-2023-speakers.png"
-  alt: "With Adrian Iliesiu before our Cisco Live 2023 talk"
+  alt: "With co-presenter Adrian Iliesiu — Cisco Live, Las Vegas, 2023"
   category: "people"
   year: 2023
 
 - src: "/assets/images/ansiblefest-2025-audience-phone.png"
-  alt: "Audience member filming — AWS re:Invent 2025, Las Vegas"
+  alt: "Audience member filming from the crowd — AWS re:Invent, Las Vegas, 2025"
   category: "behind-the-scenes"
   year: 2025
 
 - src: "/assets/images/redhat-one-demo-stage.png"
-  alt: "Teaching a workshop — Red Hat One, Indonesia 2024"
+  alt: "Teaching a workshop — Red Hat One, Indonesia, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/cisco-live-2023-audience.png"
-  alt: "343 attendees at BRKATO-2106 — Cisco Live 2023"
+  alt: "343 attendees at BRKATO-2106 — Cisco Live, Las Vegas, 2023"
   category: "stage"
   year: 2023
 
 - src: "/assets/images/datadog-booth-demo.png"
-  alt: "Demoing at the Red Hat booth — Cisco Live"
+  alt: "Demoing at the Red Hat booth — Cisco Live, Las Vegas, 2024"
   category: "booth"
   year: 2024
 
 - src: "/assets/images/ansiblefest-2025-big-screens.png"
-  alt: "Wide shot — AnsibleFest 2025 keynote with Dafne Mendoza"
+  alt: "Keynote with Dafne Mendoza — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/workshop-tropical-2024.png"
-  alt: "Ansible workshop — Cisco Live 2024 Las Vegas"
+  alt: "Ansible workshop — Cisco Live, Las Vegas, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/cisco-live-2023-booth.png"
-  alt: "Packed Red Hat booth at Cisco Live 2023"
+  alt: "Packed Red Hat booth — Cisco Live, Las Vegas, 2023"
   category: "booth"
   year: 2023
 
 - src: "/assets/images/ansiblefest-2025-on-stage-trio.png"
-  alt: "On stage at AnsibleFest 2025"
+  alt: "On stage with the team — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansible-automates-tokyo-2018.png"
-  alt: "Keynote at Ansible Automates Tokyo 2018"
+  alt: "Keynote presentation — Ansible Automates, Tokyo, 2018"
   category: "stage"
   year: 2018
 
 - src: "/assets/images/redhat-one-stage.png"
-  alt: "On stage — Red Hat One, Indonesia 2024"
+  alt: "On stage — Red Hat One, Indonesia, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/cisco-live-theater-crowd.png"
-  alt: "Presenting at the Cisco Live theater"
+  alt: "Presenting at the theater — Cisco Live, Las Vegas, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/ansiblefest-2025-demo-error.png"
-  alt: "Live policy violation demo — AnsibleFest 2025"
+  alt: "Live policy violation demo — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansible-automates-tokyo-2018-selfie.png"
-  alt: "Behind the scenes — about to present in Tokyo"
+  alt: "Behind the scenes before keynote — Ansible Automates, Tokyo, 2018"
   category: "behind-the-scenes"
   year: 2018
 
 - src: "/assets/images/demo-jam-2019.png"
-  alt: "Presenting at Red Hat Tech Exchange, Orlando 2019"
+  alt: "Presenting — Red Hat Tech Exchange, Orlando, 2019"
   category: "stage"
   year: 2019
 
 - src: "/assets/images/ansiblefest-2019-booth-1.png"
-  alt: "Demoing at the Ansible booth — AnsibleFest 2019"
+  alt: "Demoing at the Ansible booth — AnsibleFest, Atlanta, 2019"
   category: "booth"
   year: 2019
 
 - src: "/assets/images/cisco-live-theater-wide.png"
-  alt: "Presenting to a crowd — AnsibleFest 2025"
+  alt: "Presenting to a seated crowd — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2019-booth-2.png"
-  alt: "Crowd at the Ansible booth — AnsibleFest 2019 Atlanta"
+  alt: "Crowd at the Ansible booth — AnsibleFest, Atlanta, 2019"
   category: "booth"
   year: 2019
 
 - src: "/assets/images/ansiblefest-2025-armon-dadgar.png"
-  alt: "With HashiCorp co-founder Armon Dadgar — AnsibleFest 2025"
+  alt: "With HashiCorp co-founder Armon Dadgar — AnsibleFest, Atlanta, 2025"
   category: "people"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-backstage.png"
-  alt: "Backstage at AnsibleFest 2025 with Craig Brandt and Emily Bock"
+  alt: "Backstage with Craig Brandt and Emily Bock — AnsibleFest, Atlanta, 2025"
   category: "behind-the-scenes"
   year: 2025
 
 - src: "/assets/images/tech-exchange-seoul.png"
-  alt: "Presenting at Red Hat Tech Exchange Seoul"
+  alt: "Presenting Ansible network automation — Red Hat Tech Exchange, Seoul, 2019"
   category: "stage"
   year: 2019
 
 - src: "/assets/images/ansiblefest-2025-podium.png"
-  alt: "At the AnsibleFest podium"
+  alt: "At the podium — AnsibleFest, Atlanta, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/juniper-nxtwork-2019.png"
-  alt: "At Juniper NXTWORK 2019"
+  alt: "Working the Red Hat booth — Juniper NXTWORK, 2019"
   category: "people"
   year: 2019
 
 - src: "/assets/images/netgru-devnet-2024.png"
-  alt: "Event-Driven Ansible on Cisco DevNet with NetGru"
+  alt: "Event-Driven Ansible livestream — Cisco DevNet / NetGru, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/cisco-live-2024-theater.png"
-  alt: "Presenting Event-Driven Ansible at Cisco Live 2024"
+  alt: "Presenting Event-Driven Ansible — Cisco Live, Las Vegas, 2024"
   category: "stage"
   year: 2024
 
 - src: "/assets/images/aiops-team-meeting-2025.png"
-  alt: "Leading an AIOps session with the NorthEast Ansible team"
+  alt: "Leading an AIOps session — NorthEast Ansible team meeting, 2025"
   category: "behind-the-scenes"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2019-booth-3.png"
-  alt: "Talking Ansible Automation Platform — AnsibleFest 2019, Atlanta, GA"
+  alt: "Demoing Ansible Automation Platform — AnsibleFest, Atlanta, 2019"
   category: "booth"
   year: 2019
 
 - src: "/assets/images/iceland-vestrahorn.png"
-  alt: "Vestrahorn, Iceland"
+  alt: "Selfie at Vestrahorn — Iceland, 2026"
   category: "people"
   year: 2026
 
 - src: "/assets/images/iceland-gljufrabui-family.png"
-  alt: "Family at Gljúfrabúi waterfall, Iceland"
+  alt: "Family at Gljúfrabúi waterfall — Iceland, 2026"
   category: "people"
   year: 2026
 
 - src: "/assets/images/camp-cheerio-family.png"
-  alt: "Family sunset at Camp Cheerio, NC mountains"
+  alt: "Family sunset — Camp Cheerio, NC mountains, 2025"
   category: "people"
   year: 2025
 
 - src: "/assets/images/ibm-tech-exchange-2025.png"
-  alt: "Teaching workshops at IBM Tech Exchange 2025, Orlando"
+  alt: "Teaching workshops — IBM Tech Exchange, Orlando, 2025"
   category: "people"
   year: 2025
 
 - src: "/assets/images/london-etx.png"
-  alt: "London — teaching AIOps at Emerging Tech Experience (ETX) 2026"
+  alt: "Teaching AIOps — Emerging Tech Experience, London, 2026"
   category: "people"
   year: 2026
 
 - src: "/assets/images/tokyo-teamlab-jamie.png"
-  alt: "With Jamie at teamLab Planets, Tokyo"
+  alt: "With Jamie at teamLab Planets — Tokyo, Japan, 2026"
   category: "people"
   year: 2026
 
 - src: "/assets/images/nara-japan-deer.png"
-  alt: "Nara deer park, Japan"
+  alt: "Deer park visit — Nara, Japan, 2026"
   category: "people"
   year: 2026
 
 - src: "/assets/images/four-on-the-4th-ivan.png"
-  alt: "Four on the 4th with my son Ivan — Carrboro, NC"
+  alt: "Four on the 4th race with my son Ivan — Carrboro, NC, 2026"
   category: "people"
   year: 2026
 
 - src: "/assets/images/sean-kid.png"
-  alt: "Future keynote speaker"
+  alt: "Future keynote speaker — circa 1990"
   category: "behind-the-scenes"
   year: 1990
-

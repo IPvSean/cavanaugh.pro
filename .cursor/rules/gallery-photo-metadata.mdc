@@ -1,0 +1,44 @@
+---
+description: Every gallery photo must have what, where, when metadata
+globs: _data/gallery.yml
+alwaysApply: false
+---
+
+# Gallery Photo Metadata Standard
+
+Every entry in `_data/gallery.yml` must include **what, where, when** in the `alt` text so visitors know the context when hovering or viewing in the lightbox.
+
+## Required Format
+
+Each `alt` field must contain:
+1. **What** — the activity or event (e.g., "Presenting", "Keynote", "Family photo")
+2. **Where** — the location or event name (e.g., "AnsibleFest 2025", "Nara, Japan", "Carrboro, NC")
+3. **When** — the year (included in `alt` text AND as the `year` field)
+
+## Examples
+
+```yaml
+# ✅ GOOD — has what, where, when
+- src: "/assets/images/example.png"
+  alt: "Presenting at the Red Hat booth — Cisco Live 2024, Las Vegas"
+  category: "booth"
+  year: 2024
+
+# ✅ GOOD — personal photo with context
+- src: "/assets/images/example2.png"
+  alt: "Four on the 4th race with Ivan — Carrboro, NC, 2026"
+  category: "people"
+  year: 2026
+
+# ❌ BAD — missing location and year in alt
+- src: "/assets/images/example3.png"
+  alt: "Presenting at the Red Hat booth"
+  category: "booth"
+  year: 2024
+
+# ❌ BAD — missing what happened
+- src: "/assets/images/example4.png"
+  alt: "Cisco Live 2024"
+  category: "stage"
+  year: 2024
+```
