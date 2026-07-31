@@ -18,6 +18,7 @@
   github: "https://github.com/ansible-tmm/ansible-quest"
   play: "https://ansible-tmm.github.io/ansible-quest/"
   emoji: "⚔️"
+  image: "/assets/images/ansible-quest-gameplay.png"
   stats:
     tools_covered: "9"
     districts: "3"
