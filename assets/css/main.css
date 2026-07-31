@@ -1971,10 +1971,91 @@ a.highlight-item {
   color: var(--color-white);
 }
 
+/* ---- Page Hero Banner ---- */
+
+.page-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.page-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.3) 0%,
+    rgba(10, 10, 10, 0.5) 40%,
+    rgba(10, 10, 10, 0.85) 75%,
+    var(--color-bg) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--space-xl) var(--space-3xl);
+}
+
+.page-hero-content .section-label {
+  margin-bottom: var(--space-sm);
+}
+
+.page-hero-content h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    height: 280px;
+  }
+}
+
 /* ---- Page Content ---- */
 
 .page-content {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.page-content-no-hero {
   padding-top: calc(var(--space-5xl) + 80px);
+  padding-bottom: var(--space-3xl);
 }
 
 .page-header {

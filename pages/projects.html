@@ -4,13 +4,19 @@ title: Projects
 permalink: /projects/
 ---
 
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/assets/images/ansiblefest-2025-closeup-screen.png" alt="Code on the big screen at AnsibleFest 2025">
+  </div>
+  <div class="page-hero-content">
+    <span class="section-label">Projects</span>
+    <h1>What I've Built</h1>
+    <p>Enterprise automation demos, open source tools, and educational content. Each project has a story, architecture, and working code.</p>
+  </div>
+</div>
+
 <section class="page-content">
   <div class="section-inner">
-    <div class="section-header" style="padding-top: calc(var(--space-5xl) + 40px);">
-      <span class="section-label">Projects</span>
-      <h1>What I've Built</h1>
-      <p>Enterprise automation demos, open source tools, and educational content. Each project has a story, architecture, and working code.</p>
-    </div>
 
     <!-- Featured Projects -->
     {% assign featured_projects = site.data.projects | where: "featured", true %}
