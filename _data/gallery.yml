@@ -1,32 +1,107 @@
+- src: "/assets/images/redhat-one-keynote-demo.png"
+  alt: "Live demo on the Red Hat One keynote stage"
+  category: "stage"
+  year: 2025
+
+- src: "/assets/images/ansiblefest-2025-closeup-screen.png"
+  alt: "On the big screen — AnsibleFest 2025 keynote"
+  category: "stage"
+  year: 2025
+
+- src: "/assets/images/cisco-live-rh-booth-networking.png"
+  alt: "Why Ansible Became Popular in Networking — Red Hat booth at Cisco Live"
+  category: "booth"
+  year: 2024
+
+- src: "/assets/images/redhat-one-speaker-badge.png"
+  alt: "Speaker badge — Red Hat One 2025"
+  category: "people"
+  year: 2025
+
 - src: "/assets/images/ansiblefest-2025-stage.png"
   alt: "AnsibleFest 2025 keynote — on the big screens"
   category: "stage"
   year: 2025
+
+- src: "/assets/images/cisco-live-badge-ribbons.png"
+  alt: "CCIE Ten Years, Speaker, Presenter, DevNet — Cisco Live badge"
+  category: "people"
+  year: 2023
 
 - src: "/assets/images/summit-2026-stage.png"
   alt: "Red Hat Summit 2026 — demoing the Automation Orchestrator"
   category: "stage"
   year: 2026
 
+- src: "/assets/images/rh-booth-silent-disco.png"
+  alt: "Silent disco demo at the Red Hat booth"
+  category: "booth"
+  year: 2025
+
 - src: "/assets/images/cisco-live-2023-speakers.png"
   alt: "With Adrian Iliesiu before our Cisco Live 2023 talk"
   category: "people"
   year: 2023
+
+- src: "/assets/images/ansiblefest-2025-audience-phone.png"
+  alt: "Audience member filming the AnsibleFest keynote"
+  category: "behind-the-scenes"
+  year: 2025
+
+- src: "/assets/images/redhat-one-demo-stage.png"
+  alt: "Live demo at Red Hat One — professional stage shot"
+  category: "stage"
+  year: 2025
 
 - src: "/assets/images/cisco-live-2023-audience.png"
   alt: "343 attendees at BRKATO-2106 — Cisco Live 2023"
   category: "stage"
   year: 2023
 
+- src: "/assets/images/datadog-booth-demo.png"
+  alt: "Demoing at the Datadog booth"
+  category: "booth"
+  year: 2025
+
+- src: "/assets/images/ansiblefest-2025-big-screens.png"
+  alt: "Wide shot — AnsibleFest 2025 keynote with Dafne Mendoza"
+  category: "stage"
+  year: 2025
+
+- src: "/assets/images/workshop-tropical-2024.png"
+  alt: "Ansible workshop — let's stay connected in 2024"
+  category: "stage"
+  year: 2024
+
 - src: "/assets/images/cisco-live-2023-booth.png"
   alt: "Packed Red Hat booth at Cisco Live 2023"
   category: "booth"
   year: 2023
 
+- src: "/assets/images/ansiblefest-2025-on-stage-trio.png"
+  alt: "On stage at AnsibleFest 2025"
+  category: "stage"
+  year: 2025
+
 - src: "/assets/images/ansible-automates-tokyo-2018.png"
   alt: "Keynote at Ansible Automates Tokyo 2018"
   category: "stage"
   year: 2018
+
+- src: "/assets/images/redhat-one-stage.png"
+  alt: "Red Hat One — on stage"
+  category: "stage"
+  year: 2025
+
+- src: "/assets/images/cisco-live-theater-crowd.png"
+  alt: "Presenting at the Cisco Live theater"
+  category: "stage"
+  year: 2024
+
+- src: "/assets/images/ansiblefest-2025-demo-error.png"
+  alt: "Live policy violation demo — AnsibleFest 2025"
+  category: "stage"
+  year: 2025
 
 - src: "/assets/images/ansible-automates-tokyo-2018-selfie.png"
   alt: "Behind the scenes — about to present in Tokyo"
@@ -43,20 +118,30 @@
   category: "booth"
   year: 2019
 
+- src: "/assets/images/cisco-live-theater-wide.png"
+  alt: "Wide shot — Cisco Live Content Corner theater"
+  category: "stage"
+  year: 2024
+
 - src: "/assets/images/ansiblefest-2019-booth-2.png"
   alt: "Crowd at the Ansible booth — AnsibleFest 2019 Atlanta"
   category: "booth"
   year: 2019
 
-- src: "/assets/images/ansiblefest-2019-booth-3.png"
-  alt: "Talking Ansible Automation Platform — AnsibleFest 2019"
-  category: "booth"
-  year: 2019
+- src: "/assets/images/ansiblefest-2025-backstage.png"
+  alt: "Backstage at AnsibleFest 2025 with Craig Brandt and Emily Bock"
+  category: "behind-the-scenes"
+  year: 2025
 
 - src: "/assets/images/tech-exchange-seoul.png"
   alt: "Presenting at Red Hat Tech Exchange Seoul"
   category: "stage"
   year: 2019
+
+- src: "/assets/images/ansiblefest-2025-podium.png"
+  alt: "At the AnsibleFest podium"
+  category: "stage"
+  year: 2025
 
 - src: "/assets/images/juniper-nxtwork-2019.png"
   alt: "At Juniper NXTWORK 2019"
@@ -77,3 +162,13 @@
   alt: "Leading an AIOps session with the NorthEast Ansible team"
   category: "behind-the-scenes"
   year: 2025
+
+- src: "/assets/images/ansiblefest-2019-booth-3.png"
+  alt: "Talking Ansible Automation Platform — AnsibleFest 2019"
+  category: "booth"
+  year: 2019
+
+- src: "/assets/images/cisco-live-2024-booth-networking.png"
+  alt: "Red Hat booth at Cisco Live — demoing at the expo floor"
+  category: "booth"
+  year: 2024
