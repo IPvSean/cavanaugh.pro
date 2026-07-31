@@ -1,7 +1,5 @@
 - title: Home
   url: "/"
-- title: Work
-  url: "/#featured"
 - title: Projects
   url: "/projects/"
 - title: Talks
