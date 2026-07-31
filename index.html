@@ -235,33 +235,23 @@ title: Home
   </div>
 </section>
 
-<!-- ===== INTERACTIVE DEMOS ===== -->
+<!-- ===== PHOTO GALLERY ===== -->
 <section class="section section-alt">
   <div class="section-inner fade-in">
-    <div class="section-header">
-      <span class="section-label">Interactive</span>
-      <h2>Demo Gallery</h2>
-      <p>Explore live demonstrations of enterprise automation and AI concepts.</p>
+    <div class="section-header" style="text-align: center;">
+      <span class="section-label">On the Road</span>
+      <h2>Moments</h2>
+      <p>From keynote stages to booth conversations — Tokyo, Atlanta, Las Vegas, Seoul, and everywhere in between.</p>
     </div>
-    <div class="demos-grid">
-      <div class="demo-card">
-        <div class="demo-card-icon">&#x1F916;</div>
-        <h3>AI Agents</h3>
-        <p class="demo-card-desc" style="font-size: 0.85rem; color: var(--color-text-muted);">See how LLMs orchestrate enterprise tasks</p>
-        <span class="btn btn-outline">Coming Soon</span>
+    <div class="photo-gallery">
+      {% for photo in site.data.gallery %}
+      <div class="photo-gallery-item">
+        <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy">
+        <div class="photo-gallery-overlay">
+          <span>{{ photo.alt }}</span>
+        </div>
       </div>
-      <div class="demo-card">
-        <div class="demo-card-icon">&#x2699;&#xFE0F;</div>
-        <h3>Enterprise Patching</h3>
-        <p class="demo-card-desc" style="font-size: 0.85rem; color: var(--color-text-muted);">Automated OS patching at scale</p>
-        <span class="btn btn-outline">Coming Soon</span>
-      </div>
-      <div class="demo-card">
-        <div class="demo-card-icon">&#x1F310;</div>
-        <h3>Event-Driven Ansible</h3>
-        <p class="demo-card-desc" style="font-size: 0.85rem; color: var(--color-text-muted);">React to infrastructure events in real time</p>
-        <span class="btn btn-outline">Coming Soon</span>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
