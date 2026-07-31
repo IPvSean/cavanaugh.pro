@@ -1235,6 +1235,25 @@ a.highlight-item {
   opacity: 1;
 }
 
+.game-card-screenshot {
+  margin: calc(var(--space-2xl) * -1) calc(var(--space-2xl) * -1) var(--space-lg);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.game-card-screenshot img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-card-screenshot img {
+  transform: scale(1.03);
+}
+
 .game-card-header {
   display: flex;
   align-items: center;

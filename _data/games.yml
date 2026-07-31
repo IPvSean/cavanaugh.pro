@@ -5,6 +5,7 @@
   github: "https://github.com/ansible-tmm/ansible-f1"
   play: "https://ansible-tmm.github.io/ansible-f1/"
   emoji: "🏎️"
+  image: "/assets/images/built-to-automate-gameplay.png"
   stats:
     commits: "331"
     drivers: "12"

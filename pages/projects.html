@@ -66,6 +66,11 @@ permalink: /projects/
     <div class="games-grid">
       {% for game in site.data.games %}
       <div class="game-card">
+        {% if game.image %}
+        <div class="game-card-screenshot">
+          <img src="{{ game.image }}" alt="{{ game.title }} gameplay" loading="lazy">
+        </div>
+        {% endif %}
         <div class="game-card-header">
           <span class="game-card-emoji">{{ game.emoji }}</span>
           <div class="game-card-badges">
