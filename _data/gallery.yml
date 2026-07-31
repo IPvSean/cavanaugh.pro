@@ -178,6 +178,11 @@
   category: "people"
   year: 2026
 
+- src: "/assets/images/london-etx.png"
+  alt: "London — teaching AIOps at Emerging Tech Experience (ETX)"
+  category: "people"
+  year: 2025
+
 - src: "/assets/images/tokyo-teamlab-jamie.png"
   alt: "With Jamie at teamLab Planets, Tokyo"
   category: "people"
