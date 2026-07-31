@@ -10,6 +10,8 @@
   logo: "ansible"
 - name: "AWS re:Invent"
   logo: "aws"
+- name: "VMware Explore"
+  logo: "vmware"
 - name: "Red Hat One"
   logo: "redhat"
 - name: "Red Hat Tech Exchange"
