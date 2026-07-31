@@ -19,78 +19,6 @@ title: Home
   </div>
 </section>
 
-<!-- ===== FEATURED TALKS ===== -->
-<section class="section keynote-section">
-  <div class="section-inner">
-
-    <!-- Red Hat Summit 2026 -->
-    <div class="keynote-highlight fade-in" style="margin-bottom: var(--space-4xl);">
-      <div class="keynote-video">
-        <div class="keynote-photo">
-          <img src="/assets/images/summit-2026-stage.png" alt="Sean Cavanaugh on stage at Red Hat Summit 2026 with Roger Lopez and Dafne Mendoza, demoing the Automation Orchestrator" loading="lazy">
-        </div>
-      </div>
-      <div class="keynote-info">
-        <span class="section-label">Latest &bull; Red Hat Summit 2026</span>
-        <h2>Red Hat Summit 2026 — Product Spotlight</h2>
-        <p>Opening and closing the Ansible Product Spotlight at Red Hat Summit — featuring customer stories from TD Bank and Marriott, an AIOps partner panel with ServiceNow, Splunk, and IBM Instana, and a live demo of the new Automation Orchestrator.</p>
-        <div class="keynote-segments">
-          <div class="keynote-segment">
-            <span class="segment-time">Intro</span>
-            <div>
-              <strong>Cold Open — How We Got Here</strong>
-              <span class="segment-desc">With Roger Lopez and Dafne Mendoza</span>
-            </div>
-          </div>
-          <div class="keynote-segment">
-            <span class="segment-time">Closing</span>
-            <div>
-              <strong>Automation Orchestrator Demo</strong>
-              <span class="segment-desc">Live demo of the new Automation Orchestrator with Roger and Dafne</span>
-            </div>
-          </div>
-        </div>
-        <a href="https://tv.redhat.com/detail/6396287207112/product-spotlight-red-hat-ansible-automation-platform-trusted-execution-for-ai-driven-it-ops" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top: var(--space-lg);">Watch on Red Hat TV</a>
-      </div>
-    </div>
-
-    <!-- AnsibleFest 2025 -->
-    <div class="keynote-highlight fade-in">
-      <div class="keynote-video">
-        <div class="keynote-photo" style="margin-bottom: var(--space-lg);">
-          <img src="/assets/images/ansiblefest-2025-stage.png" alt="Sean Cavanaugh on the AnsibleFest 2025 keynote stage with the Ansible Automation Dashboard demo" loading="lazy">
-        </div>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/OiQDFjmWGUc?start=2418" title="AnsibleFest 2025 Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="keynote-info">
-        <span class="section-label">AnsibleFest 2025 &bull; Keynote</span>
-        <h2>AnsibleFest 2025 Keynote</h2>
-        <p>Two live demos on the main stage — the Ansible Automation Dashboard and Ansible Lightspeed Assistant + AIOps.</p>
-        <div class="keynote-segments">
-          <a href="https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=2418" target="_blank" rel="noopener" class="keynote-segment">
-            <span class="segment-time">40:18</span>
-            <div>
-              <strong>Ansible Automation Dashboard</strong>
-              <span class="segment-desc">Live demo of the Red Hat Ansible Automation Dashboard</span>
-            </div>
-          </a>
-          <a href="https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=3835" target="_blank" rel="noopener" class="keynote-segment">
-            <span class="segment-time">1:03:55</span>
-            <div>
-              <strong>Ansible Lightspeed Assistant + AIOps</strong>
-              <span class="segment-desc">With Dafne Mendoza — new ways to tackle AIOps with Ansible</span>
-            </div>
-          </a>
-        </div>
-        <a href="https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: var(--space-lg);">Watch Full Keynote</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- ===== FEATURED WORK ===== -->
 <section class="section" id="featured">
   <div class="section-inner fade-in">
@@ -203,7 +131,8 @@ title: Home
     </div>
     <div class="talks-grid">
       {% for talk in site.data.talks limit:3 %}
-      <a href="{{ talk.url }}" class="talk-card" {% if talk.url contains "http" %}target="_blank" rel="noopener"{% endif %}>
+      {% assign talk_slug = talk.title | slugify %}
+      <a href="/talks/{{ talk_slug }}/" class="talk-card">
         <div class="talk-card-image">
           {% if talk.image and talk.image != "/assets/images/placeholder-talk.svg" %}
           <img src="{{ talk.image }}" alt="{{ talk.title }}" loading="lazy">

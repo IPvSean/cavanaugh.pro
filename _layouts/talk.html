@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+{% assign talk_slug = page.talk_slug %}
+{% assign talk = nil %}
+{% for t in site.data.talks %}
+  {% assign s = t.title | slugify %}
+  {% if s == talk_slug %}
+    {% assign talk = t %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<section class="section" style="padding-top: var(--space-4xl);">
+  <div class="section-inner" style="max-width: 900px;">
+
+    <a href="/talks/" class="back-link">&larr; All Talks</a>
+
+    {% if talk.image %}
+    <div class="talk-detail-hero">
+      <img src="{{ talk.image }}" alt="{{ talk.title }}" loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="talk-detail-header">
+      {% if talk.session_id %}
+      <span class="talk-session-id">{{ talk.session_id }}</span>
+      {% endif %}
+      <h1>{{ talk.title }}</h1>
+      <div class="talk-detail-meta">
+        <span class="talk-detail-event">{{ talk.audience }}</span>
+        {% if talk.date %}
+        <span class="talk-detail-date">{{ talk.date }}</span>
+        {% else %}
+        <span class="talk-detail-date">{{ talk.year }}</span>
+        {% endif %}
+        {% if talk.role_at_time %}
+        <span class="talk-detail-role">While at {{ talk.role_at_time }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="talk-detail-body">
+      <p class="talk-detail-description">{{ talk.description }}</p>
+
+      {% if talk.co_presenter %}
+      <div class="talk-detail-info-card">
+        <strong>Co-presenter:</strong> {{ talk.co_presenter }}
+      </div>
+      {% endif %}
+
+      {% if talk.stats %}
+      <div class="talk-detail-stats">
+        {% if talk.stats.registered %}
+        <div class="talk-detail-stat">
+          <span class="talk-detail-stat-number">{{ talk.stats.registered }}</span>
+          <span class="talk-detail-stat-label">Registered</span>
+        </div>
+        {% endif %}
+        {% if talk.stats.attended %}
+        <div class="talk-detail-stat">
+          <span class="talk-detail-stat-number">{{ talk.stats.attended }}</span>
+          <span class="talk-detail-stat-label">Attended</span>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if talk.segments %}
+      <div class="talk-detail-segments">
+        <h3>Segments</h3>
+        {% for seg in talk.segments %}
+        <div class="talk-detail-segment">
+          <span class="segment-time">{{ seg.start }}</span>
+          <div>
+            <strong>{{ seg.title }}</strong>
+            {% if seg.description %}
+            <span class="segment-desc">{{ seg.description }}</span>
+            {% endif %}
+            {% if seg.co_presenter %}
+            <span class="segment-desc">With {{ seg.co_presenter }}</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if talk.tags %}
+      <div class="talk-detail-tags">
+        {% for tag in talk.tags %}
+        <span class="talk-detail-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="talk-detail-actions">
+        {% if talk.url %}
+        <a href="{{ talk.url }}" target="_blank" rel="noopener" class="btn btn-primary">
+          {% if talk.video_platform == "youtube" %}Watch Video{% elsif talk.video_platform == "redhat-tv" %}Watch on Red Hat TV{% else %}View Talk{% endif %}
+        </a>
+        {% endif %}
+        {% if talk.slides %}
+        <a href="{{ talk.slides }}" target="_blank" rel="noopener" class="btn btn-outline">View Slides</a>
+        {% endif %}
+        {% if talk.photos %}
+        <a href="{{ talk.photos }}" target="_blank" rel="noopener" class="btn btn-outline">View Photos</a>
+        {% endif %}
+      </div>
+
+      {% if talk.youtube_id %}
+      <div class="talk-detail-video">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/{{ talk.youtube_id }}{% if talk.segments[0].start_seconds %}?start={{ talk.segments[0].start_seconds }}{% endif %}" title="{{ talk.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if talk.gallery %}
+      <div class="talk-detail-gallery">
+        <h3>Photos</h3>
+        <div class="talk-detail-gallery-grid">
+          {% for img in talk.gallery %}
+          <div class="talk-detail-gallery-item">
+            <img src="{{ img.src }}" alt="{{ img.alt }}" loading="lazy">
+            <span>{{ img.alt }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+</section>

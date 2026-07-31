@@ -15,13 +15,10 @@ permalink: /talks/
     <!-- Featured Talks -->
     {% assign featured_talks = site.data.talks | where: "featured", true %}
     {% for talk in featured_talks %}
-    <div class="keynote-highlight" style="margin-bottom: var(--space-4xl);">
+    {% assign talk_slug = talk.title | slugify %}
+    <a href="/talks/{{ talk_slug }}/" class="keynote-highlight" style="margin-bottom: var(--space-4xl); text-decoration: none; color: inherit; display: block;">
       <div class="keynote-video">
-        {% if talk.video_platform == "youtube" %}
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/{{ talk.youtube_id }}?start={{ talk.segments[0].start_seconds }}" title="{{ talk.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-        {% elsif talk.stage_photo %}
+        {% if talk.stage_photo %}
         <div class="keynote-photo">
           <img src="{{ talk.stage_photo }}" alt="{{ talk.title }}" loading="lazy">
         </div>
@@ -30,35 +27,10 @@ permalink: /talks/
       <div class="keynote-info">
         <span class="section-label">{{ talk.audience }} &bull; {{ talk.year }}</span>
         <h2>{{ talk.title }}</h2>
-        <p>{{ talk.description }}</p>
-        <div class="keynote-segments">
-          {% for seg in talk.segments %}
-          {% if talk.video_platform == "youtube" %}
-          <a href="{{ talk.url }}" target="_blank" rel="noopener" class="keynote-segment">
-          {% else %}
-          <div class="keynote-segment">
-          {% endif %}
-            <span class="segment-time">{{ seg.start }}</span>
-            <div>
-              <strong>{{ seg.title }}</strong>
-              {% if seg.description %}
-              <span class="segment-desc">{{ seg.description }}</span>
-              {% elsif seg.co_presenter %}
-              <span class="segment-desc">With {{ seg.co_presenter }}</span>
-              {% endif %}
-            </div>
-          {% if talk.video_platform == "youtube" %}
-          </a>
-          {% else %}
-          </div>
-          {% endif %}
-          {% endfor %}
-        </div>
-        <a href="{{ talk.url }}" target="_blank" rel="noopener" class="btn {% if talk.video_platform == 'youtube' %}btn-primary{% else %}btn-secondary{% endif %}" style="margin-top: var(--space-lg);">
-          {% if talk.video_platform == "youtube" %}Watch Full Keynote{% else %}Watch on Red Hat TV{% endif %}
-        </a>
+        <p>{{ talk.description | truncatewords: 30 }}</p>
+        <span class="btn btn-outline" style="margin-top: var(--space-lg);">View Details &rarr;</span>
       </div>
-    </div>
+    </a>
     {% endfor %}
 
     <!-- Speaking Track Record -->
@@ -92,8 +64,9 @@ permalink: /talks/
     <div class="talks-grid">
       {% for talk in site.data.talks %}
       {% unless talk.featured %}
+      {% assign talk_slug = talk.title | slugify %}
       <div class="talk-card">
-        <a href="{{ talk.url }}" class="talk-card-image" {% if talk.url contains "http" %}target="_blank" rel="noopener"{% endif %}>
+        <a href="/talks/{{ talk_slug }}/" class="talk-card-image">
           {% if talk.image and talk.image != "/assets/images/placeholder-talk.svg" %}
           <img src="{{ talk.image }}" alt="{{ talk.title }}" loading="lazy">
           {% else %}
@@ -108,7 +81,7 @@ permalink: /talks/
           {% endif %}
         </a>
         <div class="talk-card-body">
-          <a href="{{ talk.url }}" {% if talk.url contains "http" %}target="_blank" rel="noopener"{% endif %} class="talk-card-title-link">
+          <a href="/talks/{{ talk_slug }}/" class="talk-card-title-link">
             <h3>{{ talk.title }}</h3>
           </a>
           <p>{{ talk.description }}</p>
