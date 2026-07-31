@@ -1742,6 +1742,7 @@ a.highlight-item {
   display: block;
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center 75%;
 }
 
 .contact-hero-text h1 {
