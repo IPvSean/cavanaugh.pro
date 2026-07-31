@@ -2407,6 +2407,113 @@ a.highlight-item {
   color: var(--color-text-muted);
 }
 
+/* ---- YouTube Shorts ---- */
+
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: 700px;
+}
+
+.short-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+}
+
+.short-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-accent);
+}
+
+.short-card-thumb {
+  aspect-ratio: 9 / 16;
+  background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.short-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.short-card:hover .short-card-thumb img {
+  transform: scale(1.05);
+}
+
+.short-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(230, 57, 70, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  z-index: 2;
+}
+
+.short-card:hover .short-card-play {
+  opacity: 1;
+}
+
+.short-card-play svg {
+  margin-left: 3px;
+}
+
+.short-badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  background: rgba(230, 57, 70, 0.9);
+  color: var(--color-white);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.short-card-body {
+  padding: var(--space-md);
+}
+
+.short-card-body h3 {
+  color: var(--color-white);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .shorts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .short-card-body {
+    padding: var(--space-sm);
+  }
+
+  .short-card-body h3 {
+    font-size: 0.75rem;
+  }
+}
+
 /* ---- About ---- */
 
 .about-layout {
