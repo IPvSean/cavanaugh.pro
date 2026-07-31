@@ -86,38 +86,37 @@
   year: 2019
   role_at_time: "Red Hat"
 
-- title: "Demo Jam: Ansible Arcade"
-  description: "Live demo of Ansible Arcade on the Demo Jam stage and manning the Ansible Automation Platform booth at AnsibleFest 2019 in Atlanta."
+- title: "Red Hat Tech Exchange Orlando"
+  description: "Presenting at Red Hat Tech Exchange in Orlando 2019 and manning the Ansible Automation Platform booth at AnsibleFest 2019 in Atlanta, GA."
   image: "/assets/images/demo-jam-2019.png"
-  audience: "AnsibleFest Atlanta"
+  audience: "Red Hat Tech Exchange Orlando"
   year: 2019
-  date: "September 24–25, 2019"
   role_at_time: "Red Hat"
   gallery:
     - src: "/assets/images/demo-jam-2019.png"
-      alt: "Sean Cavanaugh presenting Ansible Arcade at Demo Jam"
+      alt: "Presenting at Red Hat Tech Exchange, Orlando 2019"
     - src: "/assets/images/ansiblefest-2019-booth-1.png"
-      alt: "Demoing at the Ansible Automation Platform booth — AnsibleFest 2019"
+      alt: "Demoing at the Ansible Automation Platform booth — AnsibleFest 2019, Atlanta, GA"
     - src: "/assets/images/ansiblefest-2019-booth-2.png"
-      alt: "Crowd gathering at the Ansible booth — AnsibleFest 2019 Atlanta"
+      alt: "Crowd gathering at the Ansible booth — AnsibleFest 2019, Atlanta, GA"
     - src: "/assets/images/ansiblefest-2019-booth-3.png"
-      alt: "Demoing Ansible Automation Platform to attendees — AnsibleFest 2019"
+      alt: "Demoing Ansible Automation Platform to attendees — AnsibleFest 2019, Atlanta, GA"
 
 - title: "Red Hat One — Live Demo"
-  description: "Live demo on the Red Hat One keynote stage — showcasing Ansible Automation Platform capabilities to a global Red Hat audience."
+  description: "Live demo and workshop at Red Hat One in Indonesia — showcasing Ansible Automation Platform capabilities to a global Red Hat and partner audience."
   image: "/assets/images/redhat-one-keynote-demo.png"
-  audience: "Red Hat One"
-  year: 2025
+  audience: "Red Hat One Indonesia"
+  year: 2024
   role_at_time: "Red Hat"
   gallery:
     - src: "/assets/images/redhat-one-keynote-demo.png"
-      alt: "Live demo on the Red Hat One keynote stage"
+      alt: "Live demo on stage — Red Hat One, Indonesia 2024"
     - src: "/assets/images/redhat-one-demo-stage.png"
-      alt: "Professional stage shot — Red Hat One"
+      alt: "Teaching a workshop — Red Hat One, Indonesia 2024"
     - src: "/assets/images/redhat-one-stage.png"
-      alt: "On the Red Hat One stage"
+      alt: "On stage — Red Hat One, Indonesia 2024"
     - src: "/assets/images/redhat-one-speaker-badge.png"
-      alt: "Speaker badge — Red Hat One 2025"
+      alt: "Speaker badge — Red Hat One, Indonesia 2024"
 
 - title: "Event-Driven Ansible — Content Corner"
   description: "Presenting Event-Driven Ansible at the Content Corner Theater at Cisco Live 2024 in Las Vegas."

@@ -1,7 +1,7 @@
 - src: "/assets/images/redhat-one-keynote-demo.png"
-  alt: "Live demo on the Red Hat One keynote stage"
+  alt: "Live demo on stage — Red Hat One, Indonesia 2024"
   category: "stage"
-  year: 2025
+  year: 2024
 
 - src: "/assets/images/ansiblefest-2025-closeup-screen.png"
   alt: "On the big screen — AnsibleFest 2025 keynote"
@@ -9,14 +9,14 @@
   year: 2025
 
 - src: "/assets/images/cisco-live-rh-booth-networking.png"
-  alt: "Why Ansible Became Popular in Networking — Red Hat booth at Cisco Live"
+  alt: "Why Ansible Became Popular in Networking — AnsibleFest 2025"
   category: "booth"
-  year: 2024
+  year: 2025
 
 - src: "/assets/images/redhat-one-speaker-badge.png"
-  alt: "Speaker badge — Red Hat One 2025"
+  alt: "Speaker badge — Red Hat One, Indonesia 2024"
   category: "people"
-  year: 2025
+  year: 2024
 
 - src: "/assets/images/ansiblefest-2025-stage.png"
   alt: "AnsibleFest 2025 keynote — on the big screens"
@@ -24,9 +24,9 @@
   year: 2025
 
 - src: "/assets/images/cisco-live-badge-ribbons.png"
-  alt: "CCIE Ten Years, Speaker, Presenter, DevNet — Cisco Live badge"
+  alt: "CCIE Ten Years, Speaker, Presenter, DevNet — Cisco Live 2024, Las Vegas"
   category: "people"
-  year: 2023
+  year: 2024
 
 - src: "/assets/images/summit-2026-stage.png"
   alt: "Red Hat Summit 2026 — demoing the Automation Orchestrator"
@@ -49,9 +49,9 @@
   year: 2025
 
 - src: "/assets/images/redhat-one-demo-stage.png"
-  alt: "Live demo at Red Hat One — professional stage shot"
+  alt: "Teaching a workshop — Red Hat One, Indonesia 2024"
   category: "stage"
-  year: 2025
+  year: 2024
 
 - src: "/assets/images/cisco-live-2023-audience.png"
   alt: "343 attendees at BRKATO-2106 — Cisco Live 2023"
@@ -59,9 +59,9 @@
   year: 2023
 
 - src: "/assets/images/datadog-booth-demo.png"
-  alt: "Demoing at the Red Hat booth — AWS re:Invent 2025"
+  alt: "Demoing at the Red Hat booth — Cisco Live"
   category: "booth"
-  year: 2025
+  year: 2024
 
 - src: "/assets/images/ansiblefest-2025-big-screens.png"
   alt: "Wide shot — AnsibleFest 2025 keynote with Dafne Mendoza"
@@ -89,9 +89,9 @@
   year: 2018
 
 - src: "/assets/images/redhat-one-stage.png"
-  alt: "Red Hat One — on stage"
+  alt: "On stage — Red Hat One, Indonesia 2024"
   category: "stage"
-  year: 2025
+  year: 2024
 
 - src: "/assets/images/cisco-live-theater-crowd.png"
   alt: "Presenting at the Cisco Live theater"
@@ -109,7 +109,7 @@
   year: 2018
 
 - src: "/assets/images/demo-jam-2019.png"
-  alt: "Demo Jam — Ansible Arcade at AnsibleFest 2019"
+  alt: "Presenting at Red Hat Tech Exchange, Orlando 2019"
   category: "stage"
   year: 2019
 
@@ -119,9 +119,9 @@
   year: 2019
 
 - src: "/assets/images/cisco-live-theater-wide.png"
-  alt: "Wide shot — Cisco Live Content Corner theater"
+  alt: "Presenting to a crowd — AnsibleFest 2025"
   category: "stage"
-  year: 2024
+  year: 2025
 
 - src: "/assets/images/ansiblefest-2019-booth-2.png"
   alt: "Crowd at the Ansible booth — AnsibleFest 2019 Atlanta"
@@ -169,7 +169,7 @@
   year: 2025
 
 - src: "/assets/images/ansiblefest-2019-booth-3.png"
-  alt: "Talking Ansible Automation Platform — AnsibleFest 2019"
+  alt: "Talking Ansible Automation Platform — AnsibleFest 2019, Atlanta, GA"
   category: "booth"
   year: 2019
 
@@ -194,9 +194,9 @@
   year: 2025
 
 - src: "/assets/images/london-etx.png"
-  alt: "London — teaching AIOps at Emerging Tech Experience (ETX)"
+  alt: "London — teaching AIOps at Emerging Tech Experience (ETX) 2026"
   category: "people"
-  year: 2025
+  year: 2026
 
 - src: "/assets/images/tokyo-teamlab-jamie.png"
   alt: "With Jamie at teamLab Planets, Tokyo"
