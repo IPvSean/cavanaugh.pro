@@ -168,6 +168,11 @@
   category: "booth"
   year: 2019
 
+- src: "/assets/images/iceland-vestrahorn.png"
+  alt: "Vestrahorn, Iceland"
+  category: "people"
+  year: 2026
+
 - src: "/assets/images/sean-kid.png"
   alt: "Future keynote speaker"
   category: "behind-the-scenes"
