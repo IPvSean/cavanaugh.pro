@@ -64,12 +64,20 @@
     - "Automation & Orchestration"
 
 - title: "Ansible Automates Tokyo — Keynote"
-  description: "Keynote presentation at Ansible Automates Tokyo — speaking to a packed audience on the state of Ansible network automation and the global Ansible community."
+  description: "Keynote on Ansible network automation to 400 attendees at Ansible Automates Tokyo — covered by ZDNET Japan. Presented on automating network operations with Ansible modules across 40+ platforms."
   image: "/assets/images/ansible-automates-tokyo-2018.png"
   audience: "Ansible Automates Tokyo"
   year: 2018
-  date: "April 2018"
+  date: "April 24, 2018"
+  url: "https://japan.zdnet.com/extra/redhathpe_201805/35119733/"
   role_at_time: "Red Hat"
+  stats:
+    attended: 400
+  gallery:
+    - src: "/assets/images/ansible-automates-tokyo-2018.png"
+      alt: "Sean Cavanaugh presenting on stage at Ansible Automates Tokyo 2018"
+    - src: "/assets/images/ansible-automates-tokyo-2018-selfie.png"
+      alt: "Behind the scenes — about to present to 400 attendees in Tokyo"
 
 - title: "Ansible Network Automation"
   description: "Presenting on the four types of Ansible network modules — command, config, facts, and resource — at Red Hat Tech Exchange in Seoul, South Korea."
