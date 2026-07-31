@@ -14,6 +14,8 @@
   logo: "vmware"
 - name: "Red Hat One"
   logo: "redhat"
+- name: "IBM Tech Exchange"
+  logo: "ibm"
 - name: "Red Hat Tech Exchange"
   logo: "redhat"
 - name: "AutoCon"

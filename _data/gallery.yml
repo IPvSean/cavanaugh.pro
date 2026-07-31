@@ -183,6 +183,11 @@
   category: "people"
   year: 2025
 
+- src: "/assets/images/ibm-tech-exchange-2025.png"
+  alt: "Teaching workshops at IBM Tech Exchange 2025, Orlando"
+  category: "people"
+  year: 2025
+
 - src: "/assets/images/london-etx.png"
   alt: "London — teaching AIOps at Emerging Tech Experience (ETX)"
   category: "people"
