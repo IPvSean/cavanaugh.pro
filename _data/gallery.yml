@@ -175,6 +175,11 @@
 
 # === 2024 — Other ===
 
+- src: "/assets/images/red-rock-canyon-reinvent-2024.png"
+  alt: "Pre-conference hike at Red Rock Canyon — AWS re:Invent, Las Vegas, 2024"
+  category: "people"
+  year: 2024
+
 - src: "/assets/images/rh-booth-silent-disco.png"
   alt: "Silent disco demo at the Red Hat booth — VMware Explore, Las Vegas, 2024"
   category: "booth"
