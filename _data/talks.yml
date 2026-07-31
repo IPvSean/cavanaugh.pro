@@ -103,19 +103,13 @@
     - src: "/assets/images/ansiblefest-2019-booth-3.png"
       alt: "Demoing Ansible Automation Platform to attendees — AnsibleFest 2019"
 
-- title: "All Things Open"
-  description: "Open Source Automation at Scale"
-  image: "/assets/images/placeholder-talk.svg"
-  audience: "300+ attendees"
-  year: 2023
-  url: "#"
-
-- title: "AutoCon"
-  description: "Event-Driven Automation for Network Engineers"
-  image: "/assets/images/placeholder-talk.svg"
-  audience: "200+ attendees"
+- title: "Event-Driven Ansible — Cisco DevNet Live"
+  description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible — how to react to infrastructure events in real time with automation."
+  image: "/assets/images/netgru-devnet-2024.png"
+  audience: "Cisco DevNet / NetGru"
   year: 2024
-  url: "#"
+  date: "March 27, 2024"
+  role_at_time: "Red Hat"
 
 - title: "Routing on the Host"
   description: "Talk on host-based routing and network automation at All Things Open 2016 — one of the largest open source conferences in the US — while working at Cumulus Networks."
