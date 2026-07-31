@@ -68,6 +68,11 @@
   category: "stage"
   year: 2024
 
+- src: "/assets/images/cisco-live-2024-theater.png"
+  alt: "Presenting Event-Driven Ansible at Cisco Live 2024"
+  category: "stage"
+  year: 2024
+
 - src: "/assets/images/aiops-team-meeting-2025.png"
   alt: "Leading an AIOps session with the NorthEast Ansible team"
   category: "behind-the-scenes"

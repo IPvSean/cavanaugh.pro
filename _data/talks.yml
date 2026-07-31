@@ -103,6 +103,14 @@
     - src: "/assets/images/ansiblefest-2019-booth-3.png"
       alt: "Demoing Ansible Automation Platform to attendees — AnsibleFest 2019"
 
+- title: "Event-Driven Ansible — Content Corner"
+  description: "Presenting Event-Driven Ansible at the Content Corner Theater at Cisco Live 2024 in Las Vegas."
+  image: "/assets/images/cisco-live-2024-theater.png"
+  audience: "Cisco Live Las Vegas"
+  year: 2024
+  date: "June 5, 2024"
+  role_at_time: "Red Hat"
+
 - title: "Event-Driven Ansible — Cisco DevNet Live"
   description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible — how to react to infrastructure events in real time with automation."
   image: "/assets/images/netgru-devnet-2024.png"
