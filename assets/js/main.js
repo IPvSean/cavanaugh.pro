@@ -118,6 +118,60 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(step);
   }
 
+  // Lightbox for photo gallery
+  var lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = '<div class="lightbox-backdrop"></div><div class="lightbox-content"><button class="lightbox-close">&times;</button><img src="" alt=""><div class="lightbox-caption"></div><button class="lightbox-prev">&lsaquo;</button><button class="lightbox-next">&rsaquo;</button></div>';
+  document.body.appendChild(lightbox);
+
+  var lightboxImg = lightbox.querySelector('img');
+  var lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  var galleryItems = document.querySelectorAll('.photo-gallery-item');
+  var currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    var item = galleryItems[index];
+    var img = item.querySelector('img');
+    var caption = item.querySelector('.photo-gallery-overlay span');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = caption ? caption.textContent : '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function navigateLightbox(direction) {
+    currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
+    var item = galleryItems[currentIndex];
+    var img = item.querySelector('img');
+    var caption = item.querySelector('.photo-gallery-overlay span');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = caption ? caption.textContent : '';
+  }
+
+  galleryItems.forEach(function (item, i) {
+    item.addEventListener('click', function () { openLightbox(i); });
+  });
+
+  lightbox.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-prev').addEventListener('click', function (e) { e.stopPropagation(); navigateLightbox(-1); });
+  lightbox.querySelector('.lightbox-next').addEventListener('click', function (e) { e.stopPropagation(); navigateLightbox(1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+    if (e.key === 'ArrowRight') navigateLightbox(1);
+  });
+
   var highlightNumbers = document.querySelectorAll('.highlight-number[data-target]');
   if (highlightNumbers.length > 0 && 'IntersectionObserver' in window) {
     var countObserver = new IntersectionObserver(function (entries) {
