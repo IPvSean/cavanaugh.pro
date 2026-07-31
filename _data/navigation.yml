@@ -8,5 +8,7 @@
   url: "/videos/"
 - title: Blog
   url: "/blog/"
+- title: Photos
+  url: "/#moments"
 - title: About
   url: "/about/"

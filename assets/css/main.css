@@ -660,9 +660,11 @@ p {
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .highlight-item {
@@ -717,7 +719,7 @@ a.highlight-item {
 }
 
 .highlight-number {
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-weight: 800;
   background: linear-gradient(135deg, var(--color-white) 30%, var(--highlight-color, var(--color-accent)));
   -webkit-background-clip: text;
@@ -1933,6 +1935,7 @@ a.highlight-item {
 
   .highlights-grid {
     grid-template-columns: repeat(3, 1fr);
+    max-width: none;
   }
 
   .demos-grid {
