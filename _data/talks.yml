@@ -100,6 +100,8 @@
       alt: "Demoing at the Ansible Automation Platform booth — AnsibleFest 2019"
     - src: "/assets/images/ansiblefest-2019-booth-2.png"
       alt: "Crowd gathering at the Ansible booth — AnsibleFest 2019 Atlanta"
+    - src: "/assets/images/ansiblefest-2019-booth-3.png"
+      alt: "Demoing Ansible Automation Platform to attendees — AnsibleFest 2019"
 
 - title: "All Things Open"
   description: "Open Source Automation at Scale"
