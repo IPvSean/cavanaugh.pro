@@ -30,6 +30,7 @@
   raw: 50
   label: "Conference Talks"
   icon: "mic"
+  url: "/talks/"
   color: "#e63946"
 
 - number: "2,000+"
