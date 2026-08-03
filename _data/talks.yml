@@ -93,6 +93,14 @@
   date: "August 25-28, 2024"
   photos: "https://photos.app.goo.gl/JAXebqxPPdxYJoQa7"
   role_at_time: "Red Hat"
+  talk_name: "2 Sessions"
+  presentations_label: "Sessions"
+  presentation_badge: "VMware"
+  presentations:
+    - title: "From Zero to Hero: Automating VMware Infra with Ansible"
+      slides: "/assets/slides/VMware-explore-zero-to-hero-ansible.pdf"
+    - title: "5 Great use-cases to automate on your VMware infrastructure efficiently"
+      slides: "/assets/slides/VMware-explore-5-use-cases.pdf"
 
 - title: "Event-Driven Ansible, Content Corner"
   description: "Presenting Event-Driven Ansible at the Content Corner Theater at Cisco Live 2024 in Las Vegas."
