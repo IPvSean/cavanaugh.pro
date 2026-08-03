@@ -41,6 +41,23 @@ permalink: /about/
       </div>
     </div>
 
+    <div style="margin-top: var(--space-4xl);">
+      <div class="section-header">
+        <span class="section-label">Journey</span>
+        <h2>The Path</h2>
+      </div>
+      <div class="timeline">
+        {% for item in site.data.timeline %}
+        <div class="timeline-item">
+          <span class="timeline-era">{{ item.era }}</span>
+          <div class="timeline-dot"></div>
+          <div class="timeline-title">{{ item.title }}</div>
+          <div class="timeline-desc">{{ item.description }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
     <div class="about-family fade-in" style="margin-top: var(--space-4xl);">
       <div class="section-header">
         <span class="section-label">Personal</span>
@@ -72,23 +89,6 @@ permalink: /about/
           <img src="/assets/images/tokyo-teamlab-jamie.png" alt="With Jamie at teamLab Planets — Tokyo, Japan, 2026" loading="lazy">
           <span>teamLab Planets, Tokyo, 2026</span>
         </div>
-      </div>
-    </div>
-
-    <div style="margin-top: var(--space-4xl);">
-      <div class="section-header">
-        <span class="section-label">Journey</span>
-        <h2>The Path</h2>
-      </div>
-      <div class="timeline">
-        {% for item in site.data.timeline %}
-        <div class="timeline-item">
-          <span class="timeline-era">{{ item.era }}</span>
-          <div class="timeline-dot"></div>
-          <div class="timeline-title">{{ item.title }}</div>
-          <div class="timeline-desc">{{ item.description }}</div>
-        </div>
-        {% endfor %}
       </div>
     </div>
   </div>
