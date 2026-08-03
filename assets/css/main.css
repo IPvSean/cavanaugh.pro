@@ -2765,13 +2765,16 @@ a.highlight-item {
   position: absolute;
   bottom: var(--space-sm);
   right: var(--space-sm);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.92);
   color: var(--color-white);
-  padding: 2px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-sm);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   z-index: 2;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
 }
 
 .video-card-body {
