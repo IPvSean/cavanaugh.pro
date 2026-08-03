@@ -40,6 +40,27 @@
 
 # All other talks, newest first
 
+- title: "Cisco Live 2026"
+  description: "Red Hat's biggest Cisco partner presence. We ran 17+ lab sessions and mini-theater presentations across 4 days covering AIOps, network automation, Event-Driven Ansible, and Ansible developer tools."
+  image: "/assets/images/cisco-live-2026-booth.png"
+  audience: "Cisco Live Las Vegas"
+  year: 2026
+  date: "June 1-4, 2026"
+  photos: "https://photos.app.goo.gl/ySAB2d4fWd4qWJ9k6"
+  role_at_time: "Red Hat"
+  talk_name: "3 Mini Theater Sessions"
+  highlights:
+    - "Ran 17+ lab sessions and mini-theater presentations across 4 days"
+    - "Covered AIOps, network automation, Event-Driven Ansible, and Ansible developer tools"
+    - "Red Hat's biggest Cisco partner presence at Cisco Live"
+  presentations:
+    - title: "Ansible Meets AI: Driving Automation Platform Operations Through Natural Language with MCP"
+      slides: "/assets/slides/CLUS-ansible-meets-ai-mcp.pdf"
+    - title: "How to write better playbooks: a deep dive"
+      slides: "/assets/slides/CLUS-write-better-playbooks.pdf"
+    - title: "An Introduction to Ansible Automation Platform for Network Engineers"
+      slides: "/assets/slides/CLUS-aap-for-network-engineers.pdf"
+
 - title: "VMware Explore 2024"
   description: "Presenting Ansible Automation Platform at the Red Hat booth at VMware Explore 2024 in Las Vegas, demoing automation workflows to VMware administrators and architects."
   image: "/assets/images/rh-booth-silent-disco.png"

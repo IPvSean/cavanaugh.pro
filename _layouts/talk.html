@@ -104,6 +104,25 @@ layout: default
       </div>
       {% endif %}
 
+      {% if talk.presentations %}
+      <div class="talk-detail-presentations">
+        <h3>Mini Theater Sessions</h3>
+        <div class="talk-presentations-list">
+          {% for presentation in talk.presentations %}
+          <div class="talk-presentation-item">
+            <div class="talk-presentation-info">
+              <span class="talk-presentation-label">CLUS</span>
+              <strong>{{ presentation.title }}</strong>
+            </div>
+            {% if presentation.slides %}
+            <a href="{{ presentation.slides }}" target="_blank" rel="noopener" class="btn btn-outline talk-presentation-slides">View Slides</a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
       {% if talk.segments %}
       <div class="talk-detail-segments">
         <h3>Segments</h3>

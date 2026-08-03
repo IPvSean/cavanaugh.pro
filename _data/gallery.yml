@@ -1,5 +1,10 @@
 # === 2026 ===
 
+- src: "/assets/images/cisco-live-2026-booth.png"
+  alt: "Presenting Event-Driven Ansible at the Red Hat booth, Cisco Live, Las Vegas, 2026"
+  category: "booth"
+  year: 2026
+
 - src: "/assets/images/summit-2026-stage.png"
   alt: "Demoing the Automation Orchestrator, Red Hat Summit, Las Vegas, 2026"
   category: "stage"

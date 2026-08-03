@@ -3804,6 +3804,67 @@ a.highlight-item {
   margin-bottom: var(--space-2xl);
 }
 
+.talk-detail-presentations {
+  margin-bottom: var(--space-2xl);
+}
+
+.talk-detail-presentations h3 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-md);
+}
+
+.talk-presentations-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.talk-presentation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.talk-presentation-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+.talk-presentation-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.talk-presentation-info strong {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.talk-presentation-slides {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 600px) {
+  .talk-presentation-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .talk-detail-info-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
