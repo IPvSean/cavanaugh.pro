@@ -104,6 +104,11 @@
 
 # === 2025, Other ===
 
+- src: "/assets/images/cisco-live-2025-san-diego.png"
+  alt: "With a teammate in Ansible jerseys, World of Solutions, Cisco Live, San Diego, 2025"
+  category: "people"
+  year: 2025
+
 - src: "/assets/images/ibm-tech-exchange-2025.png"
   alt: "Teaching workshops, IBM Tech Exchange, Orlando, 2025"
   category: "people"

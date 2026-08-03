@@ -85,6 +85,23 @@
       co_presenter: "IBM"
       slides: "/assets/slides/AI-networking-summit-ai-driven-automation.pdf"
 
+- title: "Cisco Live 2025"
+  description: "Lead speaker for the Red Hat sponsor session in the World of Solutions at Cisco Live 2025 in San Diego, covering Ansible Automation Platform for Cisco network and infrastructure audiences."
+  image: "/assets/images/cisco-live-2025-san-diego.png"
+  audience: "Cisco Live San Diego"
+  year: 2025
+  date: "June 8-12, 2025"
+  role_at_time: "Red Hat"
+  talk_name: "Sponsor Session"
+  presentations_label: "Sponsor Session"
+  presentation_badge: "CLUS"
+  highlights:
+    - "Lead speaker for the Red Hat sponsor session slot"
+    - "Presented in the World of Solutions at Cisco Live San Diego"
+  presentations:
+    - title: "Cisco Live 2025 Sponsor Session"
+      slides: "/assets/slides/CLUS-2025-sponsor-session.pdf"
+
 - title: "VMware Explore 2024"
   description: "Presenting Ansible Automation Platform at the Red Hat booth at VMware Explore 2024 in Las Vegas, demoing automation workflows to VMware administrators and architects."
   image: "/assets/images/rh-booth-silent-disco.png"
