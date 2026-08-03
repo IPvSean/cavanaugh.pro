@@ -3,6 +3,7 @@ layout: post
 title: "Learning and Testing Ansible Playbooks with Virtual Images"
 date: 2018-04-11
 tags: [ansible, networking, virtual-labs, cisco, arista, cumulus, juniper]
+featured: true
 ---
 
 One of the common problems I see with network automation in general is that no one wants to learn and test their automation software on production network gear. While lots of people have labs they can play with network gear that obviously is not an option for everyone. Even used equipment can cost a thousand dollars or more, and in my case my spouse was not super excited about our power bill rising by $100 a month while I ran some Cisco switches in my office.

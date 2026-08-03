@@ -18,44 +18,186 @@ permalink: /blog/
 <section class="page-content">
   <div class="section-inner">
 
-    <!-- Red Hat Blog -->
-    <div class="section-header fade-in" style="margin-bottom: var(--space-2xl);">
-      <span class="section-label">Red Hat Blog</span>
-      <h2>Published on redhat.com</h2>
-      <p style="color: var(--color-text-secondary); max-width: 600px; margin-top: var(--space-sm);">Technical deep-dives published on the official Red Hat blog.</p>
+    {% comment %}
+      Collect all posts + Red Hat external posts into a unified list.
+      Red Hat posts are defined inline here so they appear in the merged feed.
+    {% endcomment %}
+
+    {% comment %} ---- Featured Posts ---- {% endcomment %}
+    {% assign featured_posts = site.posts | where: "featured", true %}
+    {% if featured_posts.size > 0 %}
+    <div class="blog-featured-section fade-in">
+      <div class="section-header" style="margin-bottom: var(--space-xl);">
+        <span class="section-label">Editor's Picks</span>
+        <h2>Featured Posts</h2>
+      </div>
+      <div class="blog-featured-grid">
+        {% for post in featured_posts limit: 3 %}
+        <a href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}" {% if post.external_url %}target="_blank" rel="noopener"{% endif %} class="blog-card blog-card-featured" data-tags="{{ post.tags | join: ' ' }}">
+          <div class="blog-card-featured-badge">Featured</div>
+          <div class="blog-card-date">
+            {{ post.date | date: "%B %d, %Y" }}
+            {% if post.external_url %}
+              {% assign domain = post.external_url | split: "//" | last | split: "/" | first | replace: "www.", "" %}
+              <span class="blog-card-source blog-card-source-external">{{ domain }}</span>
+            {% endif %}
+          </div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          {% if post.tags.size > 0 %}
+          <div class="blog-card-tags">
+            {% for tag in post.tags limit: 3 %}
+            <span class="blog-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <span class="read-more">{% if post.external_url %}Read on {{ domain }} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>{% else %}Read more &rarr;{% endif %}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% comment %} ---- Red Hat Blog Section ---- {% endcomment %}
+    <div class="blog-redhat-section fade-in">
+      <div class="section-header" style="margin-bottom: var(--space-xl);">
+        <span class="section-label">Red Hat Blog</span>
+        <h2>Published on redhat.com</h2>
+        <p style="color: var(--color-text-secondary); max-width: 600px; margin-top: var(--space-sm);">Technical deep-dives published on the official Red Hat blog.</p>
+      </div>
+
+      <div class="blog-grid">
+        <a href="https://www.redhat.com/en/blog/peeling-back-the-layers-and-understanding-automation-mesh" target="_blank" rel="noopener" class="blog-card">
+          <div class="blog-card-date">
+            August 1, 2022
+            <span class="blog-card-source blog-card-source-redhat">redhat.com</span>
+          </div>
+          <h3>Peeling back the layers and understanding automation mesh</h3>
+          <p>A technical deep-dive into automation mesh — the overlay network in Ansible Automation Platform 2 that separates the control plane from execution.</p>
+          <div class="blog-card-tags">
+            <span class="blog-tag">ansible</span>
+            <span class="blog-tag">networking</span>
+          </div>
+          <span class="read-more">Read on redhat.com <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+        </a>
+
+        <a href="https://www.redhat.com/en/blog/introducing-red-hat-ansible-automation-platform-2.1" target="_blank" rel="noopener" class="blog-card">
+          <div class="blog-card-date">
+            December 2, 2021
+            <span class="blog-card-source blog-card-source-redhat">redhat.com</span>
+          </div>
+          <h3>Introducing Red Hat Ansible Automation Platform 2.1</h3>
+          <p>Announcing the GA of Ansible Automation Platform 2.1 — featuring major new capabilities for flexible automation architectures and enterprise onboarding.</p>
+          <div class="blog-card-tags">
+            <span class="blog-tag">ansible</span>
+            <span class="blog-tag">release</span>
+          </div>
+          <span class="read-more">Read on redhat.com <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+        </a>
+
+        <a href="https://www.redhat.com/en/blog/red-hat-ansible-network-automation-updates" target="_blank" rel="noopener" class="blog-card">
+          <div class="blog-card-date">
+            October 10, 2018
+            <span class="blog-card-source blog-card-source-redhat">redhat.com</span>
+          </div>
+          <h3>Red Hat Ansible Network Automation Updates</h3>
+          <p>A network automation perspective on the enhancements in Ansible Engine 2.6, Ansible Tower 3.3, and Ansible Engine 2.7 following the largest AnsibleFest to date.</p>
+          <div class="blog-card-tags">
+            <span class="blog-tag">ansible</span>
+            <span class="blog-tag">networking</span>
+          </div>
+          <span class="read-more">Read on redhat.com <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+        </a>
+      </div>
+
+      <div class="github-profile-cta fade-in" style="margin-top: var(--space-2xl);">
+        <svg class="github-profile-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"/></svg>
+        <h2>More on the Red Hat Blog</h2>
+        <p>Read all my published articles on automation, networking, and enterprise infrastructure.</p>
+        <a href="https://www.redhat.com/en/authors/sean-cavanaugh" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-lg);">View Author Page &rarr;</a>
+      </div>
     </div>
 
-    <div class="blog-grid fade-in" style="margin-bottom: var(--space-3xl);">
-      <a href="https://www.redhat.com/en/blog/peeling-back-the-layers-and-understanding-automation-mesh" target="_blank" rel="noopener" class="blog-card">
-        <div class="blog-card-date">August 1, 2022 · redhat.com</div>
-        <h3>Peeling back the layers and understanding automation mesh</h3>
-        <p>A technical deep-dive into automation mesh — the overlay network in Ansible Automation Platform 2 that separates the control plane from execution, covering network ports, certificate authority setup, and firewall considerations.</p>
-        <span class="read-more">Read on Red Hat Blog &rarr;</span>
-      </a>
-    </div>
+    {% comment %} ---- All Posts Section (unified feed) ---- {% endcomment %}
+    <div class="blog-all-section fade-in">
+      <div class="section-header" style="margin-bottom: var(--space-lg);">
+        <span class="section-label">Archive</span>
+        <h2>All Posts <span class="blog-post-count">({{ site.posts.size }})</span></h2>
+      </div>
 
-    <div class="github-profile-cta fade-in" style="margin-bottom: var(--space-4xl);">
-      <svg class="github-profile-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"/></svg>
-      <h2>More on the Red Hat Blog</h2>
-      <p>Read all my published articles on automation, networking, and enterprise infrastructure.</p>
-      <a href="https://www.redhat.com/en/authors/sean-cavanaugh" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: var(--space-lg);">View Author Page &rarr;</a>
-    </div>
+      {% comment %} ---- Tag filter pills ---- {% endcomment %}
+      <div class="blog-filters" id="blog-filters">
+        <button class="blog-filter-pill active" data-filter="all">All</button>
+        <button class="blog-filter-pill" data-filter="ansible">Ansible</button>
+        <button class="blog-filter-pill" data-filter="networking">Networking</button>
+        <button class="blog-filter-pill" data-filter="cumulus">Cumulus</button>
+        <button class="blog-filter-pill" data-filter="community">Community</button>
+        <button class="blog-filter-pill" data-filter="tutorial">Tutorial</button>
+        <button class="blog-filter-pill" data-filter="travel">Travel</button>
+      </div>
 
-    <!-- Personal Blog -->
-    <div class="section-header fade-in" style="margin-bottom: var(--space-2xl);">
-      <span class="section-label">Personal</span>
-      <h2>From This Site</h2>
-    </div>
+      {% comment %} ---- Posts grouped by year ---- {% endcomment %}
+      {% assign current_year = "" %}
+      <div class="blog-archive" id="blog-archive">
+        {% for post in site.posts %}
+          {% assign post_year = post.date | date: "%Y" %}
+          {% if post_year != current_year %}
+            {% assign current_year = post_year %}
+            <div class="blog-year-divider">
+              <span>{{ current_year }}</span>
+            </div>
+          {% endif %}
 
-    <div class="blog-grid fade-in">
-      {% for post in site.posts %}
-      <a href="{{ post.url }}" class="blog-card">
-        <div class="blog-card-date">{{ post.date | date: "%B %d, %Y" }}</div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        <span class="read-more">Read more &rarr;</span>
-      </a>
-      {% endfor %}
+          {% comment %} Map tags to consolidated categories {% endcomment %}
+          {% assign tag_classes = "" %}
+          {% for tag in post.tags %}
+            {% if tag == "ansible" or tag == "netdevops" or tag == "automation" or tag == "infoblox" or tag == "netq" or tag == "nclu" or tag == "evpn" %}
+              {% unless tag_classes contains "ansible" %}{% assign tag_classes = tag_classes | append: " ansible" %}{% endunless %}
+            {% endif %}
+            {% if tag == "networking" or tag == "bgp" or tag == "vrrp" or tag == "ipv6" or tag == "lldp" or tag == "sdn" or tag == "mlag" or tag == "performance" or tag == "release" or tag == "ipam" %}
+              {% unless tag_classes contains "networking" %}{% assign tag_classes = tag_classes | append: " networking" %}{% endunless %}
+            {% endif %}
+            {% if tag == "cumulus" or tag == "open-networking" %}
+              {% unless tag_classes contains "cumulus" %}{% assign tag_classes = tag_classes | append: " cumulus" %}{% endunless %}
+            {% endif %}
+            {% if tag == "community" or tag == "meetup" or tag == "urban-planning" or tag == "chapel-hill" or tag == "carrboro" or tag == "biking" %}
+              {% unless tag_classes contains "community" %}{% assign tag_classes = tag_classes | append: " community" %}{% endunless %}
+            {% endif %}
+            {% if tag == "tutorial" or tag == "virtual-labs" or tag == "troubleshooting" or tag == "bug-fix" or tag == "devops" %}
+              {% unless tag_classes contains "tutorial" %}{% assign tag_classes = tag_classes | append: " tutorial" %}{% endunless %}
+            {% endif %}
+            {% if tag == "travel" or tag == "photography" %}
+              {% unless tag_classes contains "travel" %}{% assign tag_classes = tag_classes | append: " travel" %}{% endunless %}
+            {% endif %}
+          {% endfor %}
+
+          {% comment %} Catch uncategorized posts {% endcomment %}
+          {% assign stripped = tag_classes | strip %}
+          {% if stripped == "" %}
+            {% assign tag_classes = " tutorial" %}
+          {% endif %}
+
+          <a href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}" {% if post.external_url %}target="_blank" rel="noopener"{% endif %} class="blog-card" data-tags="{{ tag_classes | strip }}" data-year="{{ post_year }}">
+            <div class="blog-card-date">
+              {{ post.date | date: "%B %d, %Y" }}
+              {% if post.external_url %}
+                {% assign domain = post.external_url | split: "//" | last | split: "/" | first | replace: "www.", "" %}
+                <span class="blog-card-source blog-card-source-external">{{ domain }}</span>
+              {% endif %}
+            </div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            {% if post.tags.size > 0 %}
+            <div class="blog-card-tags">
+              {% for tag in post.tags limit: 3 %}
+              <span class="blog-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <span class="read-more">{% if post.external_url %}{% assign domain = post.external_url | split: "//" | last | split: "/" | first | replace: "www.", "" %}Read on {{ domain }} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>{% else %}Read more &rarr;{% endif %}</span>
+          </a>
+        {% endfor %}
+      </div>
 
       {% if site.posts.size == 0 %}
       <div class="blog-card">

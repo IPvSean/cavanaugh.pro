@@ -258,6 +258,13 @@
   category: "behind-the-scenes"
   year: 2018
 
+# === 2017 — Ansible Automates Atlanta ===
+
+- src: "/assets/images/ansible-automates-atlanta-2017.png"
+  alt: "#AnsibleAutomates banner at Mercedes-Benz Stadium — Ansible Automates, Atlanta, 2017"
+  category: "stage"
+  year: 2017
+
 # === Throwback ===
 
 - src: "/assets/images/sean-kid.png"

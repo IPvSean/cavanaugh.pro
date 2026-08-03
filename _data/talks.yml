@@ -145,11 +145,13 @@
   role_at_time: "Cumulus Networks"
 
 - title: "Network Automation with Ansible"
-  description: "Ansible Automates Atlanta — covering automation for network infrastructure, from configuration management to compliance and operational workflows."
+  description: "Ansible Automates Atlanta — covering automation for network infrastructure, from configuration management to compliance and operational workflows. Held at Mercedes-Benz Stadium in Atlanta, GA."
+  image: "/assets/images/ansible-automates-atlanta-2017.png"
   audience: "Ansible Automates Atlanta"
   year: 2017
   date: "November 1, 2017"
   url: "https://www.ansible.com/videos-ansible-automates-network-automation-with-ansible"
+  photos: "https://photos.app.goo.gl/cE5xMS2Yen2Rs0Ji2"
   role_at_time: "Red Hat"
 
 - title: "Routing on the Host with Docker and Ansible"

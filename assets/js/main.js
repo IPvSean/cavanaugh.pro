@@ -174,6 +174,52 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'ArrowRight') navigateLightbox(1);
   });
 
+  // Blog tag filtering
+  var blogFilters = document.getElementById('blog-filters');
+  var blogArchive = document.getElementById('blog-archive');
+  if (blogFilters && blogArchive) {
+    var filterPills = blogFilters.querySelectorAll('.blog-filter-pill');
+    var blogCards = blogArchive.querySelectorAll('.blog-card');
+    var yearDividers = blogArchive.querySelectorAll('.blog-year-divider');
+
+    filterPills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        filterPills.forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+
+        var filter = pill.getAttribute('data-filter');
+        var visibleYears = {};
+
+        blogCards.forEach(function (card) {
+          var tags = card.getAttribute('data-tags') || '';
+          if (filter === 'all' || tags.indexOf(filter) !== -1) {
+            card.classList.remove('hidden');
+            var year = card.getAttribute('data-year');
+            if (year) visibleYears[year] = true;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        yearDividers.forEach(function (divider) {
+          var yearText = divider.querySelector('span').textContent.trim();
+          divider.style.display = (filter === 'all' || visibleYears[yearText]) ? '' : 'none';
+        });
+
+        var anyVisible = Object.keys(visibleYears).length > 0 || filter === 'all';
+        var noResults = blogArchive.querySelector('.blog-no-results');
+        if (!anyVisible && !noResults) {
+          var msg = document.createElement('div');
+          msg.className = 'blog-no-results';
+          msg.textContent = 'No posts match this filter.';
+          blogArchive.appendChild(msg);
+        } else if (anyVisible && noResults) {
+          noResults.remove();
+        }
+      });
+    });
+  }
+
   var highlightNumbers = document.querySelectorAll('.highlight-number[data-target]');
   if (highlightNumbers.length > 0 && 'IntersectionObserver' in window) {
     var countObserver = new IntersectionObserver(function (entries) {

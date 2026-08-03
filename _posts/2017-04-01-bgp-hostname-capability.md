@@ -3,6 +3,7 @@ layout: post
 title: "BGP Hostname Capability"
 date: 2017-04-01
 tags: [bgp, networking, cumulus, troubleshooting]
+featured: true
 ---
 
 I really like Daniel Walton's [draft-walton-bgp-hostname-capability-00](https://tools.ietf.org/html/draft-walton-bgp-hostname-capability-00). Cumulus Networks implemented this as part of Quagga/FRR and it has become the default on Cumulus Linux 3.0 and later. BGP is one of those protocols that is really powerful but in the past is really a pain in the ass to troubleshoot if you don't know how things are cabled. Without a network map or diagram it will take awhile to reverse engineer and troubleshoot a customer's network.

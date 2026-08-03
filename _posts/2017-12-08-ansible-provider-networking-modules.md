@@ -3,6 +3,7 @@ layout: post
 title: "Ansible Provider for Networking Modules"
 date: 2017-12-08
 tags: [ansible, networking, troubleshooting]
+featured: true
 ---
 
 While I know the provider argument is going to be eventually deprecated for networking modules for Ansible in favor of the new `connection: network_cli`, I often find myself troubleshooting playbooks running pre-Ansible 2.5. The message you can get can be super frustrating:
