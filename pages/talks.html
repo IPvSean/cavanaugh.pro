@@ -4,11 +4,11 @@ title: Talks
 permalink: /talks/
 ---
 
-<div class="page-hero">
+<div class="page-hero page-hero-talks">
   <div class="page-hero-bg">
     <img src="/assets/images/ansiblefest-2025-stage.png" alt="Keynote at AnsibleFest 2025">
   </div>
-  <div class="page-hero-content">
+  <div class="page-hero-content page-hero-content-right">
     <span class="section-label">Speaking</span>
     <h1>Conference Talks</h1>
     <p>Keynotes, breakout sessions, and workshops at the world's largest infrastructure and automation conferences.</p>
@@ -18,26 +18,32 @@ permalink: /talks/
 <section class="page-content">
   <div class="section-inner">
 
+    <!-- Quick Nav -->
+    <div class="talks-quick-nav fade-in">
+      <a href="#featured" class="talks-nav-pill talks-nav-pill-active">Featured</a>
+      <a href="#all-talks" class="talks-nav-pill">All Talks</a>
+      <a href="#venues" class="talks-nav-pill">Venues</a>
+    </div>
+
     <!-- Featured Talks -->
-    {% assign featured_talks = site.data.talks | where: "featured", true %}
-    {% for talk in featured_talks %}
-    {% assign talk_slug = talk.title | slugify %}
-    <a href="/talks/{{ talk_slug }}/" class="keynote-highlight" style="margin-bottom: var(--space-4xl); text-decoration: none; color: inherit; display: block;">
-      <div class="keynote-video">
-        {% if talk.stage_photo %}
-        <div class="keynote-photo">
+    <div id="featured" class="featured-talks-grid fade-in">
+      {% assign featured_talks = site.data.talks | where: "featured", true %}
+      {% for talk in featured_talks %}
+      {% assign talk_slug = talk.title | slugify %}
+      <a href="/talks/{{ talk_slug }}/" class="featured-talk-card">
+        <div class="featured-talk-image">
           <img src="{{ talk.stage_photo }}" alt="{{ talk.title }}" loading="lazy">
+          <div class="featured-talk-badge">Featured</div>
         </div>
-        {% endif %}
-      </div>
-      <div class="keynote-info">
-        <span class="section-label">{{ talk.audience }} &bull; {{ talk.year }}</span>
-        <h2>{{ talk.title }}</h2>
-        <p>{{ talk.description | truncatewords: 30 }}</p>
-        <span class="btn btn-outline" style="margin-top: var(--space-lg);">View Details &rarr;</span>
-      </div>
-    </a>
-    {% endfor %}
+        <div class="featured-talk-body">
+          <span class="featured-talk-meta">{{ talk.audience }} &bull; {{ talk.year }}</span>
+          <h3>{{ talk.title }}</h3>
+          <p>{{ talk.description | truncatewords: 20 }}</p>
+          <span class="featured-talk-link">View Details &rarr;</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
 
     <!-- Speaking Track Record -->
     <div class="track-record fade-in">
@@ -47,7 +53,7 @@ permalink: /talks/
       </div>
       <div class="track-record-divider"></div>
       <div class="track-record-stat">
-        <span class="track-record-number">2016</span>
+        <span class="track-record-number">2015</span>
         <span class="track-record-label">First Talk</span>
       </div>
       <div class="track-record-divider"></div>
@@ -63,9 +69,10 @@ permalink: /talks/
     </div>
 
     <!-- All Talks -->
-    <div class="section-header">
+    <div id="all-talks" class="section-header">
       <span class="section-label">All Talks</span>
       <h2>More Appearances</h2>
+      <p class="section-subtitle">Select highlights from 50+ conference talks, workshops, and livestreams.</p>
     </div>
     <div class="talks-grid">
       {% for talk in site.data.talks %}
@@ -90,7 +97,7 @@ permalink: /talks/
           <a href="/talks/{{ talk_slug }}/" class="talk-card-title-link">
             <h3>{{ talk.title }}</h3>
           </a>
-          <p>{{ talk.description }}</p>
+          <p>{{ talk.description | truncatewords: 25 }}</p>
           {% if talk.stats %}
           <div class="talk-stats">
             <span class="talk-stat">
@@ -126,27 +133,43 @@ permalink: /talks/
             {% endif %}
           </div>
           {% endif %}
-          {% if talk.gallery %}
-          <div class="talk-gallery">
-            {% for photo in talk.gallery %}
-            <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy">
-            {% endfor %}
-          </div>
-          {% endif %}
         </div>
       </div>
       {% endunless %}
       {% endfor %}
     </div>
 
-    <div style="margin-top: var(--space-4xl);">
+    <div id="venues" style="margin-top: var(--space-4xl);">
       <div class="section-header" style="text-align: center;">
         <span class="section-label">Venues</span>
         <h2>Where I've Spoken</h2>
       </div>
-      <div class="speaking-logos">
+      <div class="speaking-venues-grid">
         {% for venue in site.data.speaking %}
-        <span class="speaking-logo">{{ venue.name }}</span>
+        <div class="speaking-venue-card">
+          <div class="speaking-venue-icon">
+            {% if venue.name == "Cisco Live" %}
+            <svg viewBox="0 0 24 24" width="32" height="32"><rect x="3" y="8" width="2" height="8" rx="1" fill="currentColor"/><rect x="7" y="5" width="2" height="14" rx="1" fill="currentColor"/><rect x="11" y="3" width="2" height="18" rx="1" fill="currentColor"/><rect x="15" y="5" width="2" height="14" rx="1" fill="currentColor"/><rect x="19" y="8" width="2" height="8" rx="1" fill="currentColor"/></svg>
+            {% elsif venue.name == "Red Hat Summit" or venue.name == "Red Hat One" or venue.name == "Red Hat Tech Exchange" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 2L2 7v2h20V7L12 2zM4 11v8h4v-8H4zm6 0v8h4v-8h-4zm6 0v8h4v-8h-4zM2 21h20v2H2v-2z"/></svg>
+            {% elsif venue.name == "AnsibleFest" or venue.name == "Ansible Automates" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6l-6 12h4l2-4 2 4h4L12 6z"/></svg>
+            {% elsif venue.name == "AWS re:Invent" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M6.5 13.5c0 1.5 1.2 2.7 2.7 2.7h5.6c1.3 0 2.4-1.1 2.4-2.4 0-1.2-.8-2.2-2-2.4v-.1c0-1.9-1.5-3.3-3.3-3.3-1.5 0-2.8 1-3.2 2.4-1.2.2-2.2 1.2-2.2 2.4v.7z"/><path d="M8 18l-3 2M16 18l3 2M12 18v3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            {% elsif venue.name == "IBM Tech Exchange" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><rect x="3" y="4" width="18" height="3"/><rect x="5" y="8" width="14" height="2"/><rect x="3" y="11" width="18" height="2"/><rect x="5" y="14" width="14" height="2"/><rect x="3" y="17" width="18" height="3"/></svg>
+            {% elsif venue.name == "All Things Open" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3C7 3 3 7 3 12M12 3c5 0 9 4 9 9M3 12h18"/></svg>
+            {% elsif venue.name == "VMware Explore" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            {% elsif venue.name == "AutoCon" %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
+            {% else %}
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"/></svg>
+            {% endif %}
+          </div>
+          <span class="speaking-venue-name">{{ venue.name }}</span>
+        </div>
         {% endfor %}
       </div>
     </div>
