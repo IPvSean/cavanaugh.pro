@@ -1038,17 +1038,21 @@ a.highlight-item {
 }
 
 .talk-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
+  cursor: pointer;
 }
 
 .talk-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  border-color: var(--color-border-light);
+  border-color: var(--color-accent);
 }
 
 .talk-card-image {
@@ -1081,7 +1085,17 @@ a.highlight-item {
 
 .talk-card-body h3 {
   color: var(--color-white);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  font-size: 1.15rem;
+}
+
+.talk-card-talk-title {
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  color: var(--color-accent) !important;
+  margin-bottom: var(--space-sm) !important;
+  display: block !important;
+  -webkit-line-clamp: 2 !important;
 }
 
 .talk-card-body p {
@@ -1154,6 +1168,10 @@ a.highlight-item {
 }
 
 .talk-resources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
   margin-top: var(--space-md);
   padding-top: var(--space-md);
   border-top: 1px solid var(--color-border);
@@ -1165,21 +1183,25 @@ a.highlight-item {
   gap: var(--space-xs);
   font-size: 0.8rem;
   font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.talk-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--color-accent);
-  text-decoration: none;
-  transition: opacity var(--transition-base);
+  transition: color var(--transition-fast);
 }
 
-.talk-resource-link:hover {
-  opacity: 0.8;
+.talk-card:hover .talk-card-link {
+  color: var(--color-white);
 }
 
-.talk-card-title-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.talk-card-title-link:hover h3 {
+.talk-card:hover h3 {
   color: var(--color-accent);
 }
 
@@ -3698,6 +3720,70 @@ a.highlight-item {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--color-text-secondary);
+  margin-bottom: var(--space-2xl);
+}
+
+.talk-detail-highlights {
+  margin-bottom: var(--space-2xl);
+}
+
+.talk-detail-highlights h3,
+.talk-detail-breakout h3,
+.talk-detail-links h3 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-md);
+}
+
+.talk-detail-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.talk-detail-highlights li {
+  position: relative;
+  padding-left: var(--space-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.talk-detail-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.talk-detail-breakout {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.talk-detail-breakout h4 {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+}
+
+.talk-detail-abstract {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.talk-detail-links {
   margin-bottom: var(--space-2xl);
 }
 

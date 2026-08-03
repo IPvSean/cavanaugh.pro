@@ -44,6 +44,43 @@ layout: default
     <div class="talk-detail-body">
       <p class="talk-detail-description">{{ talk.description }}</p>
 
+      {% if talk.highlights %}
+      <div class="talk-detail-highlights">
+        <h3>Highlights</h3>
+        <ul>
+          {% for item in talk.highlights %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if talk.talk_name %}
+      <div class="talk-detail-breakout">
+        <h3>Breakout Talk</h3>
+        <h4>{{ talk.talk_name }}</h4>
+        {% if talk.abstract %}
+        <p class="talk-detail-abstract">{{ talk.abstract }}</p>
+        {% endif %}
+      </div>
+      {% elsif talk.abstract %}
+      <div class="talk-detail-breakout">
+        <h3>Abstract</h3>
+        <p class="talk-detail-abstract">{{ talk.abstract }}</p>
+      </div>
+      {% endif %}
+
+      {% if talk.links %}
+      <div class="talk-detail-links">
+        <h3>Related</h3>
+        <div class="talk-detail-actions">
+          {% for link in talk.links %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener" class="btn btn-outline">{{ link.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
       {% if talk.co_presenter %}
       <div class="talk-detail-info-card">
         <strong>Co-presenter:</strong> {{ talk.co_presenter }}
