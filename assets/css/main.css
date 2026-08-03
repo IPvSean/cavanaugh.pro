@@ -2810,9 +2810,39 @@ a.highlight-item {
 }
 
 /* About — Family Section */
+.about-family-bio {
+  max-width: 750px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.about-family-bio p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.about-family-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.about-family-quote {
+  max-width: 700px;
+  margin: var(--space-xl) 0 var(--space-2xl) 0;
+  padding: var(--space-lg) var(--space-xl);
+  border-left: 3px solid var(--color-accent);
+  background: rgba(238, 0, 0, 0.03);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-white);
+  font-style: italic;
+}
+
 .about-family-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
 }
 
@@ -2834,6 +2864,10 @@ a.highlight-item {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+}
+
+.about-family-item img[src$=".svg"] {
+  background: #1a1a2e;
 }
 
 .about-family-item span {
