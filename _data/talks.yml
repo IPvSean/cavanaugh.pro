@@ -136,6 +136,7 @@
 
 - title: "Routing on the Host"
   description: "Talk on host-based routing and network automation at All Things Open 2016 — one of the largest open source conferences in the US — while working at Cumulus Networks."
+  image: "/assets/images/docker-logo.png"
   audience: "All Things Open"
   year: 2016
   date: "October 26, 2016"
