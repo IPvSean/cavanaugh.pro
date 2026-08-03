@@ -13,7 +13,7 @@
 
 - title: "Ansible Quest"
   repo: "ansible-quest"
-  description: "A medieval-themed 3D interactive learning game for Ansible Development Tools. Explore a kingdom divided into three districts — Village (Create), Township (Test), and Fortress (Deploy) — take quizzes on 9 tools, fight ogres, chop trees, and master the full Ansible dev workflow from creation to deployment."
+  description: "A medieval-themed 3D interactive learning game for Ansible Development Tools. Explore a kingdom divided into three districts, Village (Create), Township (Test), and Fortress (Deploy), take quizzes on 9 tools, fight ogres, chop trees, and master the full Ansible dev workflow from creation to deployment."
   tags: ["Three.js", "Ansible", "RPG", "Education"]
   github: "https://github.com/ansible-tmm/ansible-quest"
   play: "https://ansible-tmm.github.io/ansible-quest/"

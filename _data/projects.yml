@@ -1,5 +1,5 @@
 - title: "Ansible Product Demos"
-  description: "The official Ansible Product Demos (APD) project — a comprehensive set of automation demos covering Linux, Windows, Cloud, Network, OpenShift, and Satellite that run on Red Hat Ansible Automation Platform. 311 stars, 256 forks, and used across the Ansible ecosystem for live demos, training, and customer engagements."
+  description: "The official Ansible Product Demos (APD) project: a comprehensive set of automation demos covering Linux, Windows, Cloud, Network, OpenShift, and Satellite that run on Red Hat Ansible Automation Platform. 311 stars, 256 forks, and used across the Ansible ecosystem for live demos, training, and customer engagements."
   tags: ["Ansible", "AAP", "Open Source", "Demos"]
   github: "https://github.com/ansible/product-demos"
   url: "https://github.com/ansible/product-demos"
@@ -10,7 +10,7 @@
     commits: "570+"
 
 - title: "Ansible Workshops"
-  description: "The official training course for Ansible Automation Platform — hands-on workshop content used to train thousands of engineers worldwide at conferences, customer engagements, and instructor-led sessions. 1,862 stars and the backbone of Ansible's global enablement program."
+  description: "The official training course for Ansible Automation Platform: hands-on workshop content used to train thousands of engineers worldwide at conferences, customer engagements, and instructor-led sessions. 1,862 stars and the backbone of Ansible's global enablement program."
   tags: ["Ansible", "Training", "Workshops", "Open Source"]
   github: "https://github.com/ansible/workshops"
   url: "https://github.com/ansible/workshops"
@@ -20,7 +20,7 @@
     forks: "1,100+"
 
 - title: "Network Automation Toolkit"
-  description: "An Ansible Content Collection for common network automation functions — backup, restore, facts, reporting, and more. Used alongside the Ansible Network Automation Workshop to help engineers quickly adopt network automation use cases. 130 stars, 157 forks, and 653 commits of battle-tested network roles and playbooks."
+  description: "An Ansible Content Collection for common network automation functions: backup, restore, facts, reporting, and more. Used alongside the Ansible Network Automation Workshop to help engineers quickly adopt network automation use cases. 130 stars, 157 forks, and 653 commits of battle-tested network roles and playbooks."
   tags: ["Ansible", "Networking", "Collection", "Open Source"]
   github: "https://github.com/network-automation/toolkit"
   url: "https://github.com/network-automation/toolkit"

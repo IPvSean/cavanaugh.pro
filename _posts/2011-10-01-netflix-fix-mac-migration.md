@@ -13,6 +13,6 @@ The file that gets corrupted is the `mspr.hds` file, located at:
 HD > Library > Application Support > Microsoft > PlayReady > mspr.hds
 ```
 
-Simply delete it and you are good to go. A lot of sites recommend you keep the old `mspr.hds` by renaming it something like `mspr.hds.old`, but I don't really see a reason for that — you can always reinstall Microsoft Silverlight.
+Simply delete it and you are good to go. A lot of sites recommend you keep the old `mspr.hds` by renaming it something like `mspr.hds.old`, but I don't really see a reason for that. you can always reinstall Microsoft Silverlight.
 
 For me the fix worked instantly. Remember that Netflix's help line is actually really easy to reach and will help you out.

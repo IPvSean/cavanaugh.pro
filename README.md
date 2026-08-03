@@ -1,6 +1,6 @@
 # cavanaugh.pro
 
-Personal website for Sean Cavanaugh — AI, Automation, Cloud.
+Personal website for Sean Cavanaugh: AI, Automation, Cloud.
 
 Built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
 

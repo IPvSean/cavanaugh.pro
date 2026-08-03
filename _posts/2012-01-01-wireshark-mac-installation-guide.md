@@ -14,7 +14,7 @@ Here is the complete guide, because so many 'complete guides' were missing a ste
 5. Drag the ChmodBPF folder onto the StartupItems alias (path is `/Library/StartupItems/ChmodBPF`).
 6. If you're running as an admin user you will see a list of network interfaces in Wireshark. If you don't see any, you're probably running as a non-admin. You need to allow read access to `/dev/bpf*`. A quick test: `sudo chmod o+r /dev/bpf*`. A better solution is adding a `chown` line to the ChmodBPF script.
 7. For fresh installs on Snow Leopard, fix ownership: `cd /Library/StartupItems && sudo chown -R root:wheel ChmodBPF`
-8. Check security settings — if you see "Insecure Startup Items folder detected", fix permissions:
+8. Check security settings. if you see "Insecure Startup Items folder detected", fix permissions:
 
 ```bash
 sudo chown -R root:wheel /Library/StartupItems

@@ -45,4 +45,4 @@ Yay now we can go configure them now that we know how they are cabled up. It's g
 net add int swp1-54
 ```
 
-One caveat vs using `ip link set` — this will make persistent config (meaning the ports are actually configured under `/etc/network/interfaces`).
+One caveat vs using `ip link set`: this will make persistent config (meaning the ports are actually configured under `/etc/network/interfaces`).
