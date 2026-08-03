@@ -18,9 +18,9 @@ permalink: /albums/
 <section class="page-content">
   <div class="section-inner">
 
-    <div class="album-grid fade-in">
+    <div class="album-grid">
       {% for album in site.data.albums %}
-      <a href="{{ album.url }}" target="_blank" rel="noopener" class="album-card {% if album.image %}album-card-has-image{% endif %}">
+      <a href="{{ album.url }}" target="_blank" rel="noopener" class="album-card {% if album.image %}album-card-has-image{% endif %} fade-in">
         {% if album.image %}
         <div class="album-card-image">
           <img src="{{ album.image }}" alt="{{ album.title }}" loading="lazy">
