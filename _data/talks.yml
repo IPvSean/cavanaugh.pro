@@ -1,3 +1,5 @@
+# Featured talks (shown in the featured grid)
+
 - title: "Red Hat Summit 2026, Product Spotlight"
   description: "Opening and closing the Ansible Product Spotlight at Red Hat Summit, featuring customer stories from TD Bank and Marriott, an AIOps partner panel with ServiceNow, Splunk, and IBM Instana, and a live demo of the new Automation Orchestrator."
   image: "/assets/images/summit-2026-stage.png"
@@ -36,6 +38,49 @@
       end: "1:10:09"
       co_presenter: "Dafne Mendoza"
 
+# All other talks, newest first
+
+- title: "VMware Explore 2024"
+  description: "Presenting Ansible Automation Platform at the Red Hat booth at VMware Explore 2024 in Las Vegas, demoing automation workflows to VMware administrators and architects."
+  image: "/assets/images/rh-booth-silent-disco.png"
+  audience: "VMware Explore Las Vegas"
+  year: 2024
+  date: "August 25-28, 2024"
+  photos: "https://photos.app.goo.gl/JAXebqxPPdxYJoQa7"
+  role_at_time: "Red Hat"
+
+- title: "Event-Driven Ansible, Content Corner"
+  description: "Presenting Event-Driven Ansible at the Content Corner Theater at Cisco Live 2024 in Las Vegas."
+  image: "/assets/images/cisco-live-2024-theater.png"
+  audience: "Cisco Live Las Vegas"
+  year: 2024
+  date: "June 5, 2024"
+  role_at_time: "Red Hat"
+
+- title: "Event-Driven Ansible, Cisco DevNet Live"
+  description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible, how to react to infrastructure events in real time with automation."
+  image: "/assets/images/netgru-devnet-2024.png"
+  audience: "Cisco DevNet / NetGru"
+  year: 2024
+  date: "March 27, 2024"
+  role_at_time: "Red Hat"
+
+- title: "Red Hat One, Live Demo"
+  description: "Live demo and workshop at Red Hat One in Indonesia, showcasing Ansible Automation Platform capabilities to a global Red Hat and partner audience."
+  image: "/assets/images/redhat-one-keynote-demo.png"
+  audience: "Red Hat One Indonesia"
+  year: 2024
+  role_at_time: "Red Hat"
+  gallery:
+    - src: "/assets/images/redhat-one-keynote-demo.png"
+      alt: "Live demo on stage, Red Hat One, Indonesia 2024"
+    - src: "/assets/images/redhat-one-demo-stage.png"
+      alt: "Teaching a workshop, Red Hat One, Indonesia 2024"
+    - src: "/assets/images/redhat-one-stage.png"
+      alt: "On stage, Red Hat One, Indonesia 2024"
+    - src: "/assets/images/redhat-one-speaker-badge.png"
+      alt: "Speaker badge, Red Hat One, Indonesia 2024"
+
 - title: "Ansible Network Automation, GitOps for NetOps"
   session_id: "BRKATO-2106"
   description: "A new paradigm shift has created a more opinionated and simpler model: GitOps. This talk covers a simple network as code approach where your Source of Truth is simply a Git Repository and every pull request starts your automation workflow. Co-presented with Adrian Iliesiu (Cisco Distinguished Speaker)."
@@ -62,22 +107,6 @@
     - "Breakout Session"
     - "Intermediate"
     - "Automation & Orchestration"
-
-- title: "Ansible Automates Tokyo, Keynote"
-  description: "Keynote on Ansible network automation to 400 attendees at Ansible Automates Tokyo, covered by ZDNET Japan. Presented on automating network operations with Ansible modules across 40+ platforms."
-  image: "/assets/images/ansible-automates-tokyo-2018.png"
-  audience: "Ansible Automates Tokyo"
-  year: 2018
-  date: "April 24, 2018"
-  url: "https://japan.zdnet.com/extra/redhathpe_201805/35119733/"
-  role_at_time: "Red Hat"
-  stats:
-    attended: 400
-  gallery:
-    - src: "/assets/images/ansible-automates-tokyo-2018.png"
-      alt: "Sean Cavanaugh presenting on stage at Ansible Automates Tokyo 2018"
-    - src: "/assets/images/ansible-automates-tokyo-2018-selfie.png"
-      alt: "Behind the scenes, about to present to 400 attendees in Tokyo"
 
 - title: "Ansible Network Automation"
   description: "Presenting on the four types of Ansible network modules, command, config, facts, and resource, at Red Hat Tech Exchange in Seoul, South Korea."
@@ -113,36 +142,30 @@
   photos: "https://photos.app.goo.gl/cM6mYT71t1mdBTuz6"
   role_at_time: "Red Hat"
 
-- title: "Red Hat One, Live Demo"
-  description: "Live demo and workshop at Red Hat One in Indonesia, showcasing Ansible Automation Platform capabilities to a global Red Hat and partner audience."
-  image: "/assets/images/redhat-one-keynote-demo.png"
-  audience: "Red Hat One Indonesia"
-  year: 2024
+- title: "Ansible Automates Tokyo, Keynote"
+  description: "Keynote on Ansible network automation to 400 attendees at Ansible Automates Tokyo, covered by ZDNET Japan. Presented on automating network operations with Ansible modules across 40+ platforms."
+  image: "/assets/images/ansible-automates-tokyo-2018.png"
+  audience: "Ansible Automates Tokyo"
+  year: 2018
+  date: "April 24, 2018"
+  url: "https://japan.zdnet.com/extra/redhathpe_201805/35119733/"
   role_at_time: "Red Hat"
+  stats:
+    attended: 400
   gallery:
-    - src: "/assets/images/redhat-one-keynote-demo.png"
-      alt: "Live demo on stage, Red Hat One, Indonesia 2024"
-    - src: "/assets/images/redhat-one-demo-stage.png"
-      alt: "Teaching a workshop, Red Hat One, Indonesia 2024"
-    - src: "/assets/images/redhat-one-stage.png"
-      alt: "On stage, Red Hat One, Indonesia 2024"
-    - src: "/assets/images/redhat-one-speaker-badge.png"
-      alt: "Speaker badge, Red Hat One, Indonesia 2024"
+    - src: "/assets/images/ansible-automates-tokyo-2018.png"
+      alt: "Sean Cavanaugh presenting on stage at Ansible Automates Tokyo 2018"
+    - src: "/assets/images/ansible-automates-tokyo-2018-selfie.png"
+      alt: "Behind the scenes, about to present to 400 attendees in Tokyo"
 
-- title: "Event-Driven Ansible, Content Corner"
-  description: "Presenting Event-Driven Ansible at the Content Corner Theater at Cisco Live 2024 in Las Vegas."
-  image: "/assets/images/cisco-live-2024-theater.png"
-  audience: "Cisco Live Las Vegas"
-  year: 2024
-  date: "June 5, 2024"
-  role_at_time: "Red Hat"
-
-- title: "Event-Driven Ansible, Cisco DevNet Live"
-  description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible, how to react to infrastructure events in real time with automation."
-  image: "/assets/images/netgru-devnet-2024.png"
-  audience: "Cisco DevNet / NetGru"
-  year: 2024
-  date: "March 27, 2024"
+- title: "Network Automation with Ansible"
+  description: "Ansible Automates Atlanta, covering automation for network infrastructure, from configuration management to compliance and operational workflows. Held at Mercedes-Benz Stadium in Atlanta, GA."
+  image: "/assets/images/ansible-automates-atlanta-2017.png"
+  audience: "Ansible Automates Atlanta"
+  year: 2017
+  date: "November 1, 2017"
+  url: "https://www.ansible.com/videos-ansible-automates-network-automation-with-ansible"
+  photos: "https://photos.app.goo.gl/cE5xMS2Yen2Rs0Ji2"
   role_at_time: "Red Hat"
 
 - title: "Routing on the Host"
@@ -155,16 +178,6 @@
   slides: "https://docs.google.com/presentation/d/1NKQQ2sTODTFDfTXqjfgjPQ2BIUBPF6BXlupLNeHh3pc/edit?usp=sharing"
   role_at_time: "Cumulus Networks"
 
-- title: "Network Automation with Ansible"
-  description: "Ansible Automates Atlanta, covering automation for network infrastructure, from configuration management to compliance and operational workflows. Held at Mercedes-Benz Stadium in Atlanta, GA."
-  image: "/assets/images/ansible-automates-atlanta-2017.png"
-  audience: "Ansible Automates Atlanta"
-  year: 2017
-  date: "November 1, 2017"
-  url: "https://www.ansible.com/videos-ansible-automates-network-automation-with-ansible"
-  photos: "https://photos.app.goo.gl/cE5xMS2Yen2Rs0Ji2"
-  role_at_time: "Red Hat"
-
 - title: "Routing on the Host with Docker and Ansible"
   description: "Community meetup talk on using Ansible to manage routable Docker containers, presented at the Ansible RDU meetup while at Cumulus Networks."
   image: "/assets/images/docker-ansible-meetup.png"
@@ -174,18 +187,6 @@
   url: "https://www.meetup.com/ansible-durham/events/229409542/"
   slides: "https://docs.google.com/presentation/d/1cbUP1XLanxM0AuF2SC7Ve4beFEGqbq8x-1JoUrK_Cp0/edit?usp=sharing"
   venue_url: "https://www.meetup.com/ansible-durham/"
-  role_at_time: "Cumulus Networks"
-
-- title: "Using DevOps Tools for Modern Data Centers"
-  description: "Talk at All Things Open 2015 on applying DevOps practices to data center networking, automating leaf-spine topologies with configuration management tools while at Cumulus Networks."
-  image: "/assets/images/all-things-open-logo-2015.png"
-  audience: "All Things Open"
-  year: 2015
-  date: "October 19, 2015"
-  youtube_id: "vXRgb7vbSWU"
-  video_platform: "youtube"
-  url: "https://www.youtube.com/watch?v=vXRgb7vbSWU"
-  slides: "https://docs.google.com/presentation/d/1jwB2XV8H5Y8qUvOOSyXcadzsWv0TsIy1HyCGMjkFi34/edit?usp=sharing"
   role_at_time: "Cumulus Networks"
 
 - title: "NetDevOps: Puppet on Bare Metal Switches"
@@ -206,4 +207,16 @@
   date: "December 3, 2015"
   url: "https://github.com/IPvSean/netdevops-puppet-enterprise"
   slides: "https://drive.google.com/file/d/0B3lmK0_qSAXiSE4wOTgzbXpWTzA/view?usp=sharing"
+  role_at_time: "Cumulus Networks"
+
+- title: "Using DevOps Tools for Modern Data Centers"
+  description: "Talk at All Things Open 2015 on applying DevOps practices to data center networking, automating leaf-spine topologies with configuration management tools while at Cumulus Networks."
+  image: "/assets/images/all-things-open-logo-2015.png"
+  audience: "All Things Open"
+  year: 2015
+  date: "October 19, 2015"
+  youtube_id: "vXRgb7vbSWU"
+  video_platform: "youtube"
+  url: "https://www.youtube.com/watch?v=vXRgb7vbSWU"
+  slides: "https://docs.google.com/presentation/d/1jwB2XV8H5Y8qUvOOSyXcadzsWv0TsIy1HyCGMjkFi34/edit?usp=sharing"
   role_at_time: "Cumulus Networks"

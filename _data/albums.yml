@@ -21,6 +21,13 @@
   image: "/assets/images/album-bald-head-island-2024.png"
   category: "travel"
 
+- title: "Disney Cruise"
+  date: "Spring 2023"
+  description: "Spring break on a Disney cruise. Captain Minnie, character meet-and-greets, and endless fun on the high seas."
+  url: "https://photos.app.goo.gl/x21i2mGLAN29YF3g8"
+  image: "/assets/images/album-disney-cruise-2023.png"
+  category: "travel"
+
 - title: "Singapore"
   date: "February 2023"
   description: "Jamie and I explored Singapore together. Marina Bay Sands, Gardens by the Bay, hawker centers, and more."
