@@ -2809,6 +2809,41 @@ a.highlight-item {
   line-height: 1.8;
 }
 
+/* About — Family Section */
+.about-family-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.about-family-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+
+.about-family-item:hover {
+  border-color: var(--color-border-light);
+  transform: translateY(-3px);
+}
+
+.about-family-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.about-family-item span {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
 /* ---- Scroll Animations ---- */
 
 .fade-in {
@@ -2916,6 +2951,10 @@ a.highlight-item {
     max-width: 300px;
     aspect-ratio: 1;
     border-radius: 50%;
+  }
+
+  .about-family-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-hero {
@@ -3094,6 +3133,11 @@ a.highlight-item {
 
   .about-text h2 {
     font-size: 1.4rem;
+  }
+
+  .about-family-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 
   .page-hero-content h1 {
