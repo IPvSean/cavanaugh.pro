@@ -2224,6 +2224,7 @@ a.highlight-item {
 .page-hero {
   position: relative;
   height: 420px;
+  padding-top: 70px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
