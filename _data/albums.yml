@@ -1,5 +1,12 @@
 # Family photo albums, newest first
 
+- title: "Singapore"
+  date: "February 2023"
+  description: "Jamie and I explored Singapore together. Marina Bay Sands, Gardens by the Bay, hawker centers, and more."
+  url: "https://photos.app.goo.gl/78F1Dd6ZdueHricC8"
+  image: "/assets/images/album-singapore-2023.png"
+  category: "travel"
+
 - title: "Ansible Automates Atlanta"
   date: "November 2017"
   description: "Ansible Automates event at Mercedes-Benz Stadium in Atlanta, GA."
