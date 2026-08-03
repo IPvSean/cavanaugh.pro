@@ -177,6 +177,7 @@
 
 - title: "NetDevOps: Puppet on Bare Metal Switches"
   description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Demonstrated provisioning OSPF Unnumbered across network nodes and automated failover handling with Puppet manifests."
+  image: "/assets/images/puppet-logo.png"
   audience: "Puppet Camp Tampa"
   year: 2015
   date: "December 1, 2015"
@@ -186,6 +187,7 @@
 
 - title: "NetDevOps: Puppet on Bare Metal Switches"
   description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Same talk delivered at Puppet Camp Atlanta two days after the Tampa debut."
+  image: "/assets/images/puppet-logo.png"
   audience: "Puppet Camp Atlanta"
   year: 2015
   date: "December 3, 2015"
