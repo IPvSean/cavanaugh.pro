@@ -1816,9 +1816,15 @@ a.highlight-item {
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
   padding-top: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .album-card {
