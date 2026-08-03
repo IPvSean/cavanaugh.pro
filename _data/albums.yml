@@ -104,3 +104,10 @@
   url: "https://photos.app.goo.gl/5pasK7cpupfiQx9E3"
   image: "/assets/images/album-park-city-2013.png"
   category: "travel"
+
+- title: "Engagement Session"
+  date: "June 2010"
+  description: "Jamie and Sean's engagement photos. Where it all started."
+  url: "https://photos.app.goo.gl/t7YodxBje2wcANQu7"
+  image: "/assets/images/album-engagement-2010.png"
+  category: "travel"
