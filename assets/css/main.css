@@ -2739,20 +2739,23 @@ a.highlight-item {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    background: rgba(10, 10, 10, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    background: rgba(10, 10, 10, 0.99);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-xl);
+    gap: var(--space-md);
+    padding: 80px var(--space-xl) 40px;
+    overflow-y: auto;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-base);
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav.open {
@@ -2761,13 +2764,15 @@ a.highlight-item {
   }
 
   .site-nav .nav-link {
-    font-size: 1.4rem;
-    padding: var(--space-sm) 0;
+    font-size: 1.2rem;
+    padding: var(--space-xs) 0;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-toggle {
     display: flex;
-    z-index: 1001;
+    z-index: 1051;
   }
 
   .section {
@@ -2917,7 +2922,11 @@ a.highlight-item {
   }
 
   .site-nav .nav-link {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    gap: var(--space-sm);
   }
 
   .contact-socials-grid {
