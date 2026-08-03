@@ -163,6 +163,17 @@
   venue_url: "https://www.meetup.com/ansible-durham/"
   role_at_time: "Cumulus Networks"
 
+- title: "Using DevOps Tools for Modern Data Centers"
+  description: "Talk at All Things Open 2015 on applying DevOps practices to data center networking — automating leaf-spine topologies with configuration management tools while at Cumulus Networks."
+  audience: "All Things Open"
+  year: 2015
+  date: "October 19, 2015"
+  youtube_id: "vXRgb7vbSWU"
+  video_platform: "youtube"
+  url: "https://www.youtube.com/watch?v=vXRgb7vbSWU"
+  slides: "https://docs.google.com/presentation/d/1jwB2XV8H5Y8qUvOOSyXcadzsWv0TsIy1HyCGMjkFi34/edit?usp=sharing"
+  role_at_time: "Cumulus Networks"
+
 - title: "NetDevOps: Puppet on Bare Metal Switches"
   description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Demonstrated provisioning OSPF Unnumbered across network nodes and automated failover handling with Puppet manifests."
   audience: "Puppet Camp Tampa"
