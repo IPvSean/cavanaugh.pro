@@ -106,13 +106,18 @@ layout: default
 
       {% if talk.presentations %}
       <div class="talk-detail-presentations">
-        <h3>Mini Theater Sessions</h3>
+        <h3>{{ talk.presentations_label | default: "Presentations" }}</h3>
         <div class="talk-presentations-list">
           {% for presentation in talk.presentations %}
           <div class="talk-presentation-item">
             <div class="talk-presentation-info">
-              <span class="talk-presentation-label">CLUS</span>
+              {% if talk.presentation_badge %}
+              <span class="talk-presentation-label">{{ talk.presentation_badge }}</span>
+              {% endif %}
               <strong>{{ presentation.title }}</strong>
+              {% if presentation.co_presenter %}
+              <span class="talk-presentation-co">With {{ presentation.co_presenter }}</span>
+              {% endif %}
             </div>
             {% if presentation.slides %}
             <a href="{{ presentation.slides }}" target="_blank" rel="noopener" class="btn btn-outline talk-presentation-slides">View Slides</a>

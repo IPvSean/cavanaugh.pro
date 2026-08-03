@@ -3852,6 +3852,11 @@ a.highlight-item {
   line-height: 1.4;
 }
 
+.talk-presentation-co {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
 .talk-presentation-slides {
   flex-shrink: 0;
   font-size: 0.8rem;
