@@ -1,0 +1,73 @@
+# Family photo albums, newest first
+
+- title: "Ansible Automates Atlanta"
+  date: "November 2017"
+  description: "Ansible Automates event at Mercedes-Benz Stadium in Atlanta, GA."
+  url: "https://photos.app.goo.gl/cE5xMS2Yen2Rs0Ji2"
+  category: "work"
+
+- title: "Walt Disney World"
+  date: "June 2018"
+  description: "Family trip while in Orlando for Cisco Live 2018. Visited Animal Kingdom and stayed at the Animal Kingdom Lodge."
+  url: "https://photos.app.goo.gl/6anmkp7Nf2ZHPt3g6"
+  category: "travel"
+
+- title: "Colorado"
+  date: "May 2018"
+  description: "Denver, Boulder, Georgetown, Breckenridge, and Vail. Highlight: dirt road through Boreas Pass in a rental minivan."
+  url: "https://photos.app.goo.gl/xBqJVz1e3ZmcZEd8A"
+  category: "travel"
+
+- title: "Walt Disney World"
+  date: "October 2016"
+  description: "Family met up with Ryan and Carolyn at Magic Kingdom and Epcot. Stayed at the Dolphin Resort."
+  url: "https://photos.app.goo.gl/V8RnaU1pkCR30YjE2"
+  category: "travel"
+
+- title: "United Kingdom and Germany"
+  date: "Summer 2017"
+  description: "London, the Isle of Lewis in Scotland, and Munich. Traveling with young kids was worth every moment."
+  url: "https://goo.gl/photos/5PtiutC7jBzkHzB86"
+  category: "travel"
+
+- title: "Greensboro Science Center, NC"
+  date: "July 2017"
+  description: "Family trip to the Greensboro Science Center on the 4th of July."
+  url: "https://photos.app.goo.gl/G2dgq06mme9jmuFX2"
+  category: "travel"
+
+- title: "Lake Lure, North Carolina"
+  date: "March 2017"
+  description: "Weekend trip to Lake Lure to visit friends. Made the best of a beautiful weekend in the mountains."
+  url: "https://photos.app.goo.gl/SkimxNEMzuqpXNmJ3"
+  category: "travel"
+
+- title: "Smith Mountain Lake, Virginia"
+  date: "June 2016"
+  description: "Jamie, Aria, and I visited the Gospodarek family at Smith Mountain Lake."
+  url: "https://photos.app.goo.gl/1Y3msBYzwaAH2rQi1"
+  category: "travel"
+
+- title: "Sedona, Arizona"
+  date: "April 2015"
+  description: "Amazing vistas, great food, and scaring Jamie at the Grand Canyon. Got our money out of the baby bjorn."
+  url: "https://photos.app.goo.gl/cM15Wk9wceUXap4r1"
+  category: "travel"
+
+- title: "Monterey, California"
+  date: "July 2014"
+  description: "Our last trip before Aria. We consider this our baby moon!"
+  url: "https://photos.app.goo.gl/5PN88UMnFD6KV3Y33"
+  category: "travel"
+
+- title: "San Francisco, California"
+  date: "April 2014"
+  description: "My brother Ryan and I explored Muir Woods, Alcatraz Island, and downtown San Francisco."
+  url: "https://photos.app.goo.gl/ZVtFC37DnrwCTDuC2"
+  category: "travel"
+
+- title: "Park City, Utah"
+  date: "December 2013"
+  description: "Jamie and I met up with family in Park City for skiing, snowmobiling, and card games."
+  url: "https://photos.app.goo.gl/5pasK7cpupfiQx9E3"
+  category: "travel"

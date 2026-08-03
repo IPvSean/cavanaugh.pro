@@ -1,0 +1,41 @@
+---
+layout: default
+title: Photo Albums
+permalink: /albums/
+---
+
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <img src="/assets/images/iceland-jokulsarlon-family.png" alt="Family at Jokulsarlon Glacier Lagoon, Iceland">
+  </div>
+  <div class="page-hero-content">
+    <span class="section-label">Photo Albums</span>
+    <h1>Adventures</h1>
+    <p>Family trips, vacations, and memories from over the years. All albums hosted on Google Photos.</p>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="section-inner">
+
+    <div class="album-grid fade-in">
+      {% for album in site.data.albums %}
+      <a href="{{ album.url }}" target="_blank" rel="noopener" class="album-card">
+        <div class="album-card-header">
+          <svg class="album-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/>
+          </svg>
+          <span class="album-card-date">{{ album.date }}</span>
+          {% if album.category == "work" %}
+          <span class="album-card-badge">Work</span>
+          {% endif %}
+        </div>
+        <h3>{{ album.title }}</h3>
+        <p>{{ album.description }}</p>
+        <span class="album-card-link">View Album <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg></span>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
