@@ -7,6 +7,20 @@
   image: "/assets/images/album-iceland-2026.png"
   category: "travel"
 
+- title: "New York City"
+  date: "April 2025"
+  description: "Family trip to NYC. Explored the city with Jamie and the kids over a long weekend."
+  url: "https://photos.app.goo.gl/CtiBtasLgg1fq6Vp9"
+  image: "/assets/images/album-nyc-2025.png"
+  category: "travel"
+
+- title: "Bald Head Island, North Carolina"
+  date: "August 2024"
+  description: "Family beach week on Bald Head Island. No cars, just golf carts, sunsets, and good food with friends."
+  url: "https://photos.app.goo.gl/YMueAKheWYdvWBWB9"
+  image: "/assets/images/album-bald-head-island-2024.png"
+  category: "travel"
+
 - title: "Singapore"
   date: "February 2023"
   description: "Jamie and I explored Singapore together. Marina Bay Sands, Gardens by the Bay, hawker centers, and more."

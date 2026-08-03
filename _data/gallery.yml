@@ -229,6 +229,13 @@
   category: "booth"
   year: 2019
 
+# === 2019, Cisco Live San Diego ===
+
+- src: "/assets/images/cisco-live-2019-crowd.png"
+  alt: "Expo hall crowd, Cisco Live, San Diego, 2019"
+  category: "booth"
+  year: 2019
+
 # === 2019, Other ===
 
 - src: "/assets/images/demo-jam-2019.png"

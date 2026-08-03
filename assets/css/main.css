@@ -2620,12 +2620,14 @@ a.highlight-item {
 @media (max-width: 768px) {
   .page-hero {
     height: 320px;
+    padding-top: 80px;
   }
 }
 
 @media (max-width: 480px) {
   .page-hero {
-    height: 280px;
+    height: 300px;
+    padding-top: 90px;
   }
 }
 
@@ -3359,7 +3361,8 @@ a.highlight-item {
   }
 
   .page-hero {
-    height: 240px;
+    height: 280px;
+    padding-top: 90px;
   }
 
   .page-hero-content h1 {
