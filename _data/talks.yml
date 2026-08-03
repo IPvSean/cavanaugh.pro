@@ -162,3 +162,21 @@
   slides: "https://docs.google.com/presentation/d/1cbUP1XLanxM0AuF2SC7Ve4beFEGqbq8x-1JoUrK_Cp0/edit?usp=sharing"
   venue_url: "https://www.meetup.com/ansible-durham/"
   role_at_time: "Cumulus Networks"
+
+- title: "NetDevOps: Puppet on Bare Metal Switches"
+  description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Demonstrated provisioning OSPF Unnumbered across network nodes and automated failover handling with Puppet manifests."
+  audience: "Puppet Camp Tampa"
+  year: 2015
+  date: "December 1, 2015"
+  url: "https://github.com/IPvSean/netdevops-puppet-enterprise"
+  slides: "https://drive.google.com/file/d/0B3lmK0_qSAXiSE4wOTgzbXpWTzA/view?usp=sharing"
+  role_at_time: "Cumulus Networks"
+
+- title: "NetDevOps: Puppet on Bare Metal Switches"
+  description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Same talk delivered at Puppet Camp Atlanta two days after the Tampa debut."
+  audience: "Puppet Camp Atlanta"
+  year: 2015
+  date: "December 3, 2015"
+  url: "https://github.com/IPvSean/netdevops-puppet-enterprise"
+  slides: "https://drive.google.com/file/d/0B3lmK0_qSAXiSE4wOTgzbXpWTzA/view?usp=sharing"
+  role_at_time: "Cumulus Networks"
