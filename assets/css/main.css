@@ -1664,7 +1664,7 @@ a.highlight-item {
 
 /* Featured posts */
 .blog-featured-section {
-  margin-bottom: var(--space-4xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .blog-featured-grid {
@@ -1695,14 +1695,14 @@ a.highlight-item {
 
 /* Red Hat blog section */
 .blog-redhat-section {
-  margin-bottom: var(--space-4xl);
-  padding-bottom: var(--space-4xl);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-xl);
   border-bottom: 1px solid var(--color-border);
 }
 
 /* All posts section */
 .blog-all-section {
-  padding-top: var(--space-xl);
+  padding-top: var(--space-md);
 }
 
 .blog-post-count {
