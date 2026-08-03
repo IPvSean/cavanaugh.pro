@@ -9,16 +9,11 @@
   period: "Growth"
 
 - era: "Red Hat"
-  title: "Automation & Ansible"
-  description: "Joined Red Hat to focus on automation, becoming a principal architect for Ansible."
+  title: "Automation, Education & Technical Storytelling"
+  description: "Joined Red Hat to help engineers understand, adopt, and succeed with Ansible Automation Platform."
   period: "Expertise"
 
-- era: "AI"
-  title: "Enterprise AI"
-  description: "Pioneering the intersection of AI, automation, and enterprise infrastructure."
-  period: "Innovation"
-
 - era: "Today"
-  title: "Building the Future"
-  description: "Creating demos, content, and tools that help developers adopt AI-powered automation."
+  title: "AI-Powered Infrastructure Automation"
+  description: "Building demos, tools, and educational experiences that connect AI reasoning with reliable enterprise automation."
   period: "Now"
