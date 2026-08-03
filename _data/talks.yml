@@ -136,7 +136,7 @@
 
 - title: "Routing on the Host"
   description: "Talk on host-based routing and network automation at All Things Open 2016 — one of the largest open source conferences in the US — while working at Cumulus Networks."
-  image: "/assets/images/docker-logo.png"
+  image: "/assets/images/all-things-open-logo.png"
   audience: "All Things Open"
   year: 2016
   date: "October 26, 2016"
@@ -165,6 +165,7 @@
 
 - title: "Using DevOps Tools for Modern Data Centers"
   description: "Talk at All Things Open 2015 on applying DevOps practices to data center networking — automating leaf-spine topologies with configuration management tools while at Cumulus Networks."
+  image: "/assets/images/all-things-open-logo.png"
   audience: "All Things Open"
   year: 2015
   date: "October 19, 2015"
