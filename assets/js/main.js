@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(step);
   }
 
-  // Lightbox for photo gallery
+  // Lightbox for photo galleries (homepage gallery + about family grid)
   var lightbox = document.createElement('div');
   lightbox.className = 'lightbox';
   lightbox.innerHTML = '<div class="lightbox-backdrop"></div><div class="lightbox-content"><button class="lightbox-close">&times;</button><img src="" alt=""><div class="lightbox-caption"></div><button class="lightbox-prev">&lsaquo;</button><button class="lightbox-next">&rsaquo;</button></div>';
@@ -128,17 +128,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var lightboxImg = lightbox.querySelector('img');
   var lightboxCaption = lightbox.querySelector('.lightbox-caption');
-  var galleryItems = document.querySelectorAll('.photo-gallery-item');
+  var activeGallery = [];
   var currentIndex = 0;
 
-  function openLightbox(index) {
-    currentIndex = index;
-    var item = galleryItems[index];
+  function getCaption(item) {
+    var overlay = item.querySelector('.photo-gallery-overlay span');
+    if (overlay) return overlay.textContent;
+    var span = item.querySelector('span');
+    if (span) return span.textContent;
     var img = item.querySelector('img');
-    var caption = item.querySelector('.photo-gallery-overlay span');
+    return img ? img.alt : '';
+  }
+
+  function openLightbox(gallery, index) {
+    activeGallery = gallery;
+    currentIndex = index;
+    var item = activeGallery[index];
+    var img = item.querySelector('img');
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
-    lightboxCaption.textContent = caption ? caption.textContent : '';
+    lightboxCaption.textContent = getCaption(item);
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -149,17 +158,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function navigateLightbox(direction) {
-    currentIndex = (currentIndex + direction + galleryItems.length) % galleryItems.length;
-    var item = galleryItems[currentIndex];
+    currentIndex = (currentIndex + direction + activeGallery.length) % activeGallery.length;
+    var item = activeGallery[currentIndex];
     var img = item.querySelector('img');
-    var caption = item.querySelector('.photo-gallery-overlay span');
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
-    lightboxCaption.textContent = caption ? caption.textContent : '';
+    lightboxCaption.textContent = getCaption(item);
   }
 
-  galleryItems.forEach(function (item, i) {
-    item.addEventListener('click', function () { openLightbox(i); });
+  var homepageGallery = Array.from(document.querySelectorAll('.photo-gallery-item'));
+  homepageGallery.forEach(function (item, i) {
+    item.addEventListener('click', function () { openLightbox(homepageGallery, i); });
+  });
+
+  var aboutFamilyGallery = Array.from(document.querySelectorAll('.about-family-item'));
+  aboutFamilyGallery.forEach(function (item, i) {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', function () { openLightbox(aboutFamilyGallery, i); });
   });
 
   lightbox.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);

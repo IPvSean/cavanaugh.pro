@@ -2852,6 +2852,7 @@ a.highlight-item {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   transition: all var(--transition-base);
+  cursor: pointer;
 }
 
 .about-family-item:hover {
