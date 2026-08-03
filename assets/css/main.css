@@ -2853,13 +2853,14 @@ a.highlight-item {
 /* ---- Page Content ---- */
 
 .page-content {
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-3xl);
+  padding: var(--space-3xl) var(--space-xl);
 }
 
 .page-content-no-hero {
   padding-top: calc(var(--space-5xl) + 80px);
   padding-bottom: var(--space-3xl);
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
 }
 
 .page-header {
@@ -3413,6 +3414,22 @@ a.highlight-item {
 
   .section {
     padding: var(--space-3xl) var(--space-lg);
+  }
+
+  .page-content,
+  .page-content-no-hero {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .site-header {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .page-hero-content {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
   }
 
   .featured-grid {
