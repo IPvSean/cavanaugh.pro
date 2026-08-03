@@ -118,7 +118,7 @@
   role_at_time: "Red Hat"
 
 - title: "Red Hat Tech Exchange Orlando"
-  description: "Presenting at Red Hat Tech Exchange in Orlando 2019 and manning the Ansible Automation Platform booth at AnsibleFest 2019 in Atlanta, GA."
+  description: "Presenting at Red Hat Tech Exchange in Orlando, covering Ansible network automation demos and workshops for Red Hat field engineers and partners."
   image: "/assets/images/demo-jam-2019.png"
   audience: "Red Hat Tech Exchange Orlando"
   year: 2019
@@ -126,6 +126,15 @@
   gallery:
     - src: "/assets/images/demo-jam-2019.png"
       alt: "Presenting at Red Hat Tech Exchange, Orlando 2019"
+
+- title: "AnsibleFest 2019"
+  description: "Demoing Ansible Automation Platform at the booth at AnsibleFest 2019 in Atlanta, GA. Huge turnout with attendees lining up to see live network and cloud automation demos."
+  image: "/assets/images/ansiblefest-2019-booth-1.png"
+  audience: "AnsibleFest Atlanta"
+  year: 2019
+  date: "September 24-25, 2019"
+  role_at_time: "Red Hat"
+  gallery:
     - src: "/assets/images/ansiblefest-2019-booth-1.png"
       alt: "Demoing at the Ansible Automation Platform booth, AnsibleFest 2019, Atlanta, GA"
     - src: "/assets/images/ansiblefest-2019-booth-2.png"
