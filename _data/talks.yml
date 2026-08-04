@@ -135,6 +135,26 @@
     - title: "Introduction to Red Hat Ansible Automation Platform with AI"
       slides: "/assets/slides/IBM-TechXchange-2025-aap-with-ai-aiops-workshop.pdf"
 
+- title: "Red Hat Summit 2025"
+  description: "Breakout session at Red Hat Summit in Boston on unlocking AIOps with Red Hat Ansible Automation Platform."
+  image: "/assets/images/ansiblefest-2025-podium.png"
+  audience: "Red Hat Summit Boston"
+  event: "Red Hat Summit"
+  location: "Boston, Massachusetts"
+  year: 2025
+  date: "May 19-22, 2025"
+  role_at_time: "Red Hat"
+  talk_name: "Breakout Session"
+  presentations_label: "Breakout"
+  presentation_badge: "BO1474"
+  highlights:
+    - "Presented Unlock AIOps with Red Hat Ansible Automation Platform"
+    - "Breakout session at Red Hat Summit in Boston"
+  presentations:
+    - title: "Unlock AIOps with Red Hat Ansible Automation Platform"
+      session_id: "BO1474"
+      slides: "/assets/slides/BO1474-unlock-aiops-aap-summit-2025.pdf"
+
 - title: "Cisco Live 2025"
   description: "Lead speaker for the Red Hat sponsor session in the World of Solutions at Cisco Live 2025 in San Diego, covering Ansible Automation Platform for Cisco network and infrastructure audiences."
   image: "/assets/images/cisco-live-2025-san-diego.png"
