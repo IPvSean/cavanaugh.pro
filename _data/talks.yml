@@ -212,6 +212,25 @@
     - "Intermediate"
     - "Automation & Orchestration"
 
+- title: "Cisco Live 2022"
+  description: "Three sessions at Cisco Live 2022 covering getting started with Ansible Automation Platform for network automation, NetOps meets GitOps, and Red Hat and Cisco network automation."
+  image: "/assets/images/cisco-live-2022-theater.png"
+  audience: "Cisco Live Las Vegas"
+  year: 2022
+  date: "June 12-16, 2022"
+  photos: "https://photos.app.goo.gl/zKmQiWc8CyKy5x5F8"
+  role_at_time: "Red Hat"
+  talk_name: "3 Sessions"
+  presentations_label: "Sessions"
+  presentations:
+    - title: "Getting started with Ansible Automation Platform for Network Automation"
+      slides: "/assets/slides/CLUS-2022-aap-network-automation.pdf"
+    - title: "NetOps meets GitOps meets Automation"
+      slides: "/assets/slides/CLUS-2022-netops-gitops-automation.pdf"
+    - title: "Do great things with Red Hat and Cisco: Network automation and much more"
+      session_id: "CNCATO-1004"
+      slides: "/assets/slides/CNCATO-1004.pdf"
+
 - title: "Ansible Network Automation"
   description: "Presenting on the four types of Ansible network modules, command, config, facts, and resource, at Red Hat Tech Exchange in Seoul, South Korea."
   image: "/assets/images/tech-exchange-seoul.png"

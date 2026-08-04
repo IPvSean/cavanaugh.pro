@@ -227,6 +227,13 @@
   category: "booth"
   year: 2023
 
+# === 2022, Cisco Live Las Vegas ===
+
+- src: "/assets/images/cisco-live-2022-theater.png"
+  alt: "Presenting at the theater, Cisco Live, Las Vegas, 2022"
+  category: "stage"
+  year: 2022
+
 # === 2019, AnsibleFest Atlanta ===
 
 - src: "/assets/images/ansiblefest-2019-booth-1.png"
