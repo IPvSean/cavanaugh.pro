@@ -102,6 +102,21 @@
     - title: "Cisco Live 2025 Sponsor Session"
       slides: "/assets/slides/CLUS-2025-sponsor-session.pdf"
 
+- title: "AutoCon 2"
+  description: "Presented at AutoCon 2 in Denver on making networks resilient with Event-Driven Ansible and Ansible Automation Platform 2.5."
+  image: "/assets/images/autocon-2-denver-2024.png"
+  audience: "AutoCon 2 Denver"
+  year: 2024
+  date: "November 18-21, 2024"
+  photos: "https://photos.app.goo.gl/Zj2Y3erd8S68qgoG7"
+  role_at_time: "Red Hat"
+  talk_name: "Event-Driven Automation for Resilient Networks"
+  presentations_label: "Session"
+  presentation_badge: "AutoCon"
+  presentations:
+    - title: "Ansible AAP 2.5: Learn how to make your networks resilient with Event Driven automation using Ansible"
+      slides: "/assets/slides/Autocon-2-aap-eda-networks.pdf"
+
 - title: "VMware Explore 2024"
   description: "Presenting Ansible Automation Platform at the Red Hat booth at VMware Explore 2024 in Las Vegas, demoing automation workflows to VMware administrators and architects."
   image: "/assets/images/rh-booth-silent-disco.png"
