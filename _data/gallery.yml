@@ -241,6 +241,18 @@
   category: "stage"
   year: 2022
 
+# === 2021, AnsibleFest Virtual ===
+
+- src: "/assets/images/ansiblefest-2021-mask.png"
+  alt: "Masked selfie during COVID, AnsibleFest virtual, 2021"
+  category: "behind-the-scenes"
+  year: 2021
+
+- src: "/assets/images/ansiblefest-2021-home-studio.png"
+  alt: "Home studio setup for AnsibleFest virtual presentation, 2021"
+  category: "behind-the-scenes"
+  year: 2021
+
 # === 2019, AnsibleFest Atlanta ===
 
 - src: "/assets/images/ansiblefest-2019-booth-1.png"

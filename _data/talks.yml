@@ -258,6 +258,31 @@
       session_id: "CNCATO-1004"
       slides: "/assets/slides/CNCATO-1004.pdf"
 
+- title: "AnsibleFest 2021"
+  description: "Virtual AnsibleFest 2021 presentation during the COVID-19 pandemic on automating hybrid cloud with Ansible, delivered from a home studio setup."
+  image: "/assets/images/ansiblefest-2021-mask.png"
+  audience: "AnsibleFest Virtual"
+  year: 2021
+  date: "2021"
+  role_at_time: "Red Hat"
+  talk_name: "Automate your Hybrid Cloud with Ansible"
+  presentations_label: "Session"
+  presentation_badge: "Virtual"
+  highlights:
+    - "Presented Automate your Hybrid Cloud with Ansible during the virtual AnsibleFest 2021"
+    - "Delivered from a home studio setup during the COVID-19 pandemic"
+  presentations:
+    - title: "Automate your Hybrid Cloud with Ansible"
+      co_presenter: "Dmitry Drotovetsky"
+      slides: "/assets/slides/AnsibleFest-2021-hybrid-cloud-ansible.pdf"
+  gallery:
+    - src: "/assets/images/ansiblefest-2021-mask.png"
+      alt: "Masked selfie during COVID, AnsibleFest virtual, 2021"
+    - src: "/assets/images/ansiblefest-2021-home-studio.png"
+      alt: "Home studio setup with hybrid cloud presentation deck, AnsibleFest virtual, 2021"
+    - src: "/assets/images/ansiblefest-2021-home-office.png"
+      alt: "Behind the scenes at the home desk during a virtual session, 2021"
+
 - title: "Ansible Network Automation"
   description: "Presenting on the four types of Ansible network modules, command, config, facts, and resource, at Red Hat Tech Exchange in Seoul, South Korea."
   image: "/assets/images/tech-exchange-seoul.png"
