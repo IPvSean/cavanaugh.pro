@@ -29,7 +29,10 @@ layout: default
       {% endif %}
       <h1>{{ talk.title }}</h1>
       <div class="talk-detail-meta">
-        <span class="talk-detail-event">{{ talk.audience }}</span>
+        <span class="talk-detail-event">{% if talk.event %}{{ talk.event }}{% else %}{{ talk.audience }}{% endif %}</span>
+        {% if talk.location %}
+        <span class="talk-detail-location">{{ talk.location }}</span>
+        {% endif %}
         {% if talk.date %}
         <span class="talk-detail-date">{{ talk.date }}</span>
         {% else %}

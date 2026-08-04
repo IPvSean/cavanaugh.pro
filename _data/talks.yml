@@ -5,6 +5,8 @@
   image: "/assets/images/summit-2026-stage.png"
   stage_photo: "/assets/images/summit-2026-stage.png"
   audience: "Red Hat Summit"
+  event: "Red Hat Summit"
+  location: "Las Vegas, Nevada"
   year: 2026
   url: "https://tv.redhat.com/detail/6396287207112/product-spotlight-red-hat-ansible-automation-platform-trusted-execution-for-ai-driven-it-ops"
   featured: true
@@ -22,6 +24,8 @@
   image: "/assets/images/ansiblefest-2025-stage.png"
   stage_photo: "/assets/images/ansiblefest-2025-stage.png"
   audience: "Keynote"
+  event: "AnsibleFest"
+  location: "Atlanta, Georgia"
   year: 2025
   url: "https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=2418"
   featured: true
@@ -44,6 +48,8 @@
   description: "Red Hat's biggest Cisco partner presence. We ran 17+ lab sessions and mini-theater presentations across 4 days covering AIOps, network automation, Event-Driven Ansible, and Ansible developer tools."
   image: "/assets/images/cisco-live-2026-booth.png"
   audience: "Cisco Live Las Vegas"
+  event: "Cisco Live"
+  location: "Las Vegas, Nevada"
   year: 2026
   date: "June 1-4, 2026"
   photos: "https://photos.app.goo.gl/ySAB2d4fWd4qWJ9k6"
@@ -67,6 +73,8 @@
   description: "Two sessions at AWS re:Invent in Las Vegas covering network automation on AWS for Juniper and using AI to optimize AWS infrastructure."
   image: "/assets/images/ansiblefest-2025-audience-phone.png"
   audience: "AWS re:Invent Las Vegas"
+  event: "AWS re:Invent"
+  location: "Las Vegas, Nevada"
   year: 2025
   date: "December 1-5, 2025"
   photos: "https://photos.app.goo.gl/UHKmXGVRceLSbVnV9"
@@ -87,6 +95,8 @@
   description: "Two sessions at the AI Networking Summit in New York City on Event-Driven Ansible workflows and what AI-driven automation looks like in practice, including a co-presentation with IBM."
   image: "/assets/images/ai-networking-summit-2025.png"
   audience: "AI Networking Summit NYC"
+  event: "AI Networking Summit"
+  location: "New York City, New York"
   year: 2025
   date: "October 21-23, 2025"
   photos: "https://photos.app.goo.gl/U34ysaoeySfPLujw5"
@@ -109,6 +119,8 @@
   description: "Lead speaker for the Red Hat sponsor session in the World of Solutions at Cisco Live 2025 in San Diego, covering Ansible Automation Platform for Cisco network and infrastructure audiences."
   image: "/assets/images/cisco-live-2025-san-diego.png"
   audience: "Cisco Live San Diego"
+  event: "Cisco Live"
+  location: "San Diego, California"
   year: 2025
   date: "June 8-12, 2025"
   role_at_time: "Red Hat"
@@ -126,6 +138,8 @@
   description: "Presented at AutoCon 2 in Denver on making networks resilient with Event-Driven Ansible and Ansible Automation Platform 2.5."
   image: "/assets/images/autocon-2-denver-2024.png"
   audience: "AutoCon 2 Denver"
+  event: "AutoCon 2"
+  location: "Denver, Colorado"
   year: 2024
   date: "November 18-21, 2024"
   photos: "https://photos.app.goo.gl/Zj2Y3erd8S68qgoG7"
@@ -141,6 +155,8 @@
   description: "Presenting Ansible Automation Platform at the Red Hat booth at VMware Explore 2024 in Las Vegas, demoing automation workflows to VMware administrators and architects."
   image: "/assets/images/rh-booth-silent-disco.png"
   audience: "VMware Explore Las Vegas"
+  event: "VMware Explore"
+  location: "Las Vegas, Nevada"
   year: 2024
   date: "August 25-28, 2024"
   photos: "https://photos.app.goo.gl/JAXebqxPPdxYJoQa7"
@@ -158,6 +174,8 @@
   description: "Three sessions at Cisco Live 2024 in Las Vegas: a Content Corner breakout on Red Hat and Cisco for networks and AI workloads, GitOps for NetOps, and getting started with Ansible Automation Platform's generative AI service."
   image: "/assets/images/cisco-live-2024-theater.png"
   audience: "Cisco Live Las Vegas"
+  event: "Cisco Live"
+  location: "Las Vegas, Nevada"
   year: 2024
   date: "June 2-7, 2024"
   photos: "https://photos.app.goo.gl/RjNQMkAzxoU3HrLh9"
@@ -182,6 +200,8 @@
   description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible, how to react to infrastructure events in real time with automation."
   image: "/assets/images/netgru-devnet-2024.png"
   audience: "Cisco DevNet / NetGru"
+  event: "Cisco DevNet Live"
+  location: "Online"
   year: 2024
   date: "March 27, 2024"
   url: "https://www.youtube.com/live/83vBAxs9oaw"
@@ -193,6 +213,8 @@
   description: "Live demo and workshop at Red Hat One in Indonesia, showcasing Ansible Automation Platform capabilities to a global Red Hat and partner audience."
   image: "/assets/images/redhat-one-keynote-demo.png"
   audience: "Red Hat One Indonesia"
+  event: "Red Hat One"
+  location: "Indonesia"
   year: 2024
   role_at_time: "Red Hat"
   gallery:
@@ -210,6 +232,8 @@
   description: "A new paradigm shift has created a more opinionated and simpler model: GitOps. This talk covers a simple network as code approach where your Source of Truth is simply a Git Repository and every pull request starts your automation workflow. Co-presented with Adrian Iliesiu (Cisco Distinguished Speaker)."
   image: "/assets/images/cisco-live-2023-speakers.png"
   audience: "Cisco Live Las Vegas"
+  event: "Cisco Live"
+  location: "Las Vegas, Nevada"
   year: 2023
   date: "June 2023"
   url: "https://www.ciscolive.com/on-demand/on-demand-library.html?search=cavanaugh#/session/1686177737934001Vsxq"
@@ -236,6 +260,8 @@
   description: "Co-presented with AWS on Ansible Automation for cloud operations, and taught multiple AWS + Ansible hands-on labs that evolved into today's hybrid cloud optimization and operations labs on labs.demoredhat.com."
   image: "/assets/images/ansiblefest-2022-lab.png"
   audience: "AnsibleFest"
+  event: "AnsibleFest"
+  location: "Chicago, Illinois"
   year: 2022
   date: "October 17-19, 2022"
   photos: "https://photos.app.goo.gl/GoKvNFVV9ig6xe3D7"
@@ -263,6 +289,8 @@
   description: "Three sessions at Cisco Live 2022 covering getting started with Ansible Automation Platform for network automation, NetOps meets GitOps, and Red Hat and Cisco network automation."
   image: "/assets/images/cisco-live-2022-theater.png"
   audience: "Cisco Live Las Vegas"
+  event: "Cisco Live"
+  location: "Las Vegas, Nevada"
   year: 2022
   date: "June 12-16, 2022"
   photos: "https://photos.app.goo.gl/zKmQiWc8CyKy5x5F8"
@@ -282,6 +310,8 @@
   description: "Virtual AnsibleFest 2021 presentation during the COVID-19 pandemic on automating hybrid cloud with Ansible, delivered from a home studio setup."
   image: "/assets/images/ansiblefest-2021-mask.png"
   audience: "AnsibleFest Virtual"
+  event: "AnsibleFest"
+  location: "Virtual"
   year: 2021
   date: "2021"
   role_at_time: "Red Hat"
@@ -307,6 +337,8 @@
   description: "Presenting on the four types of Ansible network modules, command, config, facts, and resource, at Red Hat Tech Exchange in Seoul, South Korea."
   image: "/assets/images/tech-exchange-seoul.png"
   audience: "Red Hat Tech Exchange Seoul"
+  event: "Red Hat Tech Exchange"
+  location: "Seoul, South Korea"
   year: 2019
   date: "September 16-18, 2019"
   photos: "https://photos.app.goo.gl/F8iRL9Ao2MrdTW4s8"
@@ -316,6 +348,8 @@
   description: "Presenting at Red Hat Tech Exchange in Orlando, covering Ansible network automation demos and workshops for Red Hat field engineers and partners. Demo Jam featured Ansible Arcade."
   image: "/assets/images/demo-jam-2019.png"
   audience: "Red Hat Tech Exchange Orlando"
+  event: "Red Hat Tech Exchange"
+  location: "Orlando, Florida"
   year: 2019
   photos: "https://photos.app.goo.gl/apRWzxcv9uNNvyhG8"
   role_at_time: "Red Hat"
@@ -327,6 +361,8 @@
   description: "Coordinated the Ansible Workshops program at AnsibleFest Atlanta, covering Network Automation, Security Automation, RHEL Automation, and F5 Automation. Delivered a breakout on Introduction to Automation Analytics, and continued building the workshop infrastructure that became today's interactive labs platform."
   image: "/assets/images/ansiblefest-2019-booth-1.png"
   audience: "AnsibleFest Atlanta"
+  event: "AnsibleFest"
+  location: "Atlanta, Georgia"
   year: 2019
   date: "September 24-25, 2019"
   photos: "https://photos.app.goo.gl/hnNKTZDJ9ZEWEW516"
@@ -354,6 +390,8 @@
   description: "Working the Red Hat booth at Cisco Live 2019 in San Diego, demoing Ansible network automation to Cisco engineers, architects, and network operators."
   image: "/assets/images/cisco-live-2019-crowd.png"
   audience: "Cisco Live San Diego"
+  event: "Cisco Live"
+  location: "San Diego, California"
   year: 2019
   date: "June 9-13, 2019"
   photos: "https://photos.app.goo.gl/cM6mYT71t1mdBTuz6"
@@ -363,6 +401,8 @@
   description: "Created and taught the Ansible for F5 Networks workshop at AnsibleFest 2018 in Austin, helping network engineers automate F5 infrastructure with Ansible."
   image: "/assets/images/ansiblefest-2018-austin.png"
   audience: "AnsibleFest Austin"
+  event: "AnsibleFest"
+  location: "Austin, Texas"
   year: 2018
   date: "October 1-5, 2018"
   photos: "https://photos.app.goo.gl/D4iEh8CsM7FhQCUb6"
@@ -378,6 +418,8 @@
   description: "Keynote on Ansible network automation to 400 attendees at Ansible Automates Tokyo, covered by ZDNET Japan. Presented on automating network operations with Ansible modules across 40+ platforms."
   image: "/assets/images/ansible-automates-tokyo-2018.png"
   audience: "Ansible Automates Tokyo"
+  event: "Ansible Automates"
+  location: "Tokyo, Japan"
   year: 2018
   date: "April 24, 2018"
   url: "https://japan.zdnet.com/extra/redhathpe_201805/35119733/"
@@ -394,6 +436,8 @@
   description: "Ansible Automates Atlanta, covering automation for network infrastructure, from configuration management to compliance and operational workflows. Held at Mercedes-Benz Stadium in Atlanta, GA."
   image: "/assets/images/ansible-automates-atlanta-2017.png"
   audience: "Ansible Automates Atlanta"
+  event: "Ansible Automates"
+  location: "Atlanta, Georgia"
   year: 2017
   date: "November 1, 2017"
   url: "https://www.ansible.com/videos-ansible-automates-network-automation-with-ansible"
@@ -404,6 +448,8 @@
   description: "Talk on host-based routing and network automation at All Things Open 2016, one of the largest open source conferences in the US, while working at Cumulus Networks."
   image: "/assets/images/all-things-open-logo.png"
   audience: "All Things Open"
+  event: "All Things Open"
+  location: "Raleigh, North Carolina"
   year: 2016
   date: "October 26, 2016"
   url: "https://allthingsopen.org/"
@@ -414,6 +460,8 @@
   description: "Community meetup talk on using Ansible to manage routable Docker containers, presented at the Ansible RDU meetup while at Cumulus Networks."
   image: "/assets/images/docker-ansible-meetup.png"
   audience: "Ansible RDU Meetup"
+  event: "Ansible RDU Meetup"
+  location: "Durham, North Carolina"
   year: 2016
   date: "March 29, 2016"
   url: "https://www.meetup.com/ansible-durham/events/229409542/"
@@ -425,6 +473,8 @@
   description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Demonstrated provisioning OSPF Unnumbered across network nodes and automated failover handling with Puppet manifests."
   image: "/assets/images/puppet-logo.png"
   audience: "Puppet Camp Tampa"
+  event: "Puppet Camp"
+  location: "Tampa, Florida"
   year: 2015
   date: "December 1, 2015"
   url: "https://github.com/IPvSean/netdevops-puppet-enterprise"
@@ -435,6 +485,8 @@
   description: "Using Puppet Enterprise as an SDN controller to automate a modern data center network in a leaf-spine configuration. Same talk delivered at Puppet Camp Atlanta two days after the Tampa debut."
   image: "/assets/images/puppet-logo.png"
   audience: "Puppet Camp Atlanta"
+  event: "Puppet Camp"
+  location: "Atlanta, Georgia"
   year: 2015
   date: "December 3, 2015"
   url: "https://github.com/IPvSean/netdevops-puppet-enterprise"
@@ -445,6 +497,8 @@
   description: "Talk at All Things Open 2015 on applying DevOps practices to data center networking, automating leaf-spine topologies with configuration management tools while at Cumulus Networks."
   image: "/assets/images/all-things-open-logo-2015.png"
   audience: "All Things Open"
+  event: "All Things Open"
+  location: "Raleigh, North Carolina"
   year: 2015
   date: "October 19, 2015"
   youtube_id: "vXRgb7vbSWU"

@@ -36,8 +36,8 @@ permalink: /talks/
           <div class="featured-talk-badge">Featured</div>
         </div>
         <div class="featured-talk-body">
-          <span class="featured-talk-meta">{{ talk.audience }} &bull; {{ talk.year }}</span>
-          <h3>{{ talk.title }}</h3>
+          <span class="featured-talk-meta">{% if talk.location %}{{ talk.location }}{% else %}{{ talk.audience }}{% endif %}</span>
+          <h3>{% if talk.event %}{{ talk.event }} - {{ talk.year }}{% else %}{{ talk.title }}{% endif %}</h3>
           <p>{{ talk.description | truncatewords: 20 }}</p>
           <span class="featured-talk-link">View Details &rarr;</span>
         </div>
@@ -94,11 +94,11 @@ permalink: /talks/
           {% endif %}
         </div>
         <div class="talk-card-body">
-          <h3>{{ talk.audience }} {{ talk.year }}</h3>
-          {% if talk.talk_name %}
+          <h3>{% if talk.event %}{{ talk.event }} - {{ talk.year }}{% else %}{{ talk.audience }} {{ talk.year }}{% endif %}</h3>
+          {% if talk.location %}
+          <p class="talk-card-talk-title">{{ talk.location }}</p>
+          {% elsif talk.talk_name %}
           <p class="talk-card-talk-title">{{ talk.talk_name }}</p>
-          {% else %}
-          <p class="talk-card-talk-title">{{ talk.title }}</p>
           {% endif %}
           <p>{{ talk.description | truncatewords: 25 }}</p>
           {% if talk.stats.attended or talk.stats.registered %}
