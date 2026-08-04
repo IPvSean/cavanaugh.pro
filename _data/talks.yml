@@ -63,6 +63,26 @@
     - title: "An Introduction to Ansible Automation Platform for Network Engineers"
       slides: "/assets/slides/CLUS-aap-for-network-engineers.pdf"
 
+- title: "AWS re:Invent 2025"
+  description: "Two sessions at AWS re:Invent in Las Vegas covering network automation on AWS for Juniper and using AI to optimize AWS infrastructure."
+  image: "/assets/images/ansiblefest-2025-audience-phone.png"
+  audience: "AWS re:Invent Las Vegas"
+  year: 2025
+  date: "December 1-5, 2025"
+  photos: "https://photos.app.goo.gl/UHKmXGVRceLSbVnV9"
+  role_at_time: "Red Hat"
+  talk_name: "2 Sessions"
+  presentations_label: "Sessions"
+  presentation_badge: "AWS"
+  highlights:
+    - "Presented Network automation on AWS for Juniper"
+    - "Presented Using AI to optimize your AWS infrastructure"
+  presentations:
+    - title: "Network automation on AWS for Juniper"
+      slides: "/assets/slides/AWS-reInvent-2025-network-automation-juniper.pdf"
+    - title: "Using AI to optimize your AWS infrastructure"
+      slides: "/assets/slides/AWS-reInvent-2025-ai-optimize-infrastructure.pdf"
+
 - title: "AI Networking Summit 2025"
   description: "Two sessions at the AI Networking Summit in New York City on Event-Driven Ansible workflows and what AI-driven automation looks like in practice, including a co-presentation with IBM."
   image: "/assets/images/ai-networking-summit-2025.png"
