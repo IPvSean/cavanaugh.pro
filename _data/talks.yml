@@ -191,10 +191,11 @@
   role_at_time: "Red Hat"
 
 - title: "Red Hat Tech Exchange Orlando"
-  description: "Presenting at Red Hat Tech Exchange in Orlando, covering Ansible network automation demos and workshops for Red Hat field engineers and partners."
+  description: "Presenting at Red Hat Tech Exchange in Orlando, covering Ansible network automation demos and workshops for Red Hat field engineers and partners. Demo Jam featured Ansible Arcade."
   image: "/assets/images/demo-jam-2019.png"
   audience: "Red Hat Tech Exchange Orlando"
   year: 2019
+  photos: "https://photos.app.goo.gl/apRWzxcv9uNNvyhG8"
   role_at_time: "Red Hat"
   gallery:
     - src: "/assets/images/demo-jam-2019.png"
