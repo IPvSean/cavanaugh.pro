@@ -55,18 +55,25 @@ layout: default
       </div>
       {% endif %}
 
-      {% if talk.talk_name %}
+      {% assign has_presentations = false %}
+      {% if talk.presentations and talk.presentations.size > 0 %}
+        {% assign has_presentations = true %}
+      {% endif %}
+
+      {% if talk.abstract %}
+      <div class="talk-detail-breakout">
+        {% if talk.talk_name %}
+        <h3>Breakout Talk</h3>
+        <h4>{{ talk.talk_name }}</h4>
+        {% else %}
+        <h3>Abstract</h3>
+        {% endif %}
+        <p class="talk-detail-abstract">{{ talk.abstract }}</p>
+      </div>
+      {% elsif talk.talk_name and has_presentations == false %}
       <div class="talk-detail-breakout">
         <h3>Breakout Talk</h3>
         <h4>{{ talk.talk_name }}</h4>
-        {% if talk.abstract %}
-        <p class="talk-detail-abstract">{{ talk.abstract }}</p>
-        {% endif %}
-      </div>
-      {% elsif talk.abstract %}
-      <div class="talk-detail-breakout">
-        <h3>Abstract</h3>
-        <p class="talk-detail-abstract">{{ talk.abstract }}</p>
       </div>
       {% endif %}
 
