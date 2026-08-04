@@ -227,6 +227,13 @@
   category: "booth"
   year: 2023
 
+# === 2022, AnsibleFest ===
+
+- src: "/assets/images/ansiblefest-2022-lab.png"
+  alt: "Teaching an AWS + Ansible lab, AnsibleFest, 2022"
+  category: "stage"
+  year: 2022
+
 # === 2022, Cisco Live Las Vegas ===
 
 - src: "/assets/images/cisco-live-2022-theater.png"

@@ -212,6 +212,33 @@
     - "Intermediate"
     - "Automation & Orchestration"
 
+- title: "AnsibleFest 2022"
+  description: "Co-presented with AWS on Ansible Automation for cloud operations, and taught multiple AWS + Ansible hands-on labs that evolved into today's hybrid cloud optimization and operations labs on labs.demoredhat.com."
+  image: "/assets/images/ansiblefest-2022-lab.png"
+  audience: "AnsibleFest"
+  year: 2022
+  date: "October 17-19, 2022"
+  photos: "https://photos.app.goo.gl/GoKvNFVV9ig6xe3D7"
+  role_at_time: "Red Hat"
+  talk_name: "AWS + Ansible Sessions & Labs"
+  presentations_label: "Session"
+  presentation_badge: "BS1168"
+  highlights:
+    - "Co-presented Exploring New Possibilities with the AWS Ansible Automation with AWS"
+    - "Taught multiple hands-on AWS + Ansible labs at AnsibleFest"
+    - "Those labs evolved into the hybrid cloud optimization and operations labs now on labs.demoredhat.com"
+  presentations:
+    - title: "Exploring New Possibilities with the AWS Ansible Automation"
+      co_presenter: "AWS"
+      slides: "/assets/slides/AnsibleFest-2022-AWS-Ansible-Automation.pdf"
+  links:
+    - label: "Cloud Optimization on AWS"
+      url: "https://labs.demoredhat.com/exercises/cloud-optimization-aws"
+    - label: "Cloud Optimization on Azure"
+      url: "https://labs.demoredhat.com/exercises/cloud-azure-optimization"
+    - label: "Cloud Operations on AWS"
+      url: "https://labs.demoredhat.com/exercises/cloud-operations-aws"
+
 - title: "Cisco Live 2022"
   description: "Three sessions at Cisco Live 2022 covering getting started with Ansible Automation Platform for network automation, NetOps meets GitOps, and Red Hat and Cisco network automation."
   image: "/assets/images/cisco-live-2022-theater.png"
