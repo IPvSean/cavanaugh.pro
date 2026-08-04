@@ -111,7 +111,9 @@ layout: default
           {% for presentation in talk.presentations %}
           <div class="talk-presentation-item">
             <div class="talk-presentation-info">
-              {% if talk.presentation_badge %}
+              {% if presentation.session_id %}
+              <span class="talk-presentation-label">{{ presentation.session_id }}</span>
+              {% elsif talk.presentation_badge %}
               <span class="talk-presentation-label">{{ talk.presentation_badge }}</span>
               {% endif %}
               <strong>{{ presentation.title }}</strong>

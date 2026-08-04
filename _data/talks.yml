@@ -119,20 +119,29 @@
     - title: "5 Great use-cases to automate on your VMware infrastructure efficiently"
       slides: "/assets/slides/VMware-explore-5-use-cases.pdf"
 
-- title: "Do great things with Red Hat and Cisco"
-  session_id: "CNCDCN-1016"
-  description: "Breakout at Cisco Live 2024 Content Corner Theater on automating, managing, and operationalizing networks and AI workloads with Red Hat and Cisco."
+- title: "Cisco Live 2024"
+  description: "Three sessions at Cisco Live 2024 in Las Vegas: a Content Corner breakout on Red Hat and Cisco for networks and AI workloads, GitOps for NetOps, and getting started with Ansible Automation Platform's generative AI service."
   image: "/assets/images/cisco-live-2024-theater.png"
   audience: "Cisco Live Las Vegas"
   year: 2024
-  date: "June 5, 2024"
-  slides: "/assets/slides/CNCDCN-1016-redhat-cisco-networks-ai.pdf"
+  date: "June 2-7, 2024"
   photos: "https://photos.app.goo.gl/RjNQMkAzxoU3HrLh9"
   role_at_time: "Red Hat"
-  talk_name: "Automate, manage, and operationalize networks & AI workloads"
-  tags:
-    - "Breakout Session"
-    - "Content Corner"
+  talk_name: "3 Sessions"
+  presentations_label: "Sessions"
+  highlights:
+    - "CNCDCN-1016 Content Corner breakout on automating networks and AI workloads with Red Hat and Cisco"
+    - "DEVNET-2510 Ansible Network Automation, GitOps for NetOps"
+    - "Session on getting started with Ansible Automation Platform's generative AI service"
+  presentations:
+    - title: "Do great things with Red Hat and Cisco: automate, manage, and operationalize networks & AI workloads"
+      session_id: "CNCDCN-1016"
+      slides: "/assets/slides/CNCDCN-1016-redhat-cisco-networks-ai.pdf"
+    - title: "Ansible Network Automation, GitOps for NetOps"
+      session_id: "DEVNET-2510"
+      slides: "/assets/slides/DEVNET-2510-gitops-for-netops.pdf"
+    - title: "Get started with AAP's gen AI service"
+      slides: "/assets/slides/CLUS-2024-aap-genai-service.pdf"
 
 - title: "Event-Driven Ansible, Cisco DevNet Live"
   description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible, how to react to infrastructure events in real time with automation."
