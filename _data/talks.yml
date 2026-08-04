@@ -115,6 +115,26 @@
       co_presenter: "IBM"
       slides: "/assets/slides/AI-networking-summit-ai-driven-automation.pdf"
 
+- title: "IBM Tech Exchange 2025"
+  description: "Taught an AIOps workshop at IBM Tech Exchange in Orlando introducing Red Hat Ansible Automation Platform with AI."
+  image: "/assets/images/ibm-tech-exchange-2025.png"
+  audience: "IBM Tech Exchange Orlando"
+  event: "IBM Tech Exchange"
+  location: "Orlando, Florida"
+  year: 2025
+  date: "October 6-8, 2025"
+  photos: "https://photos.app.goo.gl/dXJC4nSKU12fDCet6"
+  role_at_time: "Red Hat"
+  talk_name: "AIOps Workshop"
+  presentations_label: "Workshop"
+  presentation_badge: "3265"
+  highlights:
+    - "Taught Introduction to Red Hat Ansible Automation Platform with AI"
+    - "Hands-on AIOps workshop for IBM Tech Exchange attendees"
+  presentations:
+    - title: "Introduction to Red Hat Ansible Automation Platform with AI"
+      slides: "/assets/slides/IBM-TechXchange-2025-aap-with-ai-aiops-workshop.pdf"
+
 - title: "Cisco Live 2025"
   description: "Lead speaker for the Red Hat sponsor session in the World of Solutions at Cisco Live 2025 in San Diego, covering Ansible Automation Platform for Cisco network and infrastructure audiences."
   image: "/assets/images/cisco-live-2025-san-diego.png"
