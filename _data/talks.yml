@@ -119,13 +119,19 @@
     - title: "5 Great use-cases to automate on your VMware infrastructure efficiently"
       slides: "/assets/slides/VMware-explore-5-use-cases.pdf"
 
-- title: "Event-Driven Ansible, Content Corner"
-  description: "Presenting Event-Driven Ansible at the Content Corner Theater at Cisco Live 2024 in Las Vegas."
+- title: "Do great things with Red Hat and Cisco"
+  session_id: "CNCDCN-1016"
+  description: "Breakout at Cisco Live 2024 Content Corner Theater on automating, managing, and operationalizing networks and AI workloads with Red Hat and Cisco."
   image: "/assets/images/cisco-live-2024-theater.png"
   audience: "Cisco Live Las Vegas"
   year: 2024
   date: "June 5, 2024"
+  slides: "/assets/slides/CNCDCN-1016-redhat-cisco-networks-ai.pdf"
   role_at_time: "Red Hat"
+  talk_name: "Automate, manage, and operationalize networks & AI workloads"
+  tags:
+    - "Breakout Session"
+    - "Content Corner"
 
 - title: "Event-Driven Ansible, Cisco DevNet Live"
   description: "Live stream on the Cisco DevNet channel with NetGru covering Event-Driven Ansible, how to react to infrastructure events in real time with automation."
