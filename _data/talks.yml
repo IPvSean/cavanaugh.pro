@@ -268,6 +268,21 @@
   photos: "https://photos.app.goo.gl/cM6mYT71t1mdBTuz6"
   role_at_time: "Red Hat"
 
+- title: "AnsibleFest 2018"
+  description: "Created and taught the Ansible for F5 Networks workshop at AnsibleFest 2018 in Austin, helping network engineers automate F5 infrastructure with Ansible."
+  image: "/assets/images/ansiblefest-2018-austin.png"
+  audience: "AnsibleFest Austin"
+  year: 2018
+  date: "October 1-5, 2018"
+  photos: "https://photos.app.goo.gl/D4iEh8CsM7FhQCUb6"
+  role_at_time: "Red Hat"
+  talk_name: "Ansible for F5 Networks Workshop"
+  presentations_label: "Workshop"
+  presentation_badge: "Workshop"
+  presentations:
+    - title: "Ansible for F5 Networks (Linklight Workshop)"
+      slides: "/assets/slides/AnsibleFest-2018-F5-Linklight-Workshop.pdf"
+
 - title: "Ansible Automates Tokyo, Keynote"
   description: "Keynote on Ansible network automation to 400 attendees at Ansible Automates Tokyo, covered by ZDNET Japan. Presented on automating network operations with Ansible modules across 40+ platforms."
   image: "/assets/images/ansible-automates-tokyo-2018.png"
