@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adding Line Numbers to VI/Vim | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Adding Line Numbers to VI/Vim | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Adding Line Numbers to VI/Vim" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="VI is a handy tool to use because it is installed on every single non-Windows box I have ever seen. I originally only used nano and I have found out that nano is not everywhere." />
+<meta property="og:description" content="VI is a handy tool to use because it is installed on every single non-Windows box I have ever seen. I originally only used nano and I have found out that nano is not everywhere." />
+<link rel="canonical" href="https://cavanaugh.pro/blog/vim-line-numbers/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/vim-line-numbers/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-12-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adding Line Numbers to VI/Vim" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2011-12-01T00:00:00+00:00","datePublished":"2011-12-01T00:00:00+00:00","description":"VI is a handy tool to use because it is installed on every single non-Windows box I have ever seen. I originally only used nano and I have found out that nano is not everywhere.","headline":"Adding Line Numbers to VI/Vim","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/vim-line-numbers/"},"url":"https://cavanaugh.pro/blog/vim-line-numbers/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2011-12-01T00:00:00+00:00">December 01, 2011</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">vim</span>
+          
+          <span class="tag">linux</span>
+          
+          <span class="tag">tutorial</span>
+          
+        </div>
+        
+      </div>
+      <h1>Adding Line Numbers to VI/Vim</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>VI is a handy tool to use because it is installed on every single non-Windows box I have ever seen. I originally only used nano and I have found out that nano is not everywhere.</p>
+
+<ol>
+  <li>Locate your <code class="language-plaintext highlighter-rouge">.vimrc</code> file. On OS X: <code class="language-plaintext highlighter-rouge">locate vimrc</code></li>
+  <li>Open it with <code class="language-plaintext highlighter-rouge">vi /usr/share/vim/vimrc</code></li>
+  <li>Add the line <code class="language-plaintext highlighter-rouge">set number</code> to the end of the file</li>
+</ol>
+
+<p>Here is how my file looks:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">" Configuration file for vim</span>
+<span class="k">set</span> <span class="nb">modelines</span><span class="p">=</span><span class="m">0</span>         " CVE<span class="m">-2007-2438</span>
+
+<span class="c">" Normally we use vim-extensions</span>
+<span class="k">set</span> <span class="nb">nocompatible</span>        " Use Vim defaults instead of <span class="m">100</span>% <span class="k">vi</span> compatibility
+<span class="k">set</span> <span class="nb">backspace</span><span class="p">=</span><span class="m">2</span>         " <span class="nb">more</span> powerful backspacing
+
+<span class="c">" Don't write backup file if vim is being called by "crontab -e"</span>
+<span class="k">au</span> <span class="nb">BufWrite</span> <span class="sr">/private/</span>tmp/crontab<span class="p">.</span>* <span class="k">set</span> <span class="nb">nowritebackup</span>
+<span class="c">" Don't write backup file if vim is being called by "chpass"</span>
+<span class="k">au</span> <span class="nb">BufWrite</span> <span class="sr">/private/</span>etc/<span class="k">pw</span><span class="p">.</span>* <span class="k">set</span> <span class="nb">nowritebackup</span>
+
+<span class="k">set</span> <span class="k">number</span>
+</code></pre></div></div>
+
+<p>Now every time you open vi it will show line numbers. To turn them off you can do <code class="language-plaintext highlighter-rouge">:set nonumber</code>.</p>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ansible Playbook for Cumulus EVPN | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ansible Playbook for Cumulus EVPN | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Ansible Playbook for Cumulus EVPN" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I wrote a quick Ansible playbook for Cumulus EVPN. Cumulus EVPN is now GA (Generally Available) but the packages are still in the EA (early access repo) so it can be confusing if you are not used to the Debian packaging system. This is nice that it won’t try to upgrade/reboot unless you have the wrong version. Feel free to read the documentation on the Cumulus Networks website." />
+<meta property="og:description" content="I wrote a quick Ansible playbook for Cumulus EVPN. Cumulus EVPN is now GA (Generally Available) but the packages are still in the EA (early access repo) so it can be confusing if you are not used to the Debian packaging system. This is nice that it won’t try to upgrade/reboot unless you have the wrong version. Feel free to read the documentation on the Cumulus Networks website." />
+<link rel="canonical" href="https://cavanaugh.pro/blog/ansible-playbook-cumulus-evpn/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/ansible-playbook-cumulus-evpn/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-05-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Ansible Playbook for Cumulus EVPN" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2017-05-01T00:00:00+00:00","datePublished":"2017-05-01T00:00:00+00:00","description":"I wrote a quick Ansible playbook for Cumulus EVPN. Cumulus EVPN is now GA (Generally Available) but the packages are still in the EA (early access repo) so it can be confusing if you are not used to the Debian packaging system. This is nice that it won’t try to upgrade/reboot unless you have the wrong version. Feel free to read the documentation on the Cumulus Networks website.","headline":"Ansible Playbook for Cumulus EVPN","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/ansible-playbook-cumulus-evpn/"},"url":"https://cavanaugh.pro/blog/ansible-playbook-cumulus-evpn/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2017-05-01T00:00:00+00:00">May 01, 2017</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">ansible</span>
+          
+          <span class="tag">cumulus</span>
+          
+          <span class="tag">evpn</span>
+          
+          <span class="tag">networking</span>
+          
+        </div>
+        
+      </div>
+      <h1>Ansible Playbook for Cumulus EVPN</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>I wrote a quick Ansible playbook for Cumulus EVPN. Cumulus EVPN is now GA (Generally Available) but the packages are still in the EA (early access repo) so it can be confusing if you are not used to the Debian packaging system. This is nice that it won’t try to upgrade/reboot unless you have the wrong version. Feel free to read the documentation on the Cumulus Networks website.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">check current quagga version for EVPN</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s2">"</span><span class="s">dpkg</span><span class="nv"> </span><span class="s">-l</span><span class="nv"> </span><span class="s">quagga"</span>
+  <span class="na">register</span><span class="pi">:</span> <span class="s">quaggaversion</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s">ansible_lsb.major_release == "3"</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">uncomment early access repo</span>
+  <span class="na">lineinfile</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">dest=/etc/apt/sources.list</span>
+    <span class="s">regexp="#deb     http://repo3.cumulusnetworks.com/repo CumulusLinux-3-early-access cumulus"</span>
+    <span class="s">line="deb     http://repo3.cumulusnetworks.com/repo CumulusLinux-3-early-access cumulus"</span>
+    <span class="s">state=present</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s">ansible_lsb.major_release == "3"</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">install eau8 of quagga</span>
+  <span class="na">apt</span><span class="pi">:</span> <span class="s">name="cumulus-evpn" update_cache=yes</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s">ansible_lsb.major_release == "3" and "eau8" not in quaggaversion.stdout</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">upgrade switch (part of EVPN install instructions)</span>
+  <span class="na">shell</span><span class="pi">:</span> <span class="s2">"</span><span class="s">apt-get</span><span class="nv"> </span><span class="s">upgrade</span><span class="nv"> </span><span class="s">-y</span><span class="nv"> </span><span class="s">--force-yes</span><span class="nv"> </span><span class="s">-o</span><span class="nv"> </span><span class="s">Dpkg::Options::='--force-confnew'"</span>
+  <span class="na">become</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">become_method</span><span class="pi">:</span> <span class="s">sudo</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ansible_lsb.major_release</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">"3"</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">"eau8"</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">quaggaversion.stdout'</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Reboot for apt-get upgrade</span>
+  <span class="na">shell</span><span class="pi">:</span> <span class="s">sleep 2 &amp;&amp; shutdown -r now "Ansible updates triggered"</span>
+  <span class="na">async</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">poll</span><span class="pi">:</span> <span class="m">0</span>
+  <span class="na">become</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">ignore_errors</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ansible_lsb.major_release</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">"3"</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">"Cumulus"</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">ansible_lsb.id</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">"eau8"</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">quaggaversion.stdout'</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Wait for everything to come back up</span>
+  <span class="na">local_action</span><span class="pi">:</span> <span class="s">wait_for port=22 host="" search_regex=OpenSSH delay=10</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ansible_lsb.major_release</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">"3"</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">"eau8"</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">quaggaversion.stdout'</span>
+</code></pre></div></div>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

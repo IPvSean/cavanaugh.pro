@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning and Testing Ansible Playbooks with Virtual Images | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Learning and Testing Ansible Playbooks with Virtual Images | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Learning and Testing Ansible Playbooks with Virtual Images" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="One of the common problems I see with network automation in general is that no one wants to learn and test their automation software on production network gear. While lots of people have labs they can play with network gear that obviously is not an option for everyone. Even used equipment can cost a thousand dollars or more, and in my case my spouse was not super excited about our power bill rising by $100 a month while I ran some Cisco switches in my office." />
+<meta property="og:description" content="One of the common problems I see with network automation in general is that no one wants to learn and test their automation software on production network gear. While lots of people have labs they can play with network gear that obviously is not an option for everyone. Even used equipment can cost a thousand dollars or more, and in my case my spouse was not super excited about our power bill rising by $100 a month while I ran some Cisco switches in my office." />
+<link rel="canonical" href="https://cavanaugh.pro/blog/learning-testing-ansible-playbooks-virtual-images/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/learning-testing-ansible-playbooks-virtual-images/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learning and Testing Ansible Playbooks with Virtual Images" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2018-04-11T00:00:00+00:00","datePublished":"2018-04-11T00:00:00+00:00","description":"One of the common problems I see with network automation in general is that no one wants to learn and test their automation software on production network gear. While lots of people have labs they can play with network gear that obviously is not an option for everyone. Even used equipment can cost a thousand dollars or more, and in my case my spouse was not super excited about our power bill rising by $100 a month while I ran some Cisco switches in my office.","headline":"Learning and Testing Ansible Playbooks with Virtual Images","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/learning-testing-ansible-playbooks-virtual-images/"},"url":"https://cavanaugh.pro/blog/learning-testing-ansible-playbooks-virtual-images/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2018-04-11T00:00:00+00:00">April 11, 2018</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">ansible</span>
+          
+          <span class="tag">networking</span>
+          
+          <span class="tag">virtual-labs</span>
+          
+          <span class="tag">cisco</span>
+          
+          <span class="tag">arista</span>
+          
+          <span class="tag">cumulus</span>
+          
+          <span class="tag">juniper</span>
+          
+        </div>
+        
+      </div>
+      <h1>Learning and Testing Ansible Playbooks with Virtual Images</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>One of the common problems I see with network automation in general is that no one wants to learn and test their automation software on production network gear. While lots of people have labs they can play with network gear that obviously is not an option for everyone. Even used equipment can cost a thousand dollars or more, and in my case my spouse was not super excited about our power bill rising by $100 a month while I ran some Cisco switches in my office.</p>
+
+<p>I am not saying that owning networking hardware is a bad idea, its just not exactly scalable, and doesn’t work for everyone’s situation. Imagine the network engineer living in New York City in the super small apartment. I was lucky enough while studying for my CCIE to have access to a lab at work where I had all the equipment I needed to play with, and didn’t have to deal with the heat, noise and power bills. I was a Cisco employee at the time so I also had access to virtual Cisco images.</p>
+
+<p>Luckily networking vendors (including Cisco) are finally realizing that these virtual images are super important for education and control plane testing. While we can’t replace line-rate hardware with virtual images, we can test configurations, bring up routing protocols, test connectivity. Of course testing Ansible Networking Playbooks is perfect for a virtual environment. The worst thing about automation is I can automate a mistake across hundreds of nodes at the same time.</p>
+
+<h2 id="arista">Arista</h2>
+
+<p>Arista has a common NOS (network operating system) amongst their hardware called EOS (Extensible Operating System). If you create a free account on their website, they will allow you to download a virtual EOS (vEOS) for free. The only limitation with this free VM is the amount of ports (I think by default it is limited to 4). For the testing I was doing it worked great on my laptop.</p>
+
+<h2 id="cisco">Cisco</h2>
+
+<p>Cisco Systems has three main platforms that I use: Cisco IOS, Cisco NX-OS and Cisco IOS-XR. All three of them have virtual images, but they require entitlement on your account. From what I have seen, if you own the physical gear you automatically can get the virtual image. Another option is using Cisco VIRL.</p>
+
+<p>I wrote a Knowledge Base article for Red Hat Ansible Engine: <a href="https://access.redhat.com/articles/3199502">Getting Cisco NX-OSv up and running</a>. This is a super simple guide on just getting Cisco NX-OSv up and running on your laptop.</p>
+
+<h2 id="cumulus-networks">Cumulus Networks</h2>
+
+<p>For Cumulus Linux they have a free version called Cumulus VX (for virtual experience). Unlike Arista, there is no port limitation, so you can add as many ports as you want (depending on the underlying platform, e.g. VirtualBox vs KVM).</p>
+
+<p>Another cool tool that Cumulus Networks provides for free is called topology converter. This python script creates a virtual topology (using Vagrant) from a network map (in the form of dot notation). This allows users of Cumulus Linux (or really any Linux operating system) to build complex topologies. While I was working at Cumulus Networks I could run well over a hundred Cumulus VX instances on a single server.</p>
+
+<h2 id="juniper">Juniper</h2>
+
+<p>Juniper Networks has a few different virtual images floating around, including vSRX and vQFX. They have published a Vagrant image that is not behind a login wall or paywall: <a href="https://github.com/Juniper/vqfx10k-vagrant">vqfx10k-vagrant</a></p>
+
+<h2 id="vyos">VyOS</h2>
+
+<p>VyOS is an open source fork of Vyatta routing software. While VyOS might be one of the networking platforms on here you have never heard of, many people use VyOS in production as a vRouter. Their use-case is often peering to a service provider where they already have limited bandwidth out of the data center, so not having 100Gbps line-rate is not a problem. Check out their website: <a href="https://vyos.io/">vyos.io</a></p>
+
+<h2 id="summary">Summary</h2>
+
+<p>While I am sure many other networking platforms are out there (e.g. F5 Networks) these are some of the ones I play with the most. I am super excited about all the virtual networks people are creating, because it means that network operators can test network changes on a virtual topology versus messing up their production network. I am sure we will see people implement really interesting CI/CD pipelines in the future, where they can automate changes into their virtual development environment before touching any production equipment.</p>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

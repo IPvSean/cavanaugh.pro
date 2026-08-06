@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fixing Netflix After Mac Migration | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Fixing Netflix After Mac Migration | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fixing Netflix After Mac Migration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Here is a problem I have come across twice now. Every time you migrate Apple computers it will corrupt a file so that Netflix will no longer work. So for me I migrated from a MacBook Pro to a Mac Mini then back to a MacBook Pro over a series of 3 years." />
+<meta property="og:description" content="Here is a problem I have come across twice now. Every time you migrate Apple computers it will corrupt a file so that Netflix will no longer work. So for me I migrated from a MacBook Pro to a Mac Mini then back to a MacBook Pro over a series of 3 years." />
+<link rel="canonical" href="https://cavanaugh.pro/blog/netflix-fix-mac-migration/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/netflix-fix-mac-migration/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-10-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fixing Netflix After Mac Migration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2011-10-01T00:00:00+00:00","datePublished":"2011-10-01T00:00:00+00:00","description":"Here is a problem I have come across twice now. Every time you migrate Apple computers it will corrupt a file so that Netflix will no longer work. So for me I migrated from a MacBook Pro to a Mac Mini then back to a MacBook Pro over a series of 3 years.","headline":"Fixing Netflix After Mac Migration","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/netflix-fix-mac-migration/"},"url":"https://cavanaugh.pro/blog/netflix-fix-mac-migration/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2011-10-01T00:00:00+00:00">October 01, 2011</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">mac</span>
+          
+          <span class="tag">netflix</span>
+          
+          <span class="tag">troubleshooting</span>
+          
+        </div>
+        
+      </div>
+      <h1>Fixing Netflix After Mac Migration</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>Here is a problem I have come across twice now. Every time you migrate Apple computers it will corrupt a file so that Netflix will no longer work. So for me I migrated from a MacBook Pro to a Mac Mini then back to a MacBook Pro over a series of 3 years.</p>
+
+<p>The file that gets corrupted is the <code class="language-plaintext highlighter-rouge">mspr.hds</code> file, located at:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HD &gt; Library &gt; Application Support &gt; Microsoft &gt; PlayReady &gt; mspr.hds
+</code></pre></div></div>
+
+<p>Simply delete it and you are good to go. A lot of sites recommend you keep the old <code class="language-plaintext highlighter-rouge">mspr.hds</code> by renaming it something like <code class="language-plaintext highlighter-rouge">mspr.hds.old</code>, but I don’t really see a reason for that. you can always reinstall Microsoft Silverlight.</p>
+
+<p>For me the fix worked instantly. Remember that Netflix’s help line is actually really easy to reach and will help you out.</p>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Wireshark Installation Guide for Mac | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Complete Wireshark Installation Guide for Mac | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Complete Wireshark Installation Guide for Mac" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Here is the complete guide, because so many ‘complete guides’ were missing a step or two that I needed." />
+<meta property="og:description" content="Here is the complete guide, because so many ‘complete guides’ were missing a step or two that I needed." />
+<link rel="canonical" href="https://cavanaugh.pro/blog/wireshark-mac-installation-guide/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/wireshark-mac-installation-guide/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-01-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Complete Wireshark Installation Guide for Mac" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2012-01-01T00:00:00+00:00","datePublished":"2012-01-01T00:00:00+00:00","description":"Here is the complete guide, because so many ‘complete guides’ were missing a step or two that I needed.","headline":"Complete Wireshark Installation Guide for Mac","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/wireshark-mac-installation-guide/"},"url":"https://cavanaugh.pro/blog/wireshark-mac-installation-guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2012-01-01T00:00:00+00:00">January 01, 2012</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">wireshark</span>
+          
+          <span class="tag">mac</span>
+          
+          <span class="tag">networking</span>
+          
+          <span class="tag">tutorial</span>
+          
+        </div>
+        
+      </div>
+      <h1>Complete Wireshark Installation Guide for Mac</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>Here is the complete guide, because so many ‘complete guides’ were missing a step or two that I needed.</p>
+
+<ol>
+  <li>Download the DMG from <a href="http://www.wireshark.org/download.html">wireshark.org</a>. Unpack it.</li>
+  <li>Drag the Wireshark icon onto the Applications alias.</li>
+  <li>Open the Utilities folder.</li>
+  <li>Drag the contents of the Command Line folder to <code class="language-plaintext highlighter-rouge">/usr/local/bin</code>.</li>
+  <li>Drag the ChmodBPF folder onto the StartupItems alias (path is <code class="language-plaintext highlighter-rouge">/Library/StartupItems/ChmodBPF</code>).</li>
+  <li>If you’re running as an admin user you will see a list of network interfaces in Wireshark. If you don’t see any, you’re probably running as a non-admin. You need to allow read access to <code class="language-plaintext highlighter-rouge">/dev/bpf*</code>. A quick test: <code class="language-plaintext highlighter-rouge">sudo chmod o+r /dev/bpf*</code>. A better solution is adding a <code class="language-plaintext highlighter-rouge">chown</code> line to the ChmodBPF script.</li>
+  <li>For fresh installs on Snow Leopard, fix ownership: <code class="language-plaintext highlighter-rouge">cd /Library/StartupItems &amp;&amp; sudo chown -R root:wheel ChmodBPF</code></li>
+  <li>Check security settings. if you see “Insecure Startup Items folder detected”, fix permissions:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> root:wheel /Library/StartupItems
+<span class="nb">sudo chmod</span> <span class="nt">-R</span> 0755 /Library/StartupItems
+</code></pre></div></div>
+
+<p>If you see an <code class="language-plaintext highlighter-rouge">@</code> symbol in <code class="language-plaintext highlighter-rouge">ls -l@</code>, remove the quarantine:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xattr <span class="nt">-r</span> <span class="nt">-d</span> com.apple.quarantine /Library/StartupItems/ChmodBPF
+</code></pre></div></div>
+
+<ol>
+  <li>Restart your computer, make sure there are no errors, and verify you can see interfaces to capture from.</li>
+</ol>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

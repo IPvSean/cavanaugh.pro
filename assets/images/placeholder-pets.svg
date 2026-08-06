@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1a1a2e"/>
+  <rect x="20" y="20" width="760" height="560" rx="12" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="8,6"/>
+  <text x="400" y="260" text-anchor="middle" fill="#666" font-family="system-ui, sans-serif" font-size="48">= =1 =1</text>
+  <text x="400" y="330" text-anchor="middle" fill="#888" font-family="system-ui, sans-serif" font-size="22">Ghost, Finn &amp; Momo</text>
+  <text x="400" y="370" text-anchor="middle" fill="#555" font-family="system-ui, sans-serif" font-size="16">Photo placeholder  replace me!</text>
+</svg>

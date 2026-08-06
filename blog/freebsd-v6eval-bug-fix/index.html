@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeBSD 9.0 v6eval Compile Bug Fix | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FreeBSD 9.0 v6eval Compile Bug Fix | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="FreeBSD 9.0 v6eval Compile Bug Fix" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Last week I was upgrading one of our VMware templates to FreeBSD 9.0 to conduct ReadyLogo testing via the Tahi scripts and stumbled across a bug where I couldn’t make v6eval compile correctly:" />
+<meta property="og:description" content="Last week I was upgrading one of our VMware templates to FreeBSD 9.0 to conduct ReadyLogo testing via the Tahi scripts and stumbled across a bug where I couldn’t make v6eval compile correctly:" />
+<link rel="canonical" href="https://cavanaugh.pro/blog/freebsd-v6eval-bug-fix/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/freebsd-v6eval-bug-fix/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-06-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="FreeBSD 9.0 v6eval Compile Bug Fix" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2012-06-01T00:00:00+00:00","datePublished":"2012-06-01T00:00:00+00:00","description":"Last week I was upgrading one of our VMware templates to FreeBSD 9.0 to conduct ReadyLogo testing via the Tahi scripts and stumbled across a bug where I couldn’t make v6eval compile correctly:","headline":"FreeBSD 9.0 v6eval Compile Bug Fix","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/freebsd-v6eval-bug-fix/"},"url":"https://cavanaugh.pro/blog/freebsd-v6eval-bug-fix/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2012-06-01T00:00:00+00:00">June 01, 2012</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">freebsd</span>
+          
+          <span class="tag">ipv6</span>
+          
+          <span class="tag">bug-fix</span>
+          
+        </div>
+        
+      </div>
+      <h1>FreeBSD 9.0 v6eval Compile Bug Fix</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>Last week I was upgrading one of our VMware templates to FreeBSD 9.0 to conduct ReadyLogo testing via the Tahi scripts and stumbled across a bug where I couldn’t make v6eval compile correctly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>freebsd-9-USGv6# cd v6eval-3.3.2
+freebsd-9-USGv6# make
+===&gt; lib (depend)
+===&gt; lib/Cm (depend)
+CmMain.cc:51:18: error: utmp.h: No such file or directory
+mkdep: compile failed
+*** Error code 1
+</code></pre></div></div>
+
+<p>I sent out an email to Ed Schouten of the FreeBSD project (who is in charge of integrating the new <code class="language-plaintext highlighter-rouge">utmpx.h</code> now that <code class="language-plaintext highlighter-rouge">utmp.h</code> has been deprecated) and he was able to help me in less than an hour!</p>
+
+<p>The fix: go to the directory of the v6eval port (<code class="language-plaintext highlighter-rouge">/usr/ports/net/v6eval</code>) and run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fetch <span class="nt">-o</span> files/patch-utmpx http://80386.nl/pub/v6eval.txt
+make clean
+make <span class="nb">install </span>clean
+</code></pre></div></div>
+
+<p>If it still won’t compile, try:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make <span class="nv">TRYBROKEN</span><span class="o">=</span> clean
+make <span class="nv">TRYBROKEN</span><span class="o">=</span> <span class="nb">install </span>clean
+</code></pre></div></div>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

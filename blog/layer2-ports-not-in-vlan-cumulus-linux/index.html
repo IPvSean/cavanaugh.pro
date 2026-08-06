@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layer2 Ports Not in a VLAN on Cumulus Linux | Sean Cavanaugh</title>
+  <meta name="description" content="AI • Automation • Cloud. Building enterprise AI demos that developers actually use.">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Layer2 Ports Not in a VLAN on Cumulus Linux | Sean Cavanaugh</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Layer2 Ports Not in a VLAN on Cumulus Linux" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cumulus Linux has a cool ‘feature’ it inherited from Linux. On most network switches a port is either Layer2 or Layer3. When a port is layer2 it has to be part of a VLAN. Linux does understand and work with VLANs but it can have a port that is running at layer2 but not part of a VLAN. We can configure a port under /etc/network/interfaces like this:" />
+<meta property="og:description" content="Cumulus Linux has a cool ‘feature’ it inherited from Linux. On most network switches a port is either Layer2 or Layer3. When a port is layer2 it has to be part of a VLAN. Linux does understand and work with VLANs but it can have a port that is running at layer2 but not part of a VLAN. We can configure a port under /etc/network/interfaces like this:" />
+<link rel="canonical" href="https://cavanaugh.pro/blog/layer2-ports-not-in-vlan-cumulus-linux/" />
+<meta property="og:url" content="https://cavanaugh.pro/blog/layer2-ports-not-in-vlan-cumulus-linux/" />
+<meta property="og:site_name" content="Sean Cavanaugh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Layer2 Ports Not in a VLAN on Cumulus Linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2017-03-15T00:00:00+00:00","datePublished":"2017-03-15T00:00:00+00:00","description":"Cumulus Linux has a cool ‘feature’ it inherited from Linux. On most network switches a port is either Layer2 or Layer3. When a port is layer2 it has to be part of a VLAN. Linux does understand and work with VLANs but it can have a port that is running at layer2 but not part of a VLAN. We can configure a port under /etc/network/interfaces like this:","headline":"Layer2 Ports Not in a VLAN on Cumulus Linux","mainEntityOfPage":{"@type":"WebPage","@id":"https://cavanaugh.pro/blog/layer2-ports-not-in-vlan-cumulus-linux/"},"url":"https://cavanaugh.pro/blog/layer2-ports-not-in-vlan-cumulus-linux/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://cavanaugh.pro/feed.xml" title="Sean Cavanaugh" />
+</head>
+<body>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-text">Sean Cavanaugh</span>
+    </a>
+    <nav class="site-nav" id="site-nav">
+      
+      <a href="/" class="nav-link">Home</a>
+      
+      <a href="/projects/" class="nav-link">Projects</a>
+      
+      <a href="/talks/" class="nav-link">Talks</a>
+      
+      <a href="/videos/" class="nav-link">Videos</a>
+      
+      <a href="/blog/" class="nav-link">Blog</a>
+      
+      <a href="/#moments" class="nav-link">Photos</a>
+      
+      <a href="/about/" class="nav-link">About</a>
+      
+      <a href="/contact/" class="nav-link nav-contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+  <main>
+    <article class="post-single">
+  <div class="post-hero">
+    <div class="post-hero-inner">
+      <div class="post-meta">
+        <time datetime="2017-03-15T00:00:00+00:00">March 15, 2017</time>
+        
+        <div class="post-tags">
+          
+          <span class="tag">cumulus</span>
+          
+          <span class="tag">linux</span>
+          
+          <span class="tag">networking</span>
+          
+          <span class="tag">lldp</span>
+          
+        </div>
+        
+      </div>
+      <h1>Layer2 Ports Not in a VLAN on Cumulus Linux</h1>
+      
+    </div>
+  </div>
+  <div class="post-content">
+    <p>Cumulus Linux has a cool ‘feature’ it inherited from Linux. On most network switches a port is either Layer2 or Layer3. When a port is layer2 it has to be part of a VLAN. Linux does understand and work with VLANs but it can have a port that is running at layer2 but not part of a VLAN. We can configure a port under <code class="language-plaintext highlighter-rouge">/etc/network/interfaces</code> like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auto swp1
+iface swp1
+</code></pre></div></div>
+
+<p>If we ifup this port it’s not part of a VLAN, and its not Layer3.</p>
+
+<p>Why would we want to do this? Honestly the most common reason is that we can check physical connections by using LLDP before this port is part of a broadcast domain (VLAN) that could cause loops or unexpected behavior.</p>
+
+<p>What if I cabled a switch and don’t know what ports are connected? You could create a stanza for each swp like above, or do a simple bash loop on the command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>swp <span class="k">in</span> <span class="o">{</span>1..54<span class="o">}</span><span class="p">;</span> <span class="k">do </span><span class="nb">sudo </span>ip <span class="nb">link set </span>swp<span class="nv">$swp</span><span class="p">;</span> <span class="k">done</span>
+</code></pre></div></div>
+
+<p>Now all 54 ports are admin up at layer2 so we can check connections, but it’s not routing or switching. Now you can use LLDP:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cumulus@leaf01:~$ net show lldp
+
+Local Port    Speed    Mode                 Remote Port    Remote Host      Summary
+------------  -------  -------------  ----  -------------  ---------------  --------------------------
+eth0          1G       Mgmt           ====  swp23          oob-mgmt-switch  IP: 10.50.100.100/24(DHCP)
+swp9          10G      NotConfigured  ====  swp51          leaf07
+swp49         40G      NotConfigured  ====  swp49          exit02
+swp50         40G      NotConfigured  ====  swp50          exit02
+swp51         40G      NotConfigured  ====  swp30          spine01
+swp52         40G      NotConfigured  ====  swp30          spine02
+</code></pre></div></div>
+
+<p>Yay now we can go configure them now that we know how they are cabled up. It’s great to be lazy.</p>
+
+<p><strong>Update 3/30/2017:</strong> The famous Daniel Walton let me know that Cumulus Linux’s new NCLU (Network Command Line Utility) also has a method of doing this quickly. NCLU uses the <code class="language-plaintext highlighter-rouge">net</code> command and has the ability to do a range of ports really quickly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net add int swp1-54
+</code></pre></div></div>
+
+<p>One caveat vs using <code class="language-plaintext highlighter-rouge">ip link set</code>: this will make persistent config (meaning the ports are actually configured under <code class="language-plaintext highlighter-rouge">/etc/network/interfaces</code>).</p>
+
+  </div>
+  <div class="post-footer">
+    <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+  </div>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sean Cavanaugh</span>
+      <p class="footer-tagline">AI &bull; Automation &bull; Cloud</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        
+        <a href="/">Home</a>
+        
+        <a href="/projects/">Projects</a>
+        
+        <a href="/talks/">Talks</a>
+        
+        <a href="/videos/">Videos</a>
+        
+        <a href="/blog/">Blog</a>
+        
+        <a href="/#moments">Photos</a>
+        
+        <a href="/about/">About</a>
+        
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.youtube.com/ansibleautomation" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/seanecavanaugh" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/IPvSean" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.tiktok.com/@ipvsean" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/ipvsean" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://bsky.app/profile/ipvsean.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://x.com/ipvsean" target="_blank" rel="noopener">X</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact</a>
+        <a href="/feed.xml">RSS Feed</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sean Cavanaugh. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
