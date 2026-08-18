@@ -6,7 +6,7 @@
   year: 2026
 
 - src: "/assets/images/summit-2026-stage.png"
-  alt: "Demoing the Automation Orchestrator, Red Hat Summit, Las Vegas, 2026"
+  alt: "Demoing the Automation Orchestrator, Red Hat Summit, Atlanta, 2026"
   category: "stage"
   year: 2026
 
@@ -48,52 +48,52 @@
 # === 2025, AnsibleFest ===
 
 - src: "/assets/images/ansiblefest-2025-closeup-screen.png"
-  alt: "On the big screen during keynote, AnsibleFest, Atlanta, 2025"
+  alt: "On the big screen during keynote, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-stage.png"
-  alt: "Keynote on the big screens, AnsibleFest, Atlanta, 2025"
+  alt: "Keynote on the big screens, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-big-screens.png"
-  alt: "Keynote with Dafne Mendoza, AnsibleFest, Atlanta, 2025"
+  alt: "Keynote with Dafne Mendoza, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-demo-error.png"
-  alt: "Live policy violation demo, AnsibleFest, Atlanta, 2025"
+  alt: "Live policy violation demo, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-on-stage-trio.png"
-  alt: "On stage with the team, AnsibleFest, Atlanta, 2025"
+  alt: "On stage with the team, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-podium.png"
-  alt: "At the podium, AnsibleFest, Atlanta, 2025"
+  alt: "At the podium, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/cisco-live-rh-booth-networking.png"
-  alt: "On stage, AnsibleFest, Atlanta, 2025"
+  alt: "On stage, AnsibleFest, Boston, 2025"
   category: "booth"
   year: 2025
 
 - src: "/assets/images/cisco-live-theater-wide.png"
-  alt: "Presenting to a seated crowd, AnsibleFest, Atlanta, 2025"
+  alt: "Presenting to a seated crowd, AnsibleFest, Boston, 2025"
   category: "stage"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-armon-dadgar.png"
-  alt: "With HashiCorp co-founder Armon Dadgar, AnsibleFest, Atlanta, 2025"
+  alt: "With HashiCorp co-founder Armon Dadgar, AnsibleFest, Boston, 2025"
   category: "people"
   year: 2025
 
 - src: "/assets/images/ansiblefest-2025-backstage.png"
-  alt: "Backstage with Craig Brandt and Emily Bock, AnsibleFest, Atlanta, 2025"
+  alt: "Backstage with Craig Brandt and Emily Bock, AnsibleFest, Boston, 2025"
   category: "behind-the-scenes"
   year: 2025
 
