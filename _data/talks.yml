@@ -6,7 +6,7 @@
   stage_photo: "/assets/images/summit-2026-stage.png"
   audience: "Red Hat Summit"
   event: "Red Hat Summit"
-  location: "Las Vegas, Nevada"
+  location: "Atlanta, Georgia"
   year: 2026
   url: "https://tv.redhat.com/detail/6396287207112/product-spotlight-red-hat-ansible-automation-platform-trusted-execution-for-ai-driven-it-ops"
   featured: true
@@ -23,9 +23,9 @@
   description: "Two live demos on the AnsibleFest main stage, the Ansible Automation Dashboard and Ansible Lightspeed Assistant + AIOps with Dafne Mendoza."
   image: "/assets/images/ansiblefest-2025-stage.png"
   stage_photo: "/assets/images/ansiblefest-2025-stage.png"
-  audience: "Keynote"
+  audience: "AnsibleFest Boston"
   event: "AnsibleFest"
-  location: "Atlanta, Georgia"
+  location: "Boston, Massachusetts"
   year: 2025
   url: "https://www.youtube.com/live/OiQDFjmWGUc?si=R9o7FMvsaHbjcV6o&t=2418"
   featured: true
