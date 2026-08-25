@@ -35,6 +35,13 @@
   image: "/assets/images/album-singapore-2023.png"
   category: "travel"
 
+- title: "Lake Lure Vacation"
+  date: "September 2021"
+  description: "Family trip to Lake Lure in the North Carolina mountains. Dock time, mountain views, and a quiet week on the water."
+  url: "https://photos.app.goo.gl/NG23GH8eqzArXuF59"
+  image: "/assets/images/album-lake-lure-2021.png"
+  category: "travel"
+
 - title: "Walt Disney World"
   date: "June 2018"
   description: "Family trip while in Orlando for Cisco Live 2018. Visited Animal Kingdom and stayed at the Animal Kingdom Lodge."
